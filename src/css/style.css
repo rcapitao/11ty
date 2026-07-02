@@ -1,77 +1,439 @@
+/*
+* Bearming — a personal Bear theme
+* Version 5.5.0 | 2026-05-26
+* Robert Birming | robertbirming.com
+*/
+
+/* Palette: Flexoki */
 :root {
-  --color-bg: #ffffff;
-  --color-text: #1a1a1a;
-  --color-accent: #2b6cb0;
-  --max-width: 42rem;
+  color-scheme: light dark;
+
+  /* Layout */
+  --page-width: 720px;
+  --line-height: 1.6;
+  --space-block: 1.8rem;
+  --radius: 3px;
+
+  /* Typography */
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+  --font-size: 1.0625rem;
+  --font-small: calc(var(--font-size) * 0.875);
+
+  /* Light — Flexoki */
+  --bg: #fffcf0;          /* paper */
+  --text: #100f0f;        /* black */
+  --link: #24837B;        /* cyan-600 */
+  --visited: #878580;     /* base-300 */
+  --accent: #205EA6;      /* red-600 */
+  --muted: #6f6e69;       /* tx-2 */
+  --surface: #f2f0e5;     /* base-50 */
+  --border: #e6e4d9;      /* base-100 */
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Dark — Flexoki */
+    --bg: #100f0f;        /* black */
+    --text: #cecdc3;      /* tx */
+    --link: #3AA99F;      /* cyan-400 */
+    --visited: #878580;   /* base-700 */
+    --accent: #4385BE;    /* red-400 */
+    --muted: #878580;     /* tx-2 */
+    --surface: #1c1b1a;   /* base-950 */
+    --border: #282726;    /* base-900 */
+  }
 }
 
-* {
+.bear {
+  font-family: ui-monospace, monospace;
+}
+
+/* =========================
+   Core styles
+   Handle with bear care
+   ========================= */
+
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
+html {
+  -webkit-text-size-adjust: 100%;
+  background-color: var(--bg);
+}
+
 body {
-  margin: 0;
-  padding: 2rem 1rem;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.6;
-  color: var(--color-text);
-  background: var(--color-bg);
+  margin-inline: auto;
+  padding: 1.25rem;
+  max-width: var(--page-width);
+  font-family: var(--font-body);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+  overflow-wrap: break-word;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
-header, main, footer {
-  max-width: var(--max-width);
-  margin: 0 auto;
+p {
+  margin-block: 1.2em;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #e2e2e2;
-  padding-bottom: 1rem;
+h1, h2, h3, h4 {
+  margin-block: var(--space-block) 0.5em;
+  line-height: 1.3;
+  font-family: var(--font-heading);
 }
 
-header a {
-  font-weight: bold;
-  font-size: 1.25rem;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-nav a {
-  margin-left: 1rem;
-  color: var(--color-accent);
-  text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
+h1 { font-size: 1.6rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.2rem; }
+h4 { font-size: 1.1rem; }
 
 a {
-  color: var(--color-accent);
+  color: var(--link);
+  text-decoration: none;
 }
 
-.post-list {
-  list-style: none;
-  padding: 0;
+main a:visited {
+  color: var(--visited);
 }
 
-.post-list li {
-  margin-bottom: 1.5rem;
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+    text-decoration-thickness: 0.12em;
+  }
 }
 
-.post-list time {
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: var(--radius);
+}
+
+ul, ol {
+  padding-inline-start: 1.5rem;
+}
+
+li,
+li > ul,
+li > ol {
+  margin-block: 0.2em;
+}
+
+hr,
+img,
+video,
+pre,
+blockquote {
+  margin-block: var(--space-block);
+}
+
+hr {
+  border: none;
+  border-block-start: 1px solid var(--border);
+}
+
+img,
+video {
   display: block;
-  font-size: 0.85rem;
-  color: #666;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
 }
 
+pre {
+  padding-block: 1rem;
+  padding-inline: 1.2rem;
+  overflow-x: auto;
+  font-family: var(--font-mono);
+  font-size: var(--font-small);
+  line-height: 1.5;
+  tab-size: 2;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+code {
+  padding-block: 0.15em;
+  padding-inline: 0.3em;
+  font-family: var(--font-mono);
+  font-size: var(--font-small);
+  overflow-wrap: anywhere;
+  background-color: var(--surface);
+  border-radius: var(--radius);
+}
+
+pre code {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: inherit;
+  overflow-wrap: normal;
+}
+
+mark {
+  padding-inline: 0.15em;
+  color: var(--bg);
+  background-color: color-mix(in srgb, var(--accent) 60%, var(--text));
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-small);
+}
+
+th,
+td {
+  padding-block: 0.5em;
+  padding-inline: 0.75em;
+  border: 1px solid var(--border);
+  text-align: start;
+}
+
+th {
+  background-color: var(--surface);
+  font-weight: 700;
+}
+
+time {
+  font-family: var(--font-mono);
+  font-size: var(--font-small);
+  font-style: normal;
+  color: var(--muted);
+}
+
+header nav p,
+main > :first-child,
+.post main > h1 + p {
+  margin-block-start: 0;
+}
+
+.post main > h1 {
+  margin-block-end: 0;
+}
+
+/* =========================
+   Style options
+   robertbirming.com/bearming/styles
+   ========================= */
+
+/* Mostrar título blog na página de blog */
+body.blog main::before {
+  content: "Blog";
+  display: block;
+  font-size: 1.7rem;
+  color: var(--txt);
+  margin-bottom: 1.0rem;
+  margin-top: -0.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Title: Underline */
+header a.title h1 {
+  position: relative;
+  display: inline-block;
+  padding-block-end: 0.4em;
+  margin-block-end: 0.2em;
+}
+
+header a.title h1::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block-end: 0;
+  height: 2px;
+  background: var(--link);
+  transform: scaleX(0.25);
+  transform-origin: left;
+  opacity: 0.8;
+}
+
+@media (hover: hover) {
+  header a.title h1::before {
+    transition: transform 0.25s ease, opacity 0.25s ease;
+  }
+
+  header a.title:hover h1::before {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+header a.title:focus-visible h1::before {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Links: Main content underlining */
+main p a {
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 0.05em;
+}
+
+/* Blockquote: Default */
+blockquote {
+  margin-inline: 0;
+  padding-block: 0.1em;
+  padding-inline-start: 1.2em;
+  font-style: italic;
+  color: var(--muted);
+  border-inline-start: 3px solid var(--accent);
+}
+
+blockquote p { margin-block: 0; }
+
+/* Header: Horizontal */
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.1rem 1rem;
+  margin-block: 0 var(--space-block);
+}
+
+header a.title {
+  display: inline-block;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.title h1 {
+  margin-block: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+header nav p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-block: 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+header nav a {
+  margin-inline-end: 0;
+}
+
+/* Blog list: Default */
+.blog-posts {
+  margin-block-end: var(--space-block);
+  padding: 0;
+  list-style: none;
+}
+
+.blog-posts li {
+  display: flex;
+  align-items: baseline;
+}
+
+.blog-posts li a {
+  margin-inline-end: auto;
+}
+
+.blog-posts li span {
+  flex: 0 0 7.6rem;
+  font-size: var(--font-small);
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* Tags: Pills */
+p.tags {
+  margin-block: var(--space-block);
+}
+
+p.tags a,
+p.tags a:visited {
+  display: inline-block;
+  margin-inline-end: 0.4em;
+  margin-block-end: 0.4em;
+  padding-block: 0.2em;
+  padding-inline: 0.65em;
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  text-decoration: none;
+}
+
+/* Footer: Default */
 footer {
-  margin-top: 3rem;
-  padding-top: 1rem;
-  border-top: 1px solid #e2e2e2;
-  font-size: 0.85rem;
-  color: #666;
+  margin-block-start: calc(var(--space-block) * 1.2);
+  padding-block-start: 1.2rem;
+  text-align: center;
+  font-size: var(--font-small);
+  color: var(--muted);
+  border-block-start: 1px solid var(--border);
+}
+
+footer p {
+  margin-block: 0.5em;
+}
+
+#footer-directive a {
+  margin-inline: 0.2em;
+}
+
+/* Figure caption | robertbirming.com */
+figure {
+  margin-inline: 0;
+  margin-block: var(--space-block);
+}
+
+figure > p {
+  margin-block: 0;
+}
+
+figure img,
+figure video {
+  margin-block: 0;
+}
+
+figcaption {
+  margin-block-start: 0.5em;
+  font-size: var(--font-small);
+  font-style: italic;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* Blockquote: Citations | robertbirming.com */
+blockquote cite {
+  display: block;
+  margin-block-start: 0.7em;
+  font-size: var(--font-small);
+  font-style: normal;
+}
+
+blockquote > :first-child { margin-block-start: 0; }
+blockquote > :last-child { margin-block-end: 0; }
+
+/* External link marker | robertbirming.com */
+main a[href^="http"]::after {
+  content: "\00a0↗\FE0E";
+  font-size: 0.7em;
+  text-decoration: none;
+  display: inline;
+  vertical-align: super;
+  white-space: nowrap;
+  color: var(--muted);
+}
+
+main a[href^="http"]:has(img)::after {
+  content: none;
 }

@@ -2,15 +2,13 @@
 layout: base.njk
 title: Início
 ---
-<h1>{{ metadata.title }}</h1>
 <p>{{ metadata.description }}</p>
 
-<h2>Últimos posts</h2>
-<ul class="post-list">
+<ul class="blog-posts">
   {%- for post in collections.posts %}
   <li>
     <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    <time datetime="{{ post.date | htmlDateString }}">{{ post.date | readableDate }}</time>
+    <span>{{ post.date | readableDate }}</span>
   </li>
   {%- endfor %}
 </ul>
