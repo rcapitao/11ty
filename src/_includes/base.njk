@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ title or metadata.title }}</title>
+  <meta name="description" content="{{ description or metadata.description }}">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <a href="/">{{ metadata.title }}</a>
+    <nav>
+      <a href="/">Início</a>
+      <a href="/sobre/">Sobre</a>
+    </nav>
+  </header>
+  <main>
+    {{ content | safe }}
+  </main>
+  <footer>
+    <p>&copy; {% year %} {{ metadata.author }} &mdash; feito com <a href="https://www.11ty.dev/">Eleventy</a></p>
+  </footer>
+</body>
+</html>
