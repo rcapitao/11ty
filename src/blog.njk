@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: Blog
+permalink: /blog/
+---
+{%- set groups = collections.posts | groupPostsByYearMonth %}
+<h1>Blog</h1>
+
+<div class="bearming-archive-controls">
+  <div class="archive-type-filter" role="group" aria-label="Filtrar por tipo">
+    <button type="button" class="archive-type-pill is-active" data-type="all" onclick="setArchiveType('all', this)">Todos ({{ collections.posts.length }})</button>
+    <button type="button" class="archive-type-pill" data-type="posts" onclick="setArchiveType('posts', this)">#posts ({{ collections.blogPosts.length }})</button>
+    <button type="button" class="archive-type-pill" data-type="notas" onclick="setArchiveType('notas', this)">#notas ({{ collections.notasPosts.length }})</button>
+  </div>
+  <div class="bearming-archive-select">
+    <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
+      <option value="all">Todos os anos ({{ collections.posts.length }})</option>
+      {%- for group in groups %}
+      <option value="{{ group.year }}">{{ group.year }} ({{ group.count }})</option>
+      {%- endfor %}
+    </select>
+  </div>
+</div>
+
+{%- for group in groups %}
+<section class="archive-year" data-year="{{ group.year }}">
+  <h2>{{ group.year }} <span class="bearming-archive-count">({{ group.count }} post{{ "s" if group.count != 1 }})</span></h2>
+  {%- for month in group.months %}
+  <div class="archive-month-group">
+    <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
+    <ul class="blog-posts">
+      {%- for post in month.posts %}
+      <li data-type="{{ 'notas' if post.data.tags and 'notas' in post.data.tags else 'posts' }}">
+        <span>{{ post.date | shortDate }}</span>
+        <a href="{{ post.url }}">{{ post.data.title }}</a>
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
+</section>
+{%- endfor %}
+
+<script>
+  var archiveType = "all";
+  var archiveYear = "all";
+
+  function applyArchiveFilters() {
+    document.querySelectorAll(".archive-year").forEach(function (year) {
+      var yearMatches = archiveYear === "all" || year.dataset.year === archiveYear;
+      if (!yearMatches) {
+        year.hidden = true;
+        return;
+      }
+      var yearHasVisible = false;
+      year.querySelectorAll(".archive-month-group").forEach(function (group) {
+        var monthHasVisible = false;
+        group.querySelectorAll("li[data-type]").forEach(function (li) {
+          var show = archiveType === "all" || li.dataset.type === archiveType;
+          li.hidden = !show;
+          if (show) monthHasVisible = true;
+        });
+        group.hidden = !monthHasVisible;
+        if (monthHasVisible) yearHasVisible = true;
+      });
+      year.hidden = !yearHasVisible;
+    });
+  }
+
+  function setArchiveType(type, button) {
+    archiveType = type;
+    document.querySelectorAll(".archive-type-pill").forEach(function (el) {
+      el.classList.toggle("is-active", el === button);
+    });
+    applyArchiveFilters();
+  }
+
+  function setArchiveYear(year) {
+    archiveYear = year;
+    applyArchiveFilters();
+  }
+</script>
