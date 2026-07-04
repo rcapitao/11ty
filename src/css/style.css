@@ -350,6 +350,68 @@ header nav a {
   white-space: nowrap;
 }
 
+/* Archive toolkit | robertbirming.com */
+.bearming-archive-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.8rem;
+  margin-block: var(--space-block) 0.9rem;
+}
+
+.bearming-archive-select {
+  position: relative;
+  flex: 0 1 12rem;
+  min-width: 9rem;
+  max-width: 100%;
+}
+
+.bearming-archive-select select {
+  width: 100%;
+  padding-block: 0.55em;
+  padding-inline: 0.7em;
+  padding-inline-end: 2.2em;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  appearance: none;
+}
+
+.bearming-archive-select select:focus-visible {
+  border-color: color-mix(in srgb, var(--link) 45%, var(--surface));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 18%, transparent);
+}
+
+.bearming-archive-select::after {
+  content: "";
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-end: 0.9em;
+  width: 0.5em;
+  height: 0.5em;
+  border-inline-end: 2px solid var(--text);
+  border-block-end: 2px solid var(--text);
+  transform: translateY(-60%) rotate(45deg);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.bearming-archive-month {
+  margin-block: 2.3rem 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.bearming-archive-count {
+  font-weight: 400;
+  font-size: var(--font-small);
+  color: var(--muted);
+}
+
 /* Tags: Pills */
 p.tags {
   margin-block: var(--space-block);
