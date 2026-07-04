@@ -491,7 +491,7 @@ blockquote > :first-child { margin-block-start: 0; }
 blockquote > :last-child { margin-block-end: 0; }
 
 /* External link marker | robertbirming.com */
-main a[href^="http"]::after {
+main a[href^="http"]:not([href*="rcapitao.com"])::after {
   content: "\00a0↗\FE0E";
   font-size: 0.7em;
   text-decoration: none;
@@ -501,6 +501,6 @@ main a[href^="http"]::after {
   color: var(--muted);
 }
 
-main a[href^="http"]:has(img)::after {
+main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   content: none;
 }
