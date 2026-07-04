@@ -77,6 +77,16 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("tagList", (collectionApi) => {
+    const tags = new Set();
+    collectionApi.getFilteredByGlob("src/posts/*.md").forEach((post) => {
+      for (const tag of post.data.tags || []) {
+        tags.add(tag);
+      }
+    });
+    return [...tags].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  });
+
   return {
     pathPrefix: "/11ty/",
     dir: {

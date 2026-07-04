@@ -1,0 +1,22 @@
+---
+layout: base.njk
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag }}/"
+eleventyComputed:
+  title: "Tag: {{ tag }}"
+---
+<h1>#{{ tag }}</h1>
+
+<ul class="blog-posts">
+  {%- for post in collections.posts %}
+  {%- if post.data.tags and tag in post.data.tags %}
+  <li>
+    <span>{{ post.date | shortDate }}</span>
+    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+  </li>
+  {%- endif %}
+  {%- endfor %}
+</ul>
