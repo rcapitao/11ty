@@ -13,6 +13,14 @@ module.exports = function (eleventyConfig) {
     return new Date(dateObj).toISOString().split("T")[0];
   });
 
+  eleventyConfig.addFilter("shortDate", (dateObj) => {
+    return new Date(dateObj).toLocaleDateString("pt-BR", {
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+    });
+  });
+
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
 
   const MONTH_NAMES = [
