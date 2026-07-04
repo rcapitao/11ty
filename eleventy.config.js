@@ -84,7 +84,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("blogPosts", (collectionApi) => {
     return collectionApi
       .getFilteredByGlob("src/posts/*.md")
-      .filter((post) => (post.data.tags || []).includes("blog"))
+      .filter((post) => (post.data.tags || []).includes("posts"))
       .sort((a, b) => b.date - a.date);
   });
 

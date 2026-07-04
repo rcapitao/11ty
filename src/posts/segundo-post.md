@@ -4,7 +4,7 @@ title: Como funciona o Eleventy
 date: 2026-07-02
 permalink: /posts/como-funciona-o-eleventy/
 tags:
-  - blog
+  - posts
 ---
 O Eleventy pega arquivos em `src/`, processa os templates (Markdown, Nunjucks, Liquid, etc.) e gera arquivos HTML estáticos na pasta `_site/`.
 

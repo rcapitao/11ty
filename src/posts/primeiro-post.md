@@ -4,7 +4,7 @@ title: Meu primeiro post
 date: 2026-07-01
 permalink: /posts/meu-primeiro-post/
 tags:
-  - blog
+  - posts
 ---
 Este é o primeiro post do blog. Escrito em **Markdown**, com suporte a listas, links e tudo mais que o Markdown oferece.
 
