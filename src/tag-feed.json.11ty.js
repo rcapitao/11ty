@@ -1,5 +1,3 @@
-const PATH_PREFIX = "/11ty";
-
 module.exports = class {
   data() {
     return {
@@ -13,8 +11,8 @@ module.exports = class {
     };
   }
 
-  render({ collections, metadata, tag }) {
-    const siteUrl = metadata.url + PATH_PREFIX;
+  render({ collections, metadata, tag, pathPrefix }) {
+    const siteUrl = metadata.url + pathPrefix.replace(/\/$/, "");
     const posts = collections.posts.filter((post) => (post.data.tags || []).includes(tag));
 
     const feed = {
