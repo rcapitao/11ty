@@ -45,6 +45,29 @@
   }
 }
 
+/* Manual light/dark override (wins over system preference) */
+:root[data-theme="light"] {
+  --bg: #fffcf0;
+  --text: #100f0f;
+  --link: #24837B;
+  --visited: #878580;
+  --accent: #205EA6;
+  --muted: #6f6e69;
+  --surface: #f2f0e5;
+  --border: #e6e4d9;
+}
+
+:root[data-theme="dark"] {
+  --bg: #100f0f;
+  --text: #cecdc3;
+  --link: #3AA99F;
+  --visited: #878580;
+  --accent: #4385BE;
+  --muted: #878580;
+  --surface: #1c1b1a;
+  --border: #282726;
+}
+
 .bear {
   font-family: ui-monospace, monospace;
 }
@@ -595,4 +618,55 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
 .search-empty {
   font-size: var(--font-small);
   color: var(--muted);
+}
+
+/* Theme toggle */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin-inline-start: 0.25rem;
+  border: none;
+  background: none;
+  color: var(--muted);
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+.theme-toggle svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.theme-toggle .icon-moon {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme]) .theme-toggle .icon-sun {
+    display: none;
+  }
+  :root:not([data-theme]) .theme-toggle .icon-moon {
+    display: block;
+  }
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-sun {
+  display: none;
+}
+
+:root[data-theme="dark"] .theme-toggle .icon-moon {
+  display: block;
+}
+
+@media (hover: hover) {
+  .theme-toggle:hover {
+    color: var(--text);
+  }
+}
+
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
