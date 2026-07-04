@@ -3,13 +3,41 @@ layout: base.njk
 title: Arquivo
 permalink: /arquivo/
 ---
+{%- set groups = collections.posts | groupPostsByYearMonth %}
 <h1>Arquivo</h1>
 
+<div class="bearming-archive-controls">
+  <div class="bearming-archive-select">
+    <select onchange="if (this.value) location.hash = this.value" aria-label="Selecionar ano">
+      <option value="">Ano</option>
+      {%- for group in groups %}
+      <option value="#ano-{{ group.id }}">{{ group.year }} ({{ group.count }})</option>
+      {%- endfor %}
+    </select>
+  </div>
+  <div class="bearming-archive-select">
+    <select onchange="if (this.value) location.hash = this.value" aria-label="Selecionar mês">
+      <option value="">Mês</option>
+      {%- for group in groups %}
+      {%- for month in group.months %}
+      <option value="#mes-{{ month.id }}">{{ month.name }} de {{ group.year }} ({{ month.count }})</option>
+      {%- endfor %}
+      {%- endfor %}
+    </select>
+  </div>
+</div>
+
+{%- for group in groups %}
+<h2 id="ano-{{ group.id }}">{{ group.year }} <span class="bearming-archive-count">({{ group.count }} post{{ "s" if group.count != 1 }})</span></h2>
+{%- for month in group.months %}
+<h3 id="mes-{{ month.id }}" class="bearming-archive-month">{{ month.name }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
 <ul class="blog-posts">
-  {%- for post in collections.posts %}
+  {%- for post in month.posts %}
   <li>
     <a href="{{ post.url | url }}">{{ post.data.title }}</a>
     <span>{{ post.date | readableDate }}</span>
   </li>
   {%- endfor %}
 </ul>
+{%- endfor %}
+{%- endfor %}
