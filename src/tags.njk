@@ -10,12 +10,14 @@ eleventyComputed:
 ---
 <h1>#{{ tag }}</h1>
 
+<p><a href="/tags/{{ tag }}/feed.xml">Feed RSS desta tag</a></p>
+
 <ul class="blog-posts">
   {%- for post in collections.posts %}
   {%- if post.data.tags and tag in post.data.tags %}
   <li>
     <span>{{ post.date | shortDate }}</span>
-    <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    <a href="{{ post.url }}">{{ post.data.title }}</a>
   </li>
   {%- endif %}
   {%- endfor %}

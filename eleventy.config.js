@@ -1,4 +1,8 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss").default;
+
 module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(pluginRss);
+
   eleventyConfig.addPassthroughCopy("src/css");
 
   eleventyConfig.addFilter("readableDate", (dateObj) => {

@@ -8,7 +8,7 @@ bodyClass: post
   {%- if tags %}
   <p class="tags">
     {%- for tag in tags %}
-    <a href="{{ ("/tags/" + tag + "/") | url }}">#{{ tag }}</a>
+    <a href="/tags/{{ tag }}/">#{{ tag }}</a>
     {%- endfor %}
   </p>
   {%- endif %}

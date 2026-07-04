@@ -1,0 +1,32 @@
+---
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag }}/feed.xml"
+eleventyExcludeFromCollections: true
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<title>{{ metadata.title }} — #{{ tag }}</title>
+	<subtitle>{{ metadata.description }}</subtitle>
+	<link href="{{ ('/tags/' + tag + '/feed.xml') | url | absoluteUrl(metadata.url) }}" rel="self"/>
+	<link href="{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}"/>
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<id>{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}</id>
+	<author>
+		<name>{{ metadata.author }}</name>
+	</author>
+
+	{%- for post in collections.posts %}
+	{%- if post.data.tags and tag in post.data.tags %}
+	<entry>
+		<title>{{ post.data.title }}</title>
+		<link href="{{ post.url | url | absoluteUrl(metadata.url) }}"/>
+		<updated>{{ post.date | dateToRfc3339 }}</updated>
+		<id>{{ post.url | url | absoluteUrl(metadata.url) }}</id>
+		<content type="html">{{ post.templateContent | htmlToAbsoluteUrls(metadata.url) | escape }}</content>
+	</entry>
+	{%- endif %}
+	{%- endfor %}
+</feed>
