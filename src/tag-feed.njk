@@ -3,14 +3,15 @@ pagination:
   data: collections.tagList
   size: 1
   alias: tag
-permalink: "/tags/{{ tag }}/feed.xml"
+permalink: "/tags/{{ tag }}/feed"
 eleventyExcludeFromCollections: true
+eleventyAllowMissingExtension: true
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 	<title>{{ metadata.title }} — #{{ tag }}</title>
 	<subtitle>{{ metadata.description }}</subtitle>
-	<link href="{{ ('/tags/' + tag + '/feed.xml') | url | absoluteUrl(metadata.url) }}" rel="self"/>
+	<link href="{{ ('/tags/' + tag + '/feed') | url | absoluteUrl(metadata.url) }}" rel="self"/>
 	<link href="{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}"/>
 	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}</id>

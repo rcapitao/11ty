@@ -81,6 +81,20 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
   });
 
+  eleventyConfig.addCollection("blogPosts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/posts/*.md")
+      .filter((post) => (post.data.tags || []).includes("posts"))
+      .sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("notasPosts", (collectionApi) => {
+    return collectionApi
+      .getFilteredByGlob("src/posts/*.md")
+      .filter((post) => (post.data.tags || []).includes("notas"))
+      .sort((a, b) => b.date - a.date);
+  });
+
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tags = new Set();
     collectionApi.getFilteredByGlob("src/posts/*.md").forEach((post) => {
