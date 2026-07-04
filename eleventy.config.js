@@ -63,6 +63,16 @@ module.exports = function (eleventyConfig) {
       });
   });
 
+  eleventyConfig.addFilter("uniqueTags", (posts) => {
+    const tags = new Set();
+    for (const post of posts) {
+      for (const tag of post.data.tags || []) {
+        tags.add(tag);
+      }
+    }
+    return [...tags].sort((a, b) => a.localeCompare(b, "pt-BR"));
+  });
+
   eleventyConfig.addCollection("posts", (collectionApi) => {
     return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a, b) => b.date - a.date);
   });
