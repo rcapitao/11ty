@@ -566,3 +566,33 @@ main a[href^="http"]:not([href*="rcapitao.com"])::after {
 main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   content: none;
 }
+
+/* Search */
+.search-box {
+  margin-block: var(--space-block) 0.9rem;
+}
+
+.search-box input[type="search"] {
+  width: 100%;
+  max-width: 24rem;
+  padding-block: 0.55em;
+  padding-inline: 0.7em;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  outline: none;
+  appearance: none;
+}
+
+.search-box input[type="search"]:focus-visible {
+  border-color: color-mix(in srgb, var(--link) 45%, var(--surface));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 18%, transparent);
+}
+
+.search-empty {
+  font-size: var(--font-small);
+  color: var(--muted);
+}
