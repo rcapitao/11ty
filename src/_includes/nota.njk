@@ -1,0 +1,8 @@
+---
+layout: base.njk
+bodyClass: nota
+---
+<article class="nota">
+  <p><time datetime="{{ date | htmlDateString }}">{{ date | shortDate }}</time></p>
+  {{ content | safe }}
+</article>
