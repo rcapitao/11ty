@@ -18,7 +18,7 @@
   --font-body: 'Inter', system-ui, sans-serif;
   --font-heading: 'Inter', system-ui, sans-serif;
   --font-mono: ui-monospace, monospace;
-  --font-size: 1.0625rem;
+  --font-size: 1.0rem;
   --font-small: calc(var(--font-size) * 0.875);
 
   /* Light — Flexoki */
