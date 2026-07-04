@@ -3,19 +3,13 @@ layout: base.njk
 title: Arquivo
 permalink: /arquivo/
 ---
-{%- set groups = collections.posts | groupPostsByYearMonth %}
+{%- set groups = collections.blogPosts | groupPostsByYearMonth %}
 <h1>Arquivo</h1>
-
-<p class="tag-cloud">
-  {%- for tag in collections.posts | uniqueTags -%}
-  <span class="tag-cloud-item">#{{ tag }}</span>{{ " " }}
-  {%- endfor -%}
-</p>
 
 <div class="bearming-archive-controls">
   <div class="bearming-archive-select">
     <select onchange="if (this.value) location.hash = this.value" aria-label="Selecionar ano">
-      <option value="">Todos os anos ({{ collections.posts.length }})</option>
+      <option value="">Todos os anos ({{ collections.blogPosts.length }})</option>
       {%- for group in groups %}
       <option value="#ano-{{ group.id }}">{{ group.year }} ({{ group.count }})</option>
       {%- endfor %}

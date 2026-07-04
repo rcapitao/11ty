@@ -1,11 +1,12 @@
 ---
 layout: base.njk
-title: Início
+title: Notas
+permalink: /notas/
 ---
-<p>{{ metadata.description }}</p>
+<h1>Notas</h1>
 
 <ul class="blog-posts">
-  {%- for post in collections.blogPosts %}
+  {%- for post in collections.notasPosts %}
   <li>
     <span>{{ post.date | shortDate }}</span>
     <a href="{{ post.url }}">{{ post.data.title }}</a>
