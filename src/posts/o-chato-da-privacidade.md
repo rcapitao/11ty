@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "O \"chato\" da privacidade"
 date: 2026-04-07
 permalink: /notas/o-chato-da-privacidade/

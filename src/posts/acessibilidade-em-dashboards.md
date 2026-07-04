@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Acessibilidade em dashboards"
 date: 2026-01-03
 permalink: /notas/acessibilidade-em-dashboards/

@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Como explicar o que eu faço?"
 date: 2024-12-09
 permalink: /notas/como-explicar-o-que-eu-faco/

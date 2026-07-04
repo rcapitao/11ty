@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Impossible is Nothing"
 date: 2026-04-11
 permalink: /notas/impossible-is-nothing/

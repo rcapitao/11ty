@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Por que olhamos tanto para o celular"
 date: 2026-04-08
 permalink: /notas/por-que-olhamos-tanto-para-o-celular/

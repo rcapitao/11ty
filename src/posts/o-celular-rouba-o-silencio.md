@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "O celular rouba o silêncio"
 date: 2025-12-23
 permalink: /notas/o-celular-rouba-o-silencio/

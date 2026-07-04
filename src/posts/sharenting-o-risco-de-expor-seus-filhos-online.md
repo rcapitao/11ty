@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Sharenting: o risco de expor seus filhos online"
 date: 2026-04-10
 permalink: /notas/sharenting-o-risco-de-expor-seus-filhos-online/
