@@ -4,7 +4,7 @@ const datesPlugin = require("./src/plugins/dates.js");
 const archivePlugin = require("./src/plugins/archive.js");
 const collectionsPlugin = require("./src/plugins/collections.js");
 
-const PATH_PREFIX = "/11ty/";
+const PATH_PREFIX = "/rcapitao.com/";
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);

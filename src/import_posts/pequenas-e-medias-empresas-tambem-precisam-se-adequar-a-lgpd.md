@@ -19,7 +19,4 @@ A boa notícia é que a implementação para empresas menores pode ser mais ági
 
 A ANPD já demonstrou que o porte é um fator de dosimetria de sanções, não uma imunidade. A Resolução CD/ANPD nº 4/2023, que trata da dosimetria das penalidades, prevê o porte da empresa como critério de graduação, mas não como condição de isenção. Portante, a empresa pode pagar menos, mas ainda pode ser autuada e responsabilizada.  
 
-<span class="curve"></span>  
-
-#### Postagens mais recentes  
-{{ posts|limit:5 }}
+<span class="curve"></span>
