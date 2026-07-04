@@ -348,6 +348,13 @@ header nav a {
   white-space: nowrap;
 }
 
+/* Tag cloud */
+.tag-cloud {
+  margin-block: 0.4rem var(--space-block);
+  font-size: var(--font-small);
+  color: var(--muted);
+}
+
 /* Archive toolkit | robertbirming.com */
 .bearming-archive-controls {
   display: flex;
@@ -359,9 +366,9 @@ header nav a {
 
 .bearming-archive-select {
   position: relative;
-  flex: 0 1 12rem;
-  min-width: 9rem;
-  max-width: 100%;
+  flex: 1 1 15rem;
+  min-width: 11rem;
+  max-width: 20rem;
 }
 
 .bearming-archive-select select {
@@ -484,7 +491,7 @@ blockquote > :first-child { margin-block-start: 0; }
 blockquote > :last-child { margin-block-end: 0; }
 
 /* External link marker | robertbirming.com */
-main a[href^="http"]::after {
+main a[href^="http"]:not([href*="rcapitao.com"])::after {
   content: "\00a0↗\FE0E";
   font-size: 0.7em;
   text-decoration: none;
@@ -494,6 +501,6 @@ main a[href^="http"]::after {
   color: var(--muted);
 }
 
-main a[href^="http"]:has(img)::after {
+main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   content: none;
 }

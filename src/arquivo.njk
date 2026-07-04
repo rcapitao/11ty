@@ -6,6 +6,12 @@ permalink: /arquivo/
 {%- set groups = collections.posts | groupPostsByYearMonth %}
 <h1>Arquivo</h1>
 
+<p class="tag-cloud">
+  {%- for tag in collections.posts | uniqueTags -%}
+  <span class="tag-cloud-item">#{{ tag }}</span>{{ " " }}
+  {%- endfor -%}
+</p>
+
 <div class="bearming-archive-controls">
   <div class="bearming-archive-select">
     <select onchange="if (this.value) location.hash = this.value" aria-label="Selecionar ano">
