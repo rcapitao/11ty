@@ -8,16 +8,18 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="alternate" type="application/atom+xml" title="{{ metadata.title }}" href="/feed.xml">
 </head>
 <body class="{{ bodyClass }}">
   <header>
-    <a class="title" href="{{ '/' | url }}"><h1>{{ metadata.title }}</h1></a>
+    <a class="title" href="/"><h1>{{ metadata.title }}</h1></a>
     <nav>
       <p>
-        <a href="{{ '/' | url }}">Início</a>
-        <a href="{{ '/arquivo/' | url }}">Arquivo</a>
-        <a href="{{ '/sobre/' | url }}">Sobre</a>
+        <a href="/">Início</a>
+        <a href="/arquivo/">Arquivo</a>
+        <a href="/sobre/">Sobre</a>
+        <a href="/feed.xml">RSS</a>
       </p>
     </nav>
   </header>
