@@ -367,9 +367,9 @@ header nav a {
 /* Archive toolkit | robertbirming.com */
 .bearming-archive-controls {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.8rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.6rem;
   margin-block: var(--space-block) 0.9rem;
 }
 
@@ -405,11 +405,32 @@ header nav a {
   outline-offset: 2px;
 }
 
+.archive-type-status {
+  margin: 0;
+  font-size: var(--font-small);
+  color: var(--muted);
+}
+
+.archive-type-status-label {
+  color: var(--text);
+}
+
+.archive-type-clear {
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  letter-spacing: inherit;
+  color: var(--link);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  cursor: pointer;
+}
+
 .bearming-archive-select {
   position: relative;
-  flex: 1 1 15rem;
-  min-width: 11rem;
-  max-width: 20rem;
+  width: 100%;
+  max-width: 16rem;
 }
 
 .bearming-archive-select select {
