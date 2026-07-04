@@ -62,5 +62,39 @@
       });
     })();
   </script>
+  <script>
+    (function () {
+      var copyIcon = '<svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+      var checkIcon = '<svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>';
+
+      document.querySelectorAll("main pre").forEach(function (pre) {
+        var code = pre.querySelector("code");
+        if (!code) return;
+
+        var wrapper = document.createElement("div");
+        wrapper.className = "highlight";
+        pre.parentNode.insertBefore(wrapper, pre);
+        wrapper.appendChild(pre);
+
+        var button = document.createElement("button");
+        button.type = "button";
+        button.className = "copy-code-button";
+        button.setAttribute("aria-label", "Copiar código");
+        button.innerHTML = copyIcon + checkIcon;
+        wrapper.appendChild(button);
+
+        button.addEventListener("click", function () {
+          navigator.clipboard.writeText(code.innerText).then(function () {
+            button.classList.add("copied");
+            button.setAttribute("aria-label", "Código copiado!");
+            setTimeout(function () {
+              button.classList.remove("copied");
+              button.setAttribute("aria-label", "Copiar código");
+            }, 2000);
+          });
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

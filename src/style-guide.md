@@ -41,6 +41,10 @@ function ola(nome) {
 }
 ```
 
+## Divisor curvo
+
+<span class="curve"></span>
+
 ## Tabela
 
 | Coluna A | Coluna B | Coluna C |
