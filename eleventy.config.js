@@ -17,6 +17,13 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/css");
   eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/posts/**/*.{png,jpg,jpeg,gif,webp,svg}");
+  // This bundle's permalink is under /notas/ (tagged "notas"), which diverges from its
+  // src/posts/ source path, so its image needs an explicit passthrough remap to match.
+  eleventyConfig.addPassthroughCopy({
+    "src/posts/como-desativar-o-compartilhamento-de-dados-para-ia-no-linkedin/image-6.webp":
+      "notas/como-desativar-o-compartilhamento-de-dados-para-ia-no-linkedin/image-6.webp",
+  });
 
   return {
     pathPrefix: PATH_PREFIX,
