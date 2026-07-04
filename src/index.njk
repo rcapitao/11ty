@@ -7,8 +7,8 @@ title: Início
 <ul class="blog-posts">
   {%- for post in collections.posts %}
   <li>
+    <span>{{ post.date | shortDate }}</span>
     <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-    <span>{{ post.date | readableDate }}</span>
   </li>
   {%- endfor %}
 </ul>

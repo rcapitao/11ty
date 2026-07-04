@@ -337,14 +337,12 @@ header nav a {
 .blog-posts li {
   display: flex;
   align-items: baseline;
-}
-
-.blog-posts li a {
-  margin-inline-end: auto;
+  gap: 1rem;
 }
 
 .blog-posts li span {
-  flex: 0 0 7.6rem;
+  flex: 0 0 6.5rem;
+  font-family: var(--font-mono);
   font-size: var(--font-small);
   color: var(--muted);
   white-space: nowrap;
