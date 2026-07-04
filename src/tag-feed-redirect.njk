@@ -1,0 +1,20 @@
+---
+pagination:
+  data: collections.tagList
+  size: 1
+  alias: tag
+permalink: "/tags/{{ tag }}/feed/"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url=/tags/{{ tag }}/feed.xml">
+  <link rel="canonical" href="/tags/{{ tag }}/feed.xml">
+  <title>Redirecionando…</title>
+</head>
+<body>
+  <p>Redirecionando para <a href="/tags/{{ tag }}/feed.xml">/tags/{{ tag }}/feed.xml</a>…</p>
+</body>
+</html>

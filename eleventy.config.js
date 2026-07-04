@@ -1,7 +1,11 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 
+const PATH_PREFIX = "/11ty/";
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginRss);
+
+  eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
   eleventyConfig.addPassthroughCopy("src/css");
 
@@ -106,7 +110,7 @@ module.exports = function (eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/11ty/",
+    pathPrefix: PATH_PREFIX,
     dir: {
       input: "src",
       output: "_site",

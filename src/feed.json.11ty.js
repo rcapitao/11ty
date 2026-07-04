@@ -1,5 +1,3 @@
-const PATH_PREFIX = "/11ty";
-
 module.exports = class {
   data() {
     return {
@@ -8,8 +6,8 @@ module.exports = class {
     };
   }
 
-  render({ collections, metadata }) {
-    const siteUrl = metadata.url + PATH_PREFIX;
+  render({ collections, metadata, pathPrefix }) {
+    const siteUrl = metadata.url + pathPrefix.replace(/\/$/, "");
 
     const feed = {
       version: "https://jsonfeed.org/version/1.1",
