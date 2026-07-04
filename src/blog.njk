@@ -7,11 +7,6 @@ permalink: /blog/
 <h1>Blog</h1>
 
 <div class="bearming-archive-controls">
-  <div class="archive-type-filter" role="group" aria-label="Filtrar por tipo">
-    <button type="button" class="archive-type-pill is-active" data-type="all" onclick="setArchiveType('all', this)">Todos ({{ collections.posts.length }})</button>
-    <button type="button" class="archive-type-pill" data-type="posts" onclick="setArchiveType('posts', this)">#posts ({{ collections.blogPosts.length }})</button>
-    <button type="button" class="archive-type-pill" data-type="notas" onclick="setArchiveType('notas', this)">#notas ({{ collections.notasPosts.length }})</button>
-  </div>
   <div class="bearming-archive-select">
     <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
       <option value="all">Todos os anos ({{ collections.posts.length }})</option>
@@ -20,6 +15,14 @@ permalink: /blog/
       {%- endfor %}
     </select>
   </div>
+  <div class="archive-type-filter" role="group" aria-label="Filtrar por tipo">
+    <button type="button" class="archive-type-pill" data-type="posts" onclick="toggleArchiveType('posts', this)">#posts</button>
+    <button type="button" class="archive-type-pill" data-type="notas" onclick="toggleArchiveType('notas', this)">#notas</button>
+  </div>
+  <p class="archive-type-status" hidden>
+    Filtrando por <strong class="archive-type-status-label"></strong> ·
+    <button type="button" class="archive-type-clear" onclick="clearArchiveType()">limpar filtro</button>
+  </p>
 </div>
 
 {%- for group in groups %}
@@ -67,11 +70,37 @@ permalink: /blog/
     });
   }
 
-  function setArchiveType(type, button) {
-    archiveType = type;
+  function updateArchiveTypeStatus() {
+    var statusEl = document.querySelector(".archive-type-status");
+    var labelEl = document.querySelector(".archive-type-status-label");
+    if (archiveType === "all") {
+      statusEl.hidden = true;
+    } else {
+      labelEl.textContent = "#" + archiveType;
+      statusEl.hidden = false;
+    }
+  }
+
+  function toggleArchiveType(type, button) {
+    if (archiveType === type) {
+      archiveType = "all";
+      button.classList.remove("is-active");
+    } else {
+      archiveType = type;
+      document.querySelectorAll(".archive-type-pill").forEach(function (el) {
+        el.classList.toggle("is-active", el === button);
+      });
+    }
+    updateArchiveTypeStatus();
+    applyArchiveFilters();
+  }
+
+  function clearArchiveType() {
+    archiveType = "all";
     document.querySelectorAll(".archive-type-pill").forEach(function (el) {
-      el.classList.toggle("is-active", el === button);
+      el.classList.remove("is-active");
     });
+    updateArchiveTypeStatus();
     applyArchiveFilters();
   }
 
