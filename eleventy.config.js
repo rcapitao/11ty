@@ -16,6 +16,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
   eleventyConfig.addPassthroughCopy("src/css");
+  eleventyConfig.addPassthroughCopy("src/img");
 
   return {
     pathPrefix: PATH_PREFIX,
