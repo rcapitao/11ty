@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/css");
 
+  eleventyConfig.addFilter("limit", (array, n) => array.slice(0, n));
+
   eleventyConfig.addFilter("readableDate", (dateObj) => {
     return new Date(dateObj).toLocaleDateString("pt-BR", {
       day: "2-digit",
