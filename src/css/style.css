@@ -373,6 +373,38 @@ header nav a {
   margin-block: var(--space-block) 0.9rem;
 }
 
+.archive-type-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.archive-type-pill {
+  display: inline-block;
+  padding-block: 0.35em;
+  padding-inline: 0.9em;
+  font: inherit;
+  letter-spacing: inherit;
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  cursor: pointer;
+}
+
+.archive-type-pill.is-active {
+  color: var(--bg);
+  background: var(--link);
+  border-color: var(--link);
+}
+
+.archive-type-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .bearming-archive-select {
   position: relative;
   flex: 1 1 15rem;
