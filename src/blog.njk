@@ -1,15 +1,15 @@
 ---
 layout: base.njk
-title: Notas
-permalink: /notas/
+title: Blog
+permalink: /blog/
 ---
-{%- set groups = collections.notasPosts | groupPostsByYearMonth %}
-<h1>Notas</h1>
+{%- set groups = collections.blogPosts | groupPostsByYearMonth %}
+<h1>Blog</h1>
 
 <div class="bearming-archive-controls">
   <div class="bearming-archive-select">
     <select onchange="if (this.value) location.hash = this.value" aria-label="Selecionar ano">
-      <option value="">Todos os anos ({{ collections.notasPosts.length }})</option>
+      <option value="">Todos os anos ({{ collections.blogPosts.length }})</option>
       {%- for group in groups %}
       <option value="#ano-{{ group.id }}">{{ group.year }} ({{ group.count }})</option>
       {%- endfor %}
