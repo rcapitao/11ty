@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Escolher as pessoas certas"
 date: 2025-12-27
 permalink: /notas/escolher-as-pessoas-certas/

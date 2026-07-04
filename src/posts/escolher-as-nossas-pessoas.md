@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Escolher as nossas pessoas"
 date: 2026-04-10
 permalink: /notas/escolher-as-nossas-pessoas/

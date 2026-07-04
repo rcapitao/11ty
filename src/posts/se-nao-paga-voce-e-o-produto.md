@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Se não paga você é o produto"
 date: 2026-04-10
 permalink: /notas/se-nao-paga-voce-e-o-produto/

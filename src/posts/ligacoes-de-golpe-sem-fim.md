@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Ligações de golpe sem fim"
 date: 2025-12-04
 permalink: /notas/ligacoes-de-golpe-sem-fim/

@@ -1,5 +1,5 @@
 ---
-layout: notas.njk
+layout: nota.njk
 title: "Parei de usar o X"
 date: 2026-05-02
 permalink: /notas/parei-de-usar-o-x/
