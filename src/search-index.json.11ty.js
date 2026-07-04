@@ -1,3 +1,10 @@
+function stripHtml(html) {
+  return html
+    .replace(/<[^>]*>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 module.exports = class {
   data() {
     return {
@@ -7,11 +14,14 @@ module.exports = class {
   }
 
   render({ collections }) {
-    const items = collections.posts.map((post) => ({
-      title: post.data.title,
-      url: post.url,
-      date: post.date,
-    }));
+    const items = collections.all
+      .filter((item) => item.data.title && item.url && !item.data.pagination)
+      .map((item) => ({
+        title: item.data.title,
+        url: item.url,
+        date: item.date,
+        content: stripHtml(item.templateContent || ""),
+      }));
 
     return JSON.stringify(items);
   }

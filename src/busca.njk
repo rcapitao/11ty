@@ -37,7 +37,8 @@ permalink: /busca/
       }
 
       var matches = searchIndex.filter(function (item) {
-        return item.title.toLowerCase().indexOf(query) !== -1;
+        if (item.title.toLowerCase().indexOf(query) !== -1) return true;
+        return item.content && item.content.toLowerCase().indexOf(query) !== -1;
       });
 
       emptyEl.hidden = matches.length !== 0;
