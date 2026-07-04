@@ -1,8 +1,8 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
-const utilsPlugin = require("./plugins/utils.js");
-const datesPlugin = require("./plugins/dates.js");
-const archivePlugin = require("./plugins/archive.js");
-const collectionsPlugin = require("./plugins/collections.js");
+const utilsPlugin = require("./src/plugins/utils.js");
+const datesPlugin = require("./src/plugins/dates.js");
+const archivePlugin = require("./src/plugins/archive.js");
+const collectionsPlugin = require("./src/plugins/collections.js");
 
 const PATH_PREFIX = "/11ty/";
 

@@ -1,0 +1,66 @@
+---
+layout: base.njk
+title: Busca
+permalink: /busca/
+---
+<h1>Busca</h1>
+
+<div class="search-box">
+  <input type="search" id="search-input" placeholder="Buscar posts..." aria-label="Buscar posts">
+</div>
+
+<ul class="blog-posts" id="search-results"></ul>
+<p class="search-empty" id="search-empty" hidden>Nenhum post encontrado.</p>
+
+<script>
+  (function () {
+    var pathPrefix = "{{ pathPrefix }}".replace(/\/$/, "");
+    var searchIndex = [];
+
+    fetch(pathPrefix + "/search-index.json")
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        searchIndex = data;
+      });
+
+    var input = document.getElementById("search-input");
+    var resultsEl = document.getElementById("search-results");
+    var emptyEl = document.getElementById("search-empty");
+
+    input.addEventListener("input", function (e) {
+      var query = e.target.value.trim().toLowerCase();
+      resultsEl.innerHTML = "";
+
+      if (!query) {
+        emptyEl.hidden = true;
+        return;
+      }
+
+      var matches = searchIndex.filter(function (item) {
+        return item.title.toLowerCase().indexOf(query) !== -1;
+      });
+
+      emptyEl.hidden = matches.length !== 0;
+
+      matches.forEach(function (item) {
+        var date = new Date(item.date);
+        var day = String(date.getDate()).padStart(2, "0");
+        var month = String(date.getMonth() + 1).padStart(2, "0");
+        var year = date.getFullYear();
+
+        var li = document.createElement("li");
+
+        var span = document.createElement("span");
+        span.textContent = day + "/" + month + "/" + year;
+
+        var a = document.createElement("a");
+        a.href = pathPrefix + item.url;
+        a.textContent = item.title;
+
+        li.appendChild(span);
+        li.appendChild(a);
+        resultsEl.appendChild(li);
+      });
+    });
+  })();
+</script>
