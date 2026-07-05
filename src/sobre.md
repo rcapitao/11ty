@@ -3,6 +3,9 @@ layout: base.njk
 title: Sobre
 date: 2026-07-05
 permalink: /sobre/
+navigationConfig:
+  key: Sobre
+  order: 5
 meta_description: "Advogado | Privacidade e Proteção de Dados, CIPM | DPO | ISO"
 meta_image: ""
 ---

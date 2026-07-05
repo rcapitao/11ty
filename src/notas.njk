@@ -2,6 +2,9 @@
 layout: base.njk
 title: Notas
 permalink: "/notas/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+navigationConfig:
+  key: Notas
+  order: 3
 pagination:
   data: collections.notas
   size: 25

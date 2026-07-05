@@ -2,6 +2,9 @@
 layout: base.njk
 title: Blog
 permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+navigationConfig:
+  key: Blog
+  order: 2
 pagination:
   data: collections.posts
   size: 25
