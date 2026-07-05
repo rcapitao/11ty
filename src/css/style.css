@@ -807,3 +807,34 @@ span.curve {
   display: block;
   color: var(--link);
 }
+
+/* Reply via email | robertbirming.com */
+.reply-email {
+  margin-block: var(--space-block);
+}
+
+.reply-email a {
+  display: inline-block;
+  padding-block: 0.4em;
+  padding-inline: 1em;
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--link);
+  text-decoration: none;
+  background: color-mix(in srgb, var(--link) 6%, var(--bg));
+  border: 1px solid color-mix(in srgb, var(--link) 18%, var(--bg));
+  border-radius: var(--radius);
+}
+
+.reply-email a:focus-visible {
+  outline: none;
+  border-color: color-mix(in srgb, var(--link) 45%, var(--surface));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 18%, transparent);
+}
+
+@media (hover: hover) {
+  .reply-email a:hover {
+    background: color-mix(in srgb, var(--link) 10%, var(--bg));
+    border-color: color-mix(in srgb, var(--link) 28%, var(--bg));
+  }
+}

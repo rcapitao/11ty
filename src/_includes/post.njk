@@ -7,3 +7,7 @@ bodyClass: post
   <p><time datetime="{{ date | htmlDateString }}">{{ date | shortDate }}</time></p>
   {{ content | safe }}
 </article>
+
+<div class="reply-email">
+  <a href="https://letterbird.co/rcapitao?subject=Re:%20{{ title | urlencode }}" target="_blank" rel="noopener">Comente por e-mail</a>
+</div>
