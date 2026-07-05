@@ -152,26 +152,26 @@ A primeira linha define o cabeçalho, a segunda linha (só com `---`) separa o c
 
 ## Imagem
 
-![Guia de estilo](/img/style-guide.png)
+![Guia de estilo](/assets/img/style-guide.png)
 
 Sintaxe padrão de imagem do Markdown: `!` seguido do texto alternativo entre colchetes e do caminho do arquivo entre parênteses. Por padrão a imagem ocupa a largura total do texto. Para imagens de um post específico (como as importadas com bundle), use o caminho relativo ao arquivo, ex. `image.webp`:
 
 ```md
-![Guia de estilo](/img/style-guide.png)
+![Guia de estilo](/assets/img/style-guide.png)
 ```
 
 ### Diminuir o tamanho da imagem
 
 Para exibir a imagem menor que a largura total, troque o Markdown pela tag HTML `<img>` e adicione a classe `img-small` ou `img-medium`:
 
-<img src="/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
+<img src="/assets/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
 
-<img src="/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
+<img src="/assets/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
 
 ```html
-<img src="/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
+<img src="/assets/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
 
-<img src="/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
+<img src="/assets/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
 ```
 
 ## Foto estilo Polaroid
@@ -179,7 +179,7 @@ Para exibir a imagem menor que a largura total, troque o Markdown pela tag HTML 
 Pensado para a foto da página Sobre: envolve a imagem numa moldura branca levemente rotacionada, com uma legenda em itálico embaixo, imitando uma foto polaroid.
 
 <div class="polaroid">
-  <img src="/img/style-guide.png" alt="Guia de estilo" class="img-medium">
+  <img src="/assets/img/style-guide.png" alt="Guia de estilo" class="img-medium">
   <em>Legenda da foto</em>
 </div>
 
@@ -187,7 +187,7 @@ Use um `<div class="polaroid">` envolvendo a `<img>` (pode combinar com `img-sma
 
 ```html
 <div class="polaroid">
-  <img src="/img/foto.jpg" alt="Descrição da foto" class="img-medium">
+  <img src="/assets/img/foto.jpg" alt="Descrição da foto" class="img-medium">
   <em>Legenda da foto</em>
 </div>
 ```
