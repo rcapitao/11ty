@@ -4,7 +4,7 @@ title: Ferramentas e Apps que eu uso
 date: 2026-03-26
 permalink: /uses/
 meta_description: "Curioso sobre o que outras pessoas usam? Eu também. Aqui compartilho os dispositivos, aplicativos e serviços que escolho usar no meu dia a dia."
-meta_image: "https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/ferramentas-e-apps-que-eu-uso.webp"
+meta_image: ""
 ---
 # Ferramentas e Apps que eu uso
 
