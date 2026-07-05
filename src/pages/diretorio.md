@@ -8,7 +8,7 @@ navigationConfig:
   order: 7
   icon: folder-tree
 meta_description: "Procura algo específico? O Diretório reúne todos os conteúdos do meu blog em um só lugar, facilitando sua navegação."
-meta_image: "https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/diretorio.webp"
+meta_image: ""
 ---
 # Diretório
 
