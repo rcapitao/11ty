@@ -171,6 +171,24 @@ Para exibir a imagem menor que a largura total, troque o Markdown pela tag HTML 
 <img src="/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
 ```
 
+## Foto estilo Polaroid
+
+Pensado para a foto da página Sobre: envolve a imagem numa moldura branca levemente rotacionada, com uma legenda em itálico embaixo, imitando uma foto polaroid.
+
+<div class="polaroid">
+  <img src="/img/style-guide.png" alt="Guia de estilo" class="img-medium">
+  <em>Legenda da foto</em>
+</div>
+
+Use um `<div class="polaroid">` envolvendo a `<img>` (pode combinar com `img-small` ou `img-medium` para controlar o tamanho) e um `<em>` com a legenda:
+
+```html
+<div class="polaroid">
+  <img src="/img/foto.jpg" alt="Descrição da foto" class="img-medium">
+  <em>Legenda da foto</em>
+</div>
+```
+
 ## Linha horizontal
 
 Acima desta linha:
