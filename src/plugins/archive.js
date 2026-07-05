@@ -48,4 +48,16 @@ module.exports = function (eleventyConfig) {
     }
     return [...tags].sort((a, b) => a.localeCompare(b, "pt-BR"));
   });
+
+  eleventyConfig.addFilter("tagsWithCounts", (posts) => {
+    const counts = new Map();
+    for (const post of posts) {
+      for (const tag of post.data.tags || []) {
+        counts.set(tag, (counts.get(tag) || 0) + 1);
+      }
+    }
+    return [...counts.entries()]
+      .sort((a, b) => a[0].localeCompare(b[0], "pt-BR"))
+      .map(([tag, count]) => ({ tag, count }));
+  });
 };
