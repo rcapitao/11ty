@@ -7,14 +7,6 @@ permalink: /blog/
 <h1>Blog</h1>
 
 <div class="bearming-archive-controls">
-  <div class="bearming-archive-select">
-    <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
-      <option value="all">Todos os anos ({{ collections.posts.length }})</option>
-      {%- for group in groups %}
-      <option value="{{ group.year }}">{{ group.year }} ({{ group.count }})</option>
-      {%- endfor %}
-    </select>
-  </div>
   <div class="archive-type-filter" role="group" aria-label="Filtrar por tags">
     {%- for tag in collections.tagList %}
     {%- if tag != "notas" %}
@@ -26,6 +18,14 @@ permalink: /blog/
     Filtrando por <strong class="archive-type-status-label"></strong> ·
     <button type="button" class="archive-type-clear" onclick="clearArchiveTags()">limpar filtro</button>
   </p>
+  <div class="bearming-archive-select">
+    <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
+      <option value="all">Todos os anos ({{ collections.posts.length }})</option>
+      {%- for group in groups %}
+      <option value="{{ group.year }}">{{ group.year }} ({{ group.count }})</option>
+      {%- endfor %}
+    </select>
+  </div>
 </div>
 
 {%- for group in groups %}
