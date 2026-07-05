@@ -11,22 +11,19 @@ pagination:
 <h1>Blog</h1>
 
 {%- for group in groups %}
-<section class="archive-year" data-year="{{ group.year }}">
-  <h2>{{ group.year }} <span class="bearming-archive-count">({{ group.count }} post{{ "s" if group.count != 1 }})</span></h2>
-  {%- for month in group.months %}
-  <div class="archive-month-group">
-    <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
-    <ul class="blog-posts">
-      {%- for post in month.posts %}
-      <li>
-        <span>{{ post.date | shortDate }}</span>
-        <a href="{{ post.url }}">{{ post.data.title }}</a>
-      </li>
-      {%- endfor %}
-    </ul>
-  </div>
-  {%- endfor %}
-</section>
+{%- for month in group.months %}
+<div class="archive-month-group">
+  <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
+  <ul class="blog-posts">
+    {%- for post in month.posts %}
+    <li>
+      <span>{{ post.date | shortDate }}</span>
+      <a href="{{ post.url }}">{{ post.data.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+{%- endfor %}
 {%- endfor %}
 
 {% include "pagination-nav.njk" %}

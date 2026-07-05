@@ -16,7 +16,7 @@ permalink: /busca/
   <div class="search-filter-group">
     <p class="search-filter-label">Ano</p>
     <div class="search-filter-pills" role="group" aria-label="Filtrar por ano">
-      <button type="button" class="search-pill search-year-pill is-active" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.posts.length }})</button>
+      <button type="button" class="search-pill search-year-pill" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.posts.length }})</button>
       {%- for group in yearGroups %}
       <button type="button" class="search-pill search-year-pill" data-year="{{ group.year }}" onclick="setSearchYear('{{ group.year }}', this)">{{ group.year }} ({{ group.count }})</button>
       {%- endfor %}
@@ -44,7 +44,7 @@ permalink: /busca/
 
     var state = {
       query: "",
-      year: "all",
+      year: null,
       tags: new Set(),
     };
 
@@ -63,8 +63,8 @@ permalink: /busca/
 
     function render() {
       var query = state.query;
-      var hasFilter = query !== "" || state.year !== "all" || state.tags.size > 0;
-      var showTagBadges = state.tags.size > 2;
+      var hasFilter = query !== "" || state.year !== null || state.tags.size > 0;
+      var showTagBadges = state.tags.size >= 2;
 
       var matches = hasFilter ? searchIndex.filter(function (item) {
         if (query) {
@@ -72,7 +72,7 @@ permalink: /busca/
           var inContent = item.content && item.content.toLowerCase().indexOf(query) !== -1;
           if (!inTitle && !inContent) return false;
         }
-        if (state.year !== "all") {
+        if (state.year && state.year !== "all") {
           var itemYear = new Date(item.date).getFullYear();
           if (String(itemYear) !== state.year) return false;
         }
@@ -140,7 +140,7 @@ permalink: /busca/
     });
 
     window.setSearchYear = function (year) {
-      state.year = state.year === year ? "all" : year;
+      state.year = state.year === year ? null : year;
       document.querySelectorAll(".search-year-pill").forEach(function (el) {
         el.classList.toggle("is-active", el.dataset.year === state.year);
       });
