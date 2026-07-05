@@ -3,6 +3,7 @@ const utilsPlugin = require("./src/plugins/utils.js");
 const datesPlugin = require("./src/plugins/dates.js");
 const archivePlugin = require("./src/plugins/archive.js");
 const collectionsPlugin = require("./src/plugins/collections.js");
+const lastModifiedPlugin = require("./src/plugins/lastModified.js");
 
 const PATH_PREFIX = "/rcapitao.com/";
 
@@ -12,6 +13,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(datesPlugin);
   eleventyConfig.addPlugin(archivePlugin);
   eleventyConfig.addPlugin(collectionsPlugin);
+  eleventyConfig.addPlugin(lastModifiedPlugin);
 
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
