@@ -14,12 +14,13 @@ module.exports = class {
   }
 
   render({ collections }) {
-    const items = collections.all
-      .filter((item) => item.data.title && item.url && !item.data.pagination)
+    const items = collections.posts
+      .filter((item) => item.data.title && item.url)
       .map((item) => ({
         title: item.data.title,
         url: item.url,
         date: item.date,
+        tags: item.data.tags || [],
         content: stripHtml(item.templateContent || ""),
       }));
 

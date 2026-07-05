@@ -6,28 +6,6 @@ permalink: /blog/
 {%- set groups = collections.posts | groupPostsByYearMonth %}
 <h1>Blog</h1>
 
-<div class="bearming-archive-controls">
-  <div class="archive-type-filter" role="group" aria-label="Filtrar por tags">
-    {%- for tag in collections.tagList %}
-    {%- if tag != "notas" %}
-    <button type="button" class="archive-type-pill" data-tag="{{ tag }}" onclick="toggleArchiveTag('{{ tag }}', this)">#{{ tag }}</button>
-    {%- endif %}
-    {%- endfor %}
-  </div>
-  <p class="archive-type-status" hidden>
-    Filtrando por <strong class="archive-type-status-label"></strong> ·
-    <button type="button" class="archive-type-clear" onclick="clearArchiveTags()">limpar filtro</button>
-  </p>
-  <div class="bearming-archive-select">
-    <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
-      <option value="all">Todos os anos ({{ collections.posts.length }})</option>
-      {%- for group in groups %}
-      <option value="{{ group.year }}">{{ group.year }} ({{ group.count }})</option>
-      {%- endfor %}
-    </select>
-  </div>
-</div>
-
 {%- for group in groups %}
 <section class="archive-year" data-year="{{ group.year }}">
   <h2>{{ group.year }} <span class="bearming-archive-count">({{ group.count }} post{{ "s" if group.count != 1 }})</span></h2>
@@ -36,7 +14,7 @@ permalink: /blog/
     <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
     <ul class="blog-posts">
       {%- for post in month.posts %}
-      <li data-tags="{{ (post.data.tags or []) | join(' ') }}">
+      <li>
         <span>{{ post.date | shortDate }}</span>
         <a href="{{ post.url }}">{{ post.data.title }}</a>
       </li>
@@ -46,68 +24,3 @@ permalink: /blog/
   {%- endfor %}
 </section>
 {%- endfor %}
-
-<script>
-  var archiveTags = new Set();
-  var archiveYear = "all";
-
-  function applyArchiveFilters() {
-    document.querySelectorAll(".archive-year").forEach(function (year) {
-      var yearMatches = archiveYear === "all" || year.dataset.year === archiveYear;
-      if (!yearMatches) {
-        year.hidden = true;
-        return;
-      }
-      var yearHasVisible = false;
-      year.querySelectorAll(".archive-month-group").forEach(function (group) {
-        var monthHasVisible = false;
-        group.querySelectorAll("li[data-tags]").forEach(function (li) {
-          var tags = li.dataset.tags.split(" ").filter(Boolean);
-          var show = archiveTags.size === 0 || tags.some(function (tag) { return archiveTags.has(tag); });
-          li.hidden = !show;
-          if (show) monthHasVisible = true;
-        });
-        group.hidden = !monthHasVisible;
-        if (monthHasVisible) yearHasVisible = true;
-      });
-      year.hidden = !yearHasVisible;
-    });
-  }
-
-  function updateArchiveTagStatus() {
-    var statusEl = document.querySelector(".archive-type-status");
-    var labelEl = document.querySelector(".archive-type-status-label");
-    if (archiveTags.size === 0) {
-      statusEl.hidden = true;
-    } else {
-      labelEl.textContent = Array.from(archiveTags).map(function (tag) { return "#" + tag; }).join(", ");
-      statusEl.hidden = false;
-    }
-  }
-
-  function toggleArchiveTag(tag, button) {
-    if (archiveTags.has(tag)) {
-      archiveTags.delete(tag);
-      button.classList.remove("is-active");
-    } else {
-      archiveTags.add(tag);
-      button.classList.add("is-active");
-    }
-    updateArchiveTagStatus();
-    applyArchiveFilters();
-  }
-
-  function clearArchiveTags() {
-    archiveTags.clear();
-    document.querySelectorAll(".archive-type-pill").forEach(function (el) {
-      el.classList.remove("is-active");
-    });
-    updateArchiveTagStatus();
-    applyArchiveFilters();
-  }
-
-  function setArchiveYear(year) {
-    archiveYear = year;
-    applyArchiveFilters();
-  }
-</script>

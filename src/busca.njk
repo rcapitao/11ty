@@ -3,12 +3,37 @@ layout: base.njk
 title: Busca
 permalink: /busca/
 ---
+{%- set yearGroups = collections.posts | groupPostsByYearMonth %}
+{%- set tagCounts = collections.posts | tagsWithCounts %}
 <h1>Busca</h1>
 
-<div class="search-box">
-  <input type="search" id="search-input" placeholder="Buscar posts..." aria-label="Buscar posts">
+<div class="search-panel">
+  <div class="search-box">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    <input type="search" id="search-input" placeholder="Buscar posts e notas" aria-label="Buscar posts e notas">
+  </div>
+
+  <div class="search-filter-group">
+    <p class="search-filter-label">Ano</p>
+    <div class="search-filter-pills" role="group" aria-label="Filtrar por ano">
+      <button type="button" class="search-pill search-year-pill is-active" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.posts.length }})</button>
+      {%- for group in yearGroups %}
+      <button type="button" class="search-pill search-year-pill" data-year="{{ group.year }}" onclick="setSearchYear('{{ group.year }}', this)">{{ group.year }} ({{ group.count }})</button>
+      {%- endfor %}
+    </div>
+  </div>
+
+  <div class="search-filter-group">
+    <p class="search-filter-label">Tags</p>
+    <div class="search-filter-pills" role="group" aria-label="Filtrar por tag">
+      {%- for item in tagCounts %}
+      <button type="button" class="search-pill" data-tag="{{ item.tag }}" onclick="toggleSearchTag('{{ item.tag }}', this)">#{{ item.tag }} ({{ item.count }})</button>
+      {%- endfor %}
+    </div>
+  </div>
 </div>
 
+<p class="search-results-meta" id="search-meta"></p>
 <ul class="blog-posts" id="search-results"></ul>
 <p class="search-empty" id="search-empty" hidden>Nenhum post encontrado.</p>
 
@@ -17,42 +42,51 @@ permalink: /busca/
     var pathPrefix = "{{ pathPrefix }}".replace(/\/$/, "");
     var searchIndex = [];
 
-    fetch(pathPrefix + "/search-index.json")
-      .then(function (response) { return response.json(); })
-      .then(function (data) {
-        searchIndex = data;
-      });
+    var state = {
+      query: "",
+      year: "all",
+      tags: new Set(),
+    };
 
     var input = document.getElementById("search-input");
     var resultsEl = document.getElementById("search-results");
     var emptyEl = document.getElementById("search-empty");
+    var metaEl = document.getElementById("search-meta");
 
-    input.addEventListener("input", function (e) {
-      var query = e.target.value.trim().toLowerCase();
-      resultsEl.innerHTML = "";
+    function formatDate(iso) {
+      var date = new Date(iso);
+      var day = String(date.getDate()).padStart(2, "0");
+      var month = String(date.getMonth() + 1).padStart(2, "0");
+      var year = date.getFullYear();
+      return day + "/" + month + "/" + year;
+    }
 
-      if (!query) {
-        emptyEl.hidden = true;
-        return;
-      }
+    function render() {
+      var query = state.query;
 
       var matches = searchIndex.filter(function (item) {
-        if (item.title.toLowerCase().indexOf(query) !== -1) return true;
-        return item.content && item.content.toLowerCase().indexOf(query) !== -1;
+        if (query) {
+          var inTitle = item.title.toLowerCase().indexOf(query) !== -1;
+          var inContent = item.content && item.content.toLowerCase().indexOf(query) !== -1;
+          if (!inTitle && !inContent) return false;
+        }
+        if (state.year !== "all") {
+          var itemYear = new Date(item.date).getFullYear();
+          if (String(itemYear) !== state.year) return false;
+        }
+        if (state.tags.size > 0) {
+          var tags = item.tags || [];
+          if (!tags.some(function (tag) { return state.tags.has(tag); })) return false;
+        }
+        return true;
       });
 
-      emptyEl.hidden = matches.length !== 0;
-
+      resultsEl.innerHTML = "";
       matches.forEach(function (item) {
-        var date = new Date(item.date);
-        var day = String(date.getDate()).padStart(2, "0");
-        var month = String(date.getMonth() + 1).padStart(2, "0");
-        var year = date.getFullYear();
-
         var li = document.createElement("li");
 
         var span = document.createElement("span");
-        span.textContent = day + "/" + month + "/" + year;
+        span.textContent = formatDate(item.date);
 
         var a = document.createElement("a");
         a.href = pathPrefix + item.url;
@@ -62,6 +96,41 @@ permalink: /busca/
         li.appendChild(a);
         resultsEl.appendChild(li);
       });
+
+      emptyEl.hidden = matches.length !== 0;
+      metaEl.hidden = matches.length === 0;
+      metaEl.textContent = matches.length + (matches.length === 1 ? " resultado" : " resultados");
+    }
+
+    fetch(pathPrefix + "/search-index.json")
+      .then(function (response) { return response.json(); })
+      .then(function (data) {
+        searchIndex = data;
+        render();
+      });
+
+    input.addEventListener("input", function (e) {
+      state.query = e.target.value.trim().toLowerCase();
+      render();
     });
+
+    window.setSearchYear = function (year) {
+      state.year = state.year === year ? "all" : year;
+      document.querySelectorAll(".search-year-pill").forEach(function (el) {
+        el.classList.toggle("is-active", el.dataset.year === state.year);
+      });
+      render();
+    };
+
+    window.toggleSearchTag = function (tag, button) {
+      if (state.tags.has(tag)) {
+        state.tags.delete(tag);
+        button.classList.remove("is-active");
+      } else {
+        state.tags.add(tag);
+        button.classList.add("is-active");
+      }
+      render();
+    };
   })();
 </script>
