@@ -646,7 +646,7 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
 .search-result-tags {
   margin-inline-start: auto;
   font-family: var(--font-mono);
-  font-size: var(--font-small);
+  font-size: calc(var(--font-size) * 0.75);
   color: var(--link);
   white-space: nowrap;
 }
@@ -658,7 +658,6 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   justify-content: center;
   gap: 0.6rem;
   margin-block: var(--space-block) 0;
-  padding-block-end: 1.2rem;
   font-size: var(--font-small);
 }
 
