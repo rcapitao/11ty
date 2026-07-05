@@ -1,7 +1,10 @@
 ---
 layout: base.njk
 title: Guia de estilo
+date: 2026-07-05
 permalink: /style-guide/
+meta_description: "Guia de estilo com os elementos de conteúdo do blog e como usá-los em posts, notas e páginas."
+meta_image: ""
 ---
 # Guia de estilo
 
