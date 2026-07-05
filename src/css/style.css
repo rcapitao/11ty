@@ -408,6 +408,30 @@ header nav a {
   margin-inline-end: 0;
 }
 
+/* Breadcrumb */
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-block-end: var(--space-block);
+  font-size: var(--font-small);
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+}
+
+.breadcrumb [aria-current="page"] {
+  color: var(--text);
+}
+
+.breadcrumb-sep {
+  color: var(--border);
+}
+
 /* Blog list: Default */
 .blog-posts {
   margin-block-end: var(--space-block);

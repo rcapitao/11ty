@@ -2,6 +2,9 @@
 layout: base.njk
 title: Busca
 permalink: /busca/
+navigationConfig:
+  key: Busca
+  order: 4
 ---
 {%- set yearGroups = collections.posts | groupPostsByYearMonth %}
 {%- set tagCounts = collections.posts | tagsWithCounts %}

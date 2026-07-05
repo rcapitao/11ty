@@ -30,11 +30,9 @@
     <a class="title" href="/"><h1>{{ metadata.title }}</h1></a>
     <nav>
       <p>
-        <a href="/">Início</a>
-        <a href="/blog/">Blog</a>
-        <a href="/notas/">Notas</a>
-        <a href="/busca/">Busca</a>
-        <a href="/sobre/">Sobre</a>
+        {%- for entry in collections.all | eleventyNavigation %}
+        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        {%- endfor %}
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"></line><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"></line><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"></line></svg>
           <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"></path></svg>
@@ -42,6 +40,17 @@
       </p>
     </nav>
   </header>
+  {%- if title and title != metadata.title and page.url != "/" %}
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Início</a>
+    {%- if eleventyNavigation and eleventyNavigation.parent %}
+    {%- for crumb in collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {allowMissing: true}) %}
+    <span class="breadcrumb-sep">/</span> <a href="{{ crumb.url }}">{{ crumb.title }}</a>
+    {%- endfor %}
+    {%- endif %}
+    <span class="breadcrumb-sep">/</span> <span aria-current="page">{{ title }}</span>
+  </nav>
+  {%- endif %}
   <main>
     {{ content | safe }}
   </main>

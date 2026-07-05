@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
+const pluginNavigation = require("@11ty/eleventy-navigation");
 const utilsPlugin = require("./src/plugins/utils.js");
 const datesPlugin = require("./src/plugins/dates.js");
 const archivePlugin = require("./src/plugins/archive.js");
@@ -14,6 +15,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(archivePlugin);
   eleventyConfig.addPlugin(collectionsPlugin);
   eleventyConfig.addPlugin(lastModifiedPlugin);
+  eleventyConfig.addPlugin(pluginNavigation);
 
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
