@@ -4,7 +4,7 @@ title: O que estou fazendo agora?
 date: 2026-03-27
 permalink: /agora/
 meta_description: "No que estou trabalhando, lendo e pensando agora. Uma página no espírito do movimento /now atualizada com regularidade."
-meta_image: "https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/o-que-estou-fazendo-agora.webp"
+meta_image: ""
 ---
 # O que estou fazendo agora?
 
