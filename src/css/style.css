@@ -169,6 +169,14 @@ video {
   border-radius: var(--radius);
 }
 
+img.img-small {
+  max-width: 200px;
+}
+
+img.img-medium {
+  max-width: 400px;
+}
+
 pre {
   padding-block: 1rem;
   padding-inline: 1.2rem;

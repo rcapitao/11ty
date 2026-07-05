@@ -149,12 +149,26 @@ A primeira linha define o cabeçalho, a segunda linha (só com `---`) separa o c
 
 ## Imagem
 
-![Favicon do blog](/img/favicon.png)
+![Guia de estilo](/img/style-guide.png)
 
-Sintaxe padrão de imagem do Markdown: `!` seguido do texto alternativo entre colchetes e do caminho do arquivo entre parênteses. Para imagens de um post específico (como as importadas com bundle), use o caminho relativo ao arquivo, ex. `image.webp`:
+Sintaxe padrão de imagem do Markdown: `!` seguido do texto alternativo entre colchetes e do caminho do arquivo entre parênteses. Por padrão a imagem ocupa a largura total do texto. Para imagens de um post específico (como as importadas com bundle), use o caminho relativo ao arquivo, ex. `image.webp`:
 
 ```md
-![Favicon do blog](/img/favicon.png)
+![Guia de estilo](/img/style-guide.png)
+```
+
+### Diminuir o tamanho da imagem
+
+Para exibir a imagem menor que a largura total, troque o Markdown pela tag HTML `<img>` e adicione a classe `img-small` ou `img-medium`:
+
+<img src="/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
+
+<img src="/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
+
+```html
+<img src="/img/style-guide.png" alt="Guia de estilo (pequena)" class="img-small">
+
+<img src="/img/style-guide.png" alt="Guia de estilo (média)" class="img-medium">
 ```
 
 ## Linha horizontal
