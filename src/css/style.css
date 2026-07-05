@@ -404,11 +404,11 @@ header nav a {
 
 .archive-type-pill {
   display: inline-block;
-  padding-block: 0.35em;
-  padding-inline: 0.9em;
+  padding-block: 0.25em;
+  padding-inline: 0.65em;
   font: inherit;
   letter-spacing: inherit;
-  font-size: var(--font-small);
+  font-size: calc(var(--font-size) * 0.75);
   font-weight: 500;
   color: var(--accent);
   background: var(--surface);
