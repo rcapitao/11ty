@@ -1,9 +1,13 @@
 ---
 layout: base.njk
 title: Notas
-permalink: /notas/
+permalink: "/notas/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+pagination:
+  data: collections.notas
+  size: 25
+  alias: pageNotas
 ---
-{%- set groups = collections.notas | groupPostsByYearMonth %}
+{%- set groups = pageNotas | groupPostsByYearMonth %}
 <h1>Notas</h1>
 
 {%- for group in groups %}
@@ -24,3 +28,5 @@ permalink: /notas/
   {%- endfor %}
 </section>
 {%- endfor %}
+
+{% include "pagination-nav.njk" %}

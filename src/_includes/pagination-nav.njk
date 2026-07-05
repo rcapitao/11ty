@@ -1,0 +1,17 @@
+{%- if pagination.pages.length > 1 %}
+<nav class="pagination-nav" aria-label="Paginação">
+  {%- if pagination.href.previous %}
+  <a href="{{ pagination.href.previous }}">&larr; Anterior</a>
+  {%- else %}
+  <span class="pagination-disabled">&larr; Anterior</span>
+  {%- endif %}
+  <span class="pagination-sep">|</span>
+  <span>Página {{ pagination.pageNumber + 1 }} de {{ pagination.pages.length }}</span>
+  <span class="pagination-sep">|</span>
+  {%- if pagination.href.next %}
+  <a href="{{ pagination.href.next }}">Próximo &rarr;</a>
+  {%- else %}
+  <span class="pagination-disabled">Próximo &rarr;</span>
+  {%- endif %}
+</nav>
+{%- endif %}
