@@ -1,9 +1,13 @@
 ---
 layout: base.njk
 title: Blog
-permalink: /blog/
+permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+pagination:
+  data: collections.posts
+  size: 25
+  alias: pagePosts
 ---
-{%- set groups = collections.posts | groupPostsByYearMonth %}
+{%- set groups = pagePosts | groupPostsByYearMonth %}
 <h1>Blog</h1>
 
 {%- for group in groups %}
@@ -24,3 +28,5 @@ permalink: /blog/
   {%- endfor %}
 </section>
 {%- endfor %}
+
+{% include "pagination-nav.njk" %}

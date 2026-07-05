@@ -657,6 +657,32 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   white-space: nowrap;
 }
 
+/* Pagination */
+.pagination-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-block: var(--space-block) 0;
+  padding-block-end: 1.2rem;
+  font-size: var(--font-small);
+  border-block-end: 1px solid var(--border);
+}
+
+.pagination-nav a {
+  color: var(--link);
+  font-weight: 500;
+}
+
+.pagination-sep {
+  color: var(--border);
+}
+
+.pagination-disabled {
+  color: var(--muted);
+  opacity: 0.5;
+}
+
 /* Theme toggle */
 .theme-toggle {
   display: inline-flex;
