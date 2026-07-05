@@ -4,15 +4,23 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.addCollection("notas", (collectionApi) => {
-    return collectionApi
-      .getFilteredByGlob("src/posts/**/*.md")
-      .filter((post) => post.data.tags && post.data.tags.includes("notas"))
-      .sort((a, b) => b.date - a.date);
+    return collectionApi.getFilteredByGlob("src/notas/**/*.md").sort((a, b) => b.date - a.date);
+  });
+
+  eleventyConfig.addCollection("content", (collectionApi) => {
+    return [
+      ...collectionApi.getFilteredByGlob("src/posts/**/*.md"),
+      ...collectionApi.getFilteredByGlob("src/notas/**/*.md"),
+    ].sort((a, b) => b.date - a.date);
   });
 
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tags = new Set();
-    collectionApi.getFilteredByGlob("src/posts/**/*.md").forEach((post) => {
+    const items = [
+      ...collectionApi.getFilteredByGlob("src/posts/**/*.md"),
+      ...collectionApi.getFilteredByGlob("src/notas/**/*.md"),
+    ];
+    items.forEach((post) => {
       for (const tag of post.data.tags || []) {
         tags.add(tag);
       }

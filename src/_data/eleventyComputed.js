@@ -1,6 +1,6 @@
 module.exports = {
   eleventyNavigation: (data) => {
-    // Top-level nav pages (Início, Blog, Notas, Busca, Sobre) set a static
+    // Top-level nav pages (Blog, Notas, Busca, Sobre) set a static
     // `navigationConfig` in their own front matter. Paginated templates only
     // register the entry once, on their first page.
     if (data.navigationConfig) {
@@ -9,11 +9,16 @@ module.exports = {
     }
 
     // Every post/nota gets a breadcrumb entry automatically, with no
-    // per-file front matter needed: any file under src/posts/ has a `tags`
-    // array, and the "notas" tag tells posts and notas apart.
-    if (Array.isArray(data.tags)) {
-      const isNota = data.tags.includes("notas");
-      return { key: data.title, parent: isNota ? "Notas" : "Blog" };
+    // per-file front matter needed: which folder the file lives in (src/posts/
+    // vs src/notas/) tells them apart.
+    const inputPath = data.page && data.page.inputPath;
+    if (typeof inputPath === "string") {
+      if (inputPath.includes("/src/notas/")) {
+        return { key: data.title, parent: "Notas" };
+      }
+      if (inputPath.includes("/src/posts/")) {
+        return { key: data.title, parent: "Blog" };
+      }
     }
 
     return undefined;

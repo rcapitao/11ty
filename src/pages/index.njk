@@ -1,15 +1,12 @@
 ---
 layout: base.njk
-title: Início
+title: Home
 permalink: /
-navigationConfig:
-  key: Início
-  order: 1
 ---
 <p>{{ metadata.description }}</p>
 
 <ul class="blog-posts">
-  {%- for post in collections.posts | limit(5) %}
+  {%- for post in collections.content | limit(5) %}
   <li>
     <span>{{ post.date | shortDate }}</span>
     <a href="{{ post.url }}">{{ post.data.title }}</a>

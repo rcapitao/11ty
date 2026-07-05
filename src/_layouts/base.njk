@@ -31,7 +31,7 @@
     <nav>
       <p>
         {%- for entry in collections.all | eleventyNavigation %}
-        <a href="{{ entry.url }}">{{ entry.title }}</a>
+        <a href="{{ entry.url }}">/{{ entry.title | lower }}</a>
         {%- endfor %}
         <button type="button" id="theme-toggle" class="theme-toggle" aria-label="Alternar tema claro/escuro">
           <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="4.2" y1="4.2" x2="5.6" y2="5.6"></line><line x1="18.4" y1="18.4" x2="19.8" y2="19.8"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.2" y1="19.8" x2="5.6" y2="18.4"></line><line x1="18.4" y1="5.6" x2="19.8" y2="4.2"></line></svg>
@@ -42,7 +42,7 @@
   </header>
   {%- if title and title != metadata.title and page.url != "/" %}
   <nav class="breadcrumb" aria-label="Breadcrumb">
-    <a href="/">Início</a>
+    <a href="/">Home</a>
     {%- if eleventyNavigation and eleventyNavigation.parent %}
     {%- for crumb in collections.all | eleventyNavigationBreadcrumb(eleventyNavigation.key, {allowMissing: true}) %}
     <span class="breadcrumb-sep">/</span> <a href="{{ crumb.url }}">{{ crumb.title }}</a>

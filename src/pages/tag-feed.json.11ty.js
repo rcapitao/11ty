@@ -13,7 +13,7 @@ module.exports = class {
 
   render({ collections, metadata, tag, pathPrefix }) {
     const siteUrl = metadata.url + pathPrefix.replace(/\/$/, "");
-    const posts = collections.posts.filter((post) => (post.data.tags || []).includes(tag));
+    const posts = collections.content.filter((post) => (post.data.tags || []).includes(tag));
 
     const feed = {
       version: "https://jsonfeed.org/version/1.1",
