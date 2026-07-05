@@ -838,3 +838,54 @@ span.curve {
     border-color: color-mix(in srgb, var(--link) 28%, var(--bg));
   }
 }
+
+/* Webring buttons | robertbirming.com */
+.webring {
+  margin-block-start: 1.5rem;
+  text-align: left;
+}
+
+.webring-link {
+  display: inline-block;
+  padding: 0.85em 1.2em;
+  font-weight: 500;
+  font-size: var(--font-small);
+  color: var(--link);
+  transition: background 0.15s, border-color 0.15s;
+  text-decoration: none;
+}
+
+.webring-pill {
+  border: 1px solid var(--border);
+  border-radius: 99px;
+}
+
+.webring-rounded {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+}
+
+.webring-dashed {
+  border: 2px dashed var(--border);
+  border-radius: 0;
+}
+
+.webring-ghost {
+  border: 1px solid transparent;
+  border-radius: 6px;
+  background: var(--surface);
+}
+
+@media (hover: hover) {
+  .webring-pill:hover,
+  .webring-rounded:hover,
+  .webring-dashed:hover {
+    text-decoration: none;
+    background: var(--surface);
+    border-color: var(--muted);
+  }
+
+  .webring-ghost:hover {
+    background: color-mix(in srgb, var(--text) 10%, var(--bg));
+  }
+}

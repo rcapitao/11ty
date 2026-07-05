@@ -45,6 +45,36 @@ function ola(nome) {
 
 <span class="curve"></span>
 
+## Botões de webring
+
+Existem quatro variantes de estilo para o botão de webring. Todas usam a classe `webring-link` junto com uma segunda classe que define a borda: `webring-pill`, `webring-rounded`, `webring-dashed` ou `webring-ghost`.
+
+<div class="webring">
+  <a class="webring-link webring-pill" href="#">← Webring → (pill)</a>
+</div>
+
+<div class="webring">
+  <a class="webring-link webring-rounded" href="#">← Webring → (rounded)</a>
+</div>
+
+<div class="webring">
+  <a class="webring-link webring-dashed" href="#">← Webring → (dashed)</a>
+</div>
+
+<div class="webring">
+  <a class="webring-link webring-ghost" href="#">← Webring → (ghost)</a>
+</div>
+
+Para usar em uma página, post ou nota, cole o HTML abaixo direto no arquivo (mesma lógica do divisor curvo): funciona em qualquer arquivo `.md` da pasta `src/posts/` ou em páginas soltas como esta. Escolha **uma** das quatro classes de borda — não é preciso repetir o bloco quatro vezes como acima, isso foi só para comparar os estilos.
+
+```html
+<div class="webring">
+  <a class="webring-link webring-pill" href="https://exemplo.com">← Webring →</a>
+</div>
+```
+
+Troque o `href` pelo link real do webring e o texto do link pelo que fizer sentido (ex.: nome do webring, ou "Anterior"/"Próximo" separados em dois links dentro do mesmo `<div class="webring">`).
+
 ## Tabela
 
 | Coluna A | Coluna B | Coluna C |
