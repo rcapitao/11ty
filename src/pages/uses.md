@@ -60,7 +60,7 @@ A lista abaixo reúne os dispositivos, aplicativos e serviços que utilizo no di
 
 - 🗄️ Armazenamento em nuvem: [iCloud](https://www.icloud.com/)
 - 🌐 Serviços web / Infraestrutura: [CloudFlare](https://www.cloudflare.com/)
-- 👨🏻‍💻 Hospedagem de sites: [Micro.Blog](https://micro.blog/)
+- 👨🏻‍💻 Hospedagem de sites: [Bearblog](https://bearblog.dev/)
 
 ### Segurança
 
