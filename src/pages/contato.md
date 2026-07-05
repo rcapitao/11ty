@@ -7,7 +7,7 @@ navigationConfig:
   key: Contato
   order: 6
 meta_description: "Tem alguma dúvida ou apenas quer entrar em contato? Envie-me um e-mail"
-meta_image: "https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/contato.webp"
+meta_image: ""
 ---
 # Contato
 
