@@ -374,12 +374,6 @@ header nav a {
   white-space: nowrap;
 }
 
-.blog-posts li[hidden],
-.archive-month-group[hidden],
-.archive-year[hidden] {
-  display: none;
-}
-
 /* Tag cloud */
 .tag-cloud {
   margin-block: 0.4rem var(--space-block);
@@ -666,7 +660,6 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   margin-block: var(--space-block) 0;
   padding-block-end: 1.2rem;
   font-size: var(--font-small);
-  border-block-end: 1px solid var(--border);
 }
 
 .pagination-nav a {
