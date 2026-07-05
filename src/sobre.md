@@ -8,7 +8,7 @@ meta_image: ""
 ---
 # Sobre
 
-<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {{ post_last_modified }} atrás.*  
+<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %} atrás.*  
 
 ## Sobre mim    
 
@@ -37,9 +37,9 @@ Se quiser trocar ideias ou discutir temas relacionados a privacidade, proteção
 
 ## Quer se conectar comigo?  
 
-<i class="fa-brands fa-square-linkedin"></i> [LinkedIn](tab:https://linkedin.com/in/rafaelcapitao/)  
-<i class="fa-brands fa-square-instagram"></i> [Instagram](tab:https://instagram.com/rafael.capitao/)  
-<i class="fa-brands fa-mastodon"></i> [Mastodon](tab:https://mastodon.social/@rcapitao)  
-<i class="fa-brands fa-square-bluesky"></i> [Bluesky](tab:https://bsky.app/profile/rcapitao.com)  
-<i class="fa-brands fa-square-threads"></i> [Threads](tab:https://threads.com/@rafael.capitao)  
-<i class="fa-brands fa-square-github"></i> [Github](tab:https://github.com/rcapitao)  
+<i class="fa-brands fa-square-linkedin"></i> <a href="https://linkedin.com/in/rafaelcapitao/" target="_blank" rel="noopener">LinkedIn</a>  
+<i class="fa-brands fa-square-instagram"></i> <a href="https://instagram.com/rafael.capitao/" target="_blank" rel="noopener">Instagram</a>  
+<i class="fa-brands fa-mastodon"></i> <a href="https://mastodon.social/@rcapitao" target="_blank" rel="noopener">Mastodon</a>  
+<i class="fa-brands fa-square-bluesky"></i> <a href="https://bsky.app/profile/rcapitao.com" target="_blank" rel="noopener">Bluesky</a>  
+<i class="fa-brands fa-square-threads"></i> <a href="https://threads.com/@rafael.capitao" target="_blank" rel="noopener">Threads</a>  
+<i class="fa-brands fa-square-github"></i> <a href="https://github.com/rcapitao" target="_blank" rel="noopener">Github</a>  
