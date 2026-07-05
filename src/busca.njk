@@ -63,8 +63,10 @@ permalink: /busca/
 
     function render() {
       var query = state.query;
+      var hasFilter = query !== "" || state.year !== "all" || state.tags.size > 0;
+      var showTagBadges = state.tags.size > 2;
 
-      var matches = searchIndex.filter(function (item) {
+      var matches = hasFilter ? searchIndex.filter(function (item) {
         if (query) {
           var inTitle = item.title.toLowerCase().indexOf(query) !== -1;
           var inContent = item.content && item.content.toLowerCase().indexOf(query) !== -1;
@@ -79,7 +81,7 @@ permalink: /busca/
           if (!tags.some(function (tag) { return state.tags.has(tag); })) return false;
         }
         return true;
-      });
+      }) : [];
 
       resultsEl.innerHTML = "";
       matches.forEach(function (item) {
@@ -94,13 +96,36 @@ permalink: /busca/
 
         li.appendChild(span);
         li.appendChild(a);
+
+        if (showTagBadges) {
+          var matchedTags = (item.tags || []).filter(function (tag) { return state.tags.has(tag); });
+          if (matchedTags.length) {
+            var tagSpan = document.createElement("span");
+            tagSpan.className = "search-result-tags";
+            tagSpan.textContent = matchedTags.map(function (tag) { return "#" + tag; }).join(" ");
+            li.appendChild(tagSpan);
+          }
+        }
+
         resultsEl.appendChild(li);
       });
 
-      emptyEl.hidden = matches.length !== 0;
-      metaEl.hidden = matches.length === 0;
-      metaEl.textContent = matches.length + (matches.length === 1 ? " resultado" : " resultados");
+      if (!hasFilter) {
+        emptyEl.hidden = false;
+        emptyEl.textContent = "Digite algo ou selecione um filtro acima para ver resultados.";
+        metaEl.hidden = true;
+      } else if (matches.length === 0) {
+        emptyEl.hidden = false;
+        emptyEl.textContent = "Nenhum post encontrado.";
+        metaEl.hidden = true;
+      } else {
+        emptyEl.hidden = true;
+        metaEl.hidden = false;
+        metaEl.textContent = matches.length + (matches.length === 1 ? " resultado" : " resultados");
+      }
     }
+
+    render();
 
     fetch(pathPrefix + "/search-index.json")
       .then(function (response) { return response.json(); })

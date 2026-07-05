@@ -649,6 +649,14 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
   color: var(--muted);
 }
 
+.search-result-tags {
+  margin-inline-start: auto;
+  font-family: var(--font-mono);
+  font-size: var(--font-small);
+  color: var(--link);
+  white-space: nowrap;
+}
+
 /* Theme toggle */
 .theme-toggle {
   display: inline-flex;

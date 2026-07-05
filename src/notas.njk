@@ -6,17 +6,6 @@ permalink: /notas/
 {%- set groups = collections.notas | groupPostsByYearMonth %}
 <h1>Notas</h1>
 
-<div class="bearming-archive-controls">
-  <div class="bearming-archive-select">
-    <select onchange="setArchiveYear(this.value)" aria-label="Selecionar ano">
-      <option value="all">Todos os anos ({{ collections.notas.length }})</option>
-      {%- for group in groups %}
-      <option value="{{ group.year }}">{{ group.year }} ({{ group.count }})</option>
-      {%- endfor %}
-    </select>
-  </div>
-</div>
-
 {%- for group in groups %}
 <section class="archive-year" data-year="{{ group.year }}">
   <h2>{{ group.year }} <span class="bearming-archive-count">({{ group.count }} nota{{ "s" if group.count != 1 }})</span></h2>
@@ -35,18 +24,3 @@ permalink: /notas/
   {%- endfor %}
 </section>
 {%- endfor %}
-
-<script>
-  var archiveYear = "all";
-
-  function applyArchiveFilters() {
-    document.querySelectorAll(".archive-year").forEach(function (year) {
-      year.hidden = archiveYear !== "all" && year.dataset.year !== archiveYear;
-    });
-  }
-
-  function setArchiveYear(year) {
-    archiveYear = year;
-    applyArchiveFilters();
-  }
-</script>
