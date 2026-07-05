@@ -4,7 +4,7 @@ title: Social
 date: 2025-12-27
 permalink: /social/
 meta_description: "Quer se conectar comigo? Veja onde estou presente: LinkedIn, Instagram, X, Mastodon, Bluesky e Threads, com conteúdos sobre privacidade e proteção de dados."
-meta_image: "https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/social.webp"
+meta_image: ""
 ---
 # Social
 
