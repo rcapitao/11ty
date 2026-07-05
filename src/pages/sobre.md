@@ -17,7 +17,7 @@ meta_image: ""
 
 <div class="polaroid">  
 
-  <img src="/img/perfil_sobre.jpeg" width="250">   
+  <img src="/assets/img/perfil_sobre.jpeg" width="250">   
   <em>Rafael Capitão</em>  
 
 </div>  

@@ -19,8 +19,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
-  eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/img");
+  eleventyConfig.addPassthroughCopy("src/assets/css");
+  eleventyConfig.addPassthroughCopy("src/assets/img");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{png,jpg,jpeg,gif,webp,svg}");
   // This bundle's permalink is under /notas/ (tagged "notas"), which diverges from its
   // src/posts/ source path, so its image needs an explicit passthrough remap to match.
@@ -35,6 +35,7 @@ module.exports = function (eleventyConfig) {
       input: "src",
       output: "_site",
       includes: "_includes",
+      layouts: "_layouts",
       data: "_data",
     },
   };
