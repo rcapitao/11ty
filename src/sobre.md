@@ -14,7 +14,7 @@ meta_image: ""
 
 <div class="polaroid">  
 
-  <img src="https://bear-images.sfo2.cdn.digitaloceanspaces.com/rcapitao/perfil_sobre.webp" width="250">   
+  <img src="src/img/perfil_sobre.jpeg" width="250">   
   <em>Rafael Capitão</em>  
 
 </div>  
