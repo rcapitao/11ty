@@ -6,8 +6,8 @@ navigationConfig:
   key: Busca
   order: 4
 ---
-{%- set yearGroups = collections.posts | groupPostsByYearMonth %}
-{%- set tagCounts = collections.posts | tagsWithCounts %}
+{%- set yearGroups = collections.content | groupPostsByYearMonth %}
+{%- set tagCounts = collections.content | tagsWithCounts %}
 <h1>Busca</h1>
 
 <div class="search-panel">
@@ -19,7 +19,7 @@ navigationConfig:
   <div class="search-filter-group">
     <p class="search-filter-label">Ano</p>
     <div class="search-filter-pills" role="group" aria-label="Filtrar por ano">
-      <button type="button" class="search-pill search-year-pill" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.posts.length }})</button>
+      <button type="button" class="search-pill search-year-pill" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.content.length }})</button>
       {%- for group in yearGroups %}
       <button type="button" class="search-pill search-year-pill" data-year="{{ group.year }}" onclick="setSearchYear('{{ group.year }}', this)">{{ group.year }} ({{ group.count }})</button>
       {%- endfor %}

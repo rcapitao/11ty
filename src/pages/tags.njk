@@ -16,7 +16,7 @@ eleventyComputed:
 </p>
 
 <ul class="blog-posts">
-  {%- for post in collections.posts %}
+  {%- for post in collections.content %}
   {%- if post.data.tags and tag in post.data.tags %}
   <li>
     <span>{{ post.date | shortDate }}</span>
