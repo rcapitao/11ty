@@ -134,6 +134,26 @@ Para usar em uma página, post ou nota, cole o HTML abaixo direto no arquivo (me
 
 Troque o `href` pelo link real do webring e o texto do link pelo que fizer sentido (ex.: nome do webring, ou "Anterior"/"Próximo" separados em dois links dentro do mesmo `<div class="webring">`).
 
+## Cards
+
+Cartão simples com título (com ícone opcional) e um parágrafo de descrição, usado por exemplo na página [Diretório](/diretorio/).
+
+<div class="card">
+  <h4><i class="fa-solid fa-circle-info"></i> <a href="/sobre/">Título do card</a></h4>
+  <p>Um parágrafo curto descrevendo do que se trata este link ou seção.</p>
+</div>
+
+Cole o HTML abaixo em qualquer página, post ou nota, trocando o link, o ícone e o texto:
+
+```html
+<div class="card">
+  <h4><i class="fa-solid fa-circle-info"></i> <a href="/sobre/">Título do card</a></h4>
+  <p>Um parágrafo curto descrevendo do que se trata este link ou seção.</p>
+</div>
+```
+
+O ícone (`<i class="fa-solid ...">`) é opcional — pode remover se não quiser usar Font Awesome.
+
 ## Tabela
 
 | Coluna A | Coluna B | Coluna C |
