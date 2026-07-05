@@ -639,7 +639,7 @@ main a[href^="http"]:not([href*="rcapitao.com"]):has(img)::after {
 }
 
 .search-empty {
-  font-size: var(--font-small);
+  font-size: 1.0rem;
   color: var(--muted);
 }
 
