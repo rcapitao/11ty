@@ -16,7 +16,7 @@ Recentemente, ouvi uma dica curiosa: usar duas linhas. Uma só para contatos rea
  
 Se alguém já usa essa estratégia, queria ouvir a experiência.  
   
-E se você tiver alguma dica que realmente ajude a lidar com esse problema, me <a href="https://letterbird.co/rcapitao?subject=Re:%20{{ post_title }}" target="_blank">envie uma mensagem</a>. Vou postar aqui no blog uma lista com as dicas! Isso pode ajudar muita gente.  
+E se você tiver alguma dica que realmente ajude a lidar com esse problema, me envie uma mensagem. Vou postar aqui no blog uma lista com as dicas! Isso pode ajudar muita gente.  
 
 <span class="curve"></span>  
 
