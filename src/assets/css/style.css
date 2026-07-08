@@ -489,7 +489,7 @@ header nav a {
 }
 
 .breadcrumb-sep {
-  color: var(--border);
+  color: color-mix(in srgb, var(--muted) 55%, var(--border));
 }
 
 /* Blog list: Default */
