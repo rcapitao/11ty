@@ -312,6 +312,18 @@ main > :first-child {
   color: var(--muted);
 }
 
+.post-meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.post-meta-icon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+
 .post-meta time {
   font-family: inherit;
   font-size: inherit;
