@@ -134,6 +134,28 @@ Para usar em uma página, post ou nota, cole o HTML abaixo direto no arquivo (me
 
 Troque o `href` pelo link real do webring e o texto do link pelo que fizer sentido (ex.: nome do webring, ou "Anterior"/"Próximo" separados em dois links dentro do mesmo `<div class="webring">`).
 
+O `<div class="webring">` também aceita vários links de uma vez — eles se organizam automaticamente em grade, quebrando linha conforme o espaço disponível (é assim que a seção "Explore por tema" da home é feita):
+
+```html
+<div class="webring">
+  <a class="webring-link webring-rounded" href="/tags/privacidade/">Privacidade</a>
+  <a class="webring-link webring-rounded" href="/tags/dicas/">Dicas</a>
+  <a class="webring-link webring-rounded" href="/tags/guias/">Guias</a>
+</div>
+```
+
+## Último status (Mastodon)
+
+<p>{ status mastodon rcapitao@mastodon.social }</p>
+
+Mostra automaticamente a publicação mais recente do Mastodon, com texto, imagem (ou pré-visualização de link) e "há quanto tempo" foi publicada. Cole o marcador abaixo em qualquer página, post ou nota, trocando o `usuario@instancia` pela conta desejada:
+
+```html
+{ status mastodon usuario@instancia }
+```
+
+O script (`/assets/js/latest-status.js`, carregado em todas as páginas pelo layout base) procura esse marcador no texto, busca a publicação na API pública do Mastodon e substitui o marcador pelo card já formatado. Se a busca falhar (rede indisponível, conta inexistente, etc.) o marcador simplesmente some da página, sem deixar espaço em branco.
+
 ## Cards
 
 Cartão simples com título (com ícone opcional) e um parágrafo de descrição, usado por exemplo na página [Diretório](/diretorio/).

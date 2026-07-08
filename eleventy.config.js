@@ -23,6 +23,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("src/assets/css");
   eleventyConfig.addPassthroughCopy("src/assets/img");
+  eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{png,jpg,jpeg,gif,webp,svg}");
   eleventyConfig.addPassthroughCopy("src/notas/**/*.{png,jpg,jpeg,gif,webp,svg}");
 
