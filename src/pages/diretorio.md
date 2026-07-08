@@ -44,7 +44,3 @@ Se você está procurando algo específico, esta página vai te direcionar para 
   <p>As ferramentas e apps que uso no dia a dia: aplicativos, hardware, serviços e configurações que fazem parte da minha rotina pessoal, de trabalho e estudo.</p>
 </div>
 
-<div class="card">
-  <h4><i class="fa-solid fa-hand-holding-heart"></i> <a href="/guestbook/">Guestbook</a></h4>
-  <p>Deixe um recado. Uma forma simples e antiga de registrar que você passou por aqui e o que achou.</p>
-</div>
