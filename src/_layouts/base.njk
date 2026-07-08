@@ -61,8 +61,12 @@
     {{ content | safe }}
   </main>
   <footer>
-    <p>&copy; {% year %} {{ metadata.author }} &mdash; feito com <a href="https://www.11ty.dev/">Eleventy</a></p>
-    <p><a href="/feed.xml">RSS</a> · <a href="/estatisticas/">Estatísticas</a></p>
+    <p>&copy; {% year %} {{ metadata.author }} &mdash; feito com <a href="https://www.11ty.dev/">Eleventy (11ty)</a></p>
+    <p class="footer-links">
+      <a href='/social/' aria-label="Redes sociais"><i class="fa-solid fa-at fa-1x"></i></a> ·
+      <a href='/estatisticas/' aria-label="Estatísticas"><i class="fa-solid fa-chart-pie fa-1x"></i></a> ·
+      <a href='/feed.xml' aria-label="RSS"><i class="fa-solid fa-rss fa-1x"></i></a>
+    </p>
   </footer>
   <script>
     (function () {
