@@ -10,6 +10,10 @@ eleventyComputed:
 ---
 <h1>#{{ tag }}</h1>
 
+{%- if tagDescriptions[tag] %}
+<p class="tag-description">{{ tagDescriptions[tag] }}</p>
+{%- endif %}
+
 <p>
   <a href="/tags/{{ tag }}/feed.xml">Feed RSS desta tag</a> ·
   <a href="/tags/{{ tag }}/feed.json">Feed JSON desta tag</a>
