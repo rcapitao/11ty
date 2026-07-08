@@ -1,0 +1,151 @@
+---
+layout: base.njk
+title: Estatísticas
+date: 2026-07-08
+permalink: /estatisticas/
+meta_description: "Estatísticas do blog: total de posts e notas, palavras escritas, tempo de leitura, quando costumo publicar e as tags mais usadas."
+---
+{%- set stats = collections.posts | blogStats(collections.notas) %}
+<h1>Estatísticas</h1>
+
+<p>Um raio-x do blog: quanto já escrevi, quanto tempo leva para ler tudo, quando costumo publicar e quais assuntos mais aparecem. Atualizado automaticamente a cada build.</p>
+
+<h2>Visão geral</h2>
+
+<div class="stats-grid">
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.totalItems }}</span>
+    <span class="stat-label">Publicações</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.totalPosts }}</span>
+    <span class="stat-label">Posts</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.totalNotas }}</span>
+    <span class="stat-label">Notas</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.totalWords | numberFormat }}</span>
+    <span class="stat-label">Palavras escritas</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.avgWords }}</span>
+    <span class="stat-label">Palavras por publicação</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.totalImages }}</span>
+    <span class="stat-label">Imagens publicadas</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.firstDate | shortDate }}</span>
+    <span class="stat-label">Primeira publicação</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.daysWriting | numberFormat }}</span>
+    <span class="stat-label">Dias de blog</span>
+  </div>
+</div>
+
+<h2>Tempo de leitura</h2>
+
+<div class="stats-grid">
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.readingTime.totalMinutes | numberFormat }} min</span>
+    <span class="stat-label">Tempo total de leitura</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.readingTime.avgMinutes }} min</span>
+    <span class="stat-label">Tempo médio por publicação</span>
+  </div>
+</div>
+
+{%- if stats.readingTime.longest %}
+<div class="card">
+  <h4><i class="fa-solid fa-book"></i> Publicação mais longa</h4>
+  <p><a href="{{ stats.readingTime.longest.url }}">{{ stats.readingTime.longest.title }}</a> — {{ stats.readingTime.longest.words | numberFormat }} palavras, {{ stats.readingTime.longest.minutes }} min de leitura</p>
+</div>
+{%- endif %}
+
+{%- if stats.readingTime.shortest %}
+<div class="card">
+  <h4><i class="fa-solid fa-feather"></i> Publicação mais curta</h4>
+  <p><a href="{{ stats.readingTime.shortest.url }}">{{ stats.readingTime.shortest.title }}</a> — {{ stats.readingTime.shortest.words | numberFormat }} palavras, {{ stats.readingTime.shortest.minutes }} min de leitura</p>
+</div>
+{%- endif %}
+
+<h2>Publicações por ano</h2>
+
+<div class="bar-chart">
+  {%- for y in stats.byYear %}
+  <div class="bar-chart-item">
+    <span class="bar-chart-value">{{ y.count }}</span>
+    <div class="bar-chart-bar" style="height: {{ y.pct }}%"></div>
+    <span class="bar-chart-label">{{ y.year }}</span>
+  </div>
+  {%- endfor %}
+</div>
+
+<h2>Publicações por mês do ano</h2>
+
+<div class="bar-chart">
+  {%- for m in stats.byMonthOfYear %}
+  <div class="bar-chart-item">
+    <span class="bar-chart-value">{{ m.count }}</span>
+    <div class="bar-chart-bar" style="height: {{ m.pct }}%"></div>
+    <span class="bar-chart-label">{{ m.name }}</span>
+  </div>
+  {%- endfor %}
+</div>
+
+<h2>Publicações por dia da semana</h2>
+
+<div class="bar-chart">
+  {%- for d in stats.byWeekday %}
+  <div class="bar-chart-item">
+    <span class="bar-chart-value">{{ d.count }}</span>
+    <div class="bar-chart-bar" style="height: {{ d.pct }}%"></div>
+    <span class="bar-chart-label">{{ d.name }}</span>
+  </div>
+  {%- endfor %}
+</div>
+
+<h2>Sequência de publicações</h2>
+
+<div class="stats-grid">
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.streak.current }}</span>
+    <span class="stat-label">Semanas seguidas publicando (atual)</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.streak.longest }}</span>
+    <span class="stat-label">Maior sequência de semanas seguidas</span>
+  </div>
+</div>
+
+<h2>Tags mais usadas</h2>
+
+<div class="tag-cloud">
+  {%- for t in stats.tags %}
+  <a href="/tags/{{ t.tag }}/" class="tag-cloud-item tag-weight-{{ t.weight }}">#{{ t.tag }} <span class="tag-cloud-count">{{ t.count }}</span></a>
+  {%- endfor %}
+</div>
+
+<h2>Resumo de {{ stats.yearRecap.year }}</h2>
+
+<div class="stats-grid">
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.yearRecap.count }}</span>
+    <span class="stat-label">Publicações em {{ stats.yearRecap.year }}</span>
+  </div>
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.yearRecap.words | numberFormat }}</span>
+    <span class="stat-label">Palavras escritas em {{ stats.yearRecap.year }}</span>
+  </div>
+  {%- if stats.yearRecap.topMonth %}
+  <div class="stat-tile">
+    <span class="stat-value">{{ stats.yearRecap.topMonth.name }}</span>
+    <span class="stat-label">Mês mais produtivo ({{ stats.yearRecap.topMonth.count }} publicações)</span>
+  </div>
+  {%- endif %}
+</div>
