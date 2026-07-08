@@ -4,7 +4,9 @@
   "description": "Blog criado com Eleventy (11ty)",
   "scripts": {
     "start": "eleventy --serve",
-    "build": "eleventy"
+    "build": "eleventy",
+    "new-post": "node scripts/new-content.js post",
+    "new-nota": "node scripts/new-content.js nota"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
