@@ -1177,6 +1177,7 @@ span.curve {
   margin-inline: auto;
   margin-block: var(--space-block);
   padding: 1rem 1.1rem;
+  font-size: var(--font-small);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
