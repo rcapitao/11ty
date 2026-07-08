@@ -11,7 +11,7 @@
     })();
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>{{ title or metadata.title }}</title>
+  <title>{%- if page.url == "/" or not title or title == metadata.title -%}{{ metadata.title }}{%- else -%}{{ title }} - {{ metadata.title }}{%- endif -%}</title>
   <meta name="description" content="{{ meta_description or metadata.description }}">
   {%- if meta_image %}
   <meta property="og:image" content="{{ meta_image }}">
