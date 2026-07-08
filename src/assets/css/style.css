@@ -287,6 +287,10 @@ time {
   color: var(--muted);
 }
 
+.text-muted {
+  color: var(--muted);
+}
+
 .tag-description {
   color: var(--muted);
   margin-block-start: 0.3em;
@@ -979,6 +983,9 @@ span.curve {
 
 /* Webring buttons | robertbirming.com */
 .webring {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
   margin-block-start: 1.5rem;
   text-align: left;
 }
@@ -1163,3 +1170,234 @@ span.curve {
 .tag-weight-3 { font-size: 1.25rem; }
 .tag-weight-4 { font-size: 1.55rem; }
 .tag-weight-5 { font-size: 1.9rem; font-weight: 700; }
+
+/* Latest status | robertbirming.com */
+.latest-status {
+  max-inline-size: 34rem;
+  margin-inline: auto;
+  margin-block: var(--space-block);
+  padding: 1rem 1.1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.latest-status::before {
+  content: "ÚLTIMO STATUS";
+  display: block;
+  margin-block-end: 0.9em;
+  font-family: var(--font-mono);
+  font-size: 0.87em;
+  color: var(--muted);
+}
+
+/* Single image: float left beside text */
+.latest-status-body--has-thumb {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3em 1rem;
+  align-items: start;
+}
+
+.latest-status-images--single .latest-status-img-btn img {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+  margin: 0;
+  margin-block-start: 0.15rem;
+}
+
+/* Multiple images: full-width row below text */
+.latest-status-images:not(.latest-status-images--single) {
+  display: flex;
+  gap: 0.4em;
+  margin-block-start: 0.9em;
+}
+
+.latest-status-images:not(.latest-status-images--single) .latest-status-img-btn {
+  flex: 1;
+  min-width: 0;
+}
+
+.latest-status-images:not(.latest-status-images--single) .latest-status-img-btn img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: var(--radius);
+  display: block;
+  margin: 0;
+}
+
+.latest-status-img-btn {
+  all: unset;
+  cursor: zoom-in;
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  line-height: 0;
+}
+
+.latest-status-text {
+  color: var(--text);
+  overflow-wrap: break-word;
+  min-width: 0;
+}
+
+.latest-status-text p { margin-block: 0.4em; }
+.latest-status-text > :first-child { margin-block-start: 0; }
+.latest-status-text > :last-child { margin-block-end: 0; }
+
+.latest-status-card {
+  display: flex;
+  gap: 0.5em;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-block-start: 0.75em;
+  text-decoration: none;
+  background: transparent;
+  transition: background 0.15s ease;
+}
+
+.latest-status-card-thumb {
+  width: 4rem;
+  height: 4rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  margin: 0.5em 0 0.5em 0.5em;
+  border-radius: var(--radius);
+  align-self: flex-start;
+}
+
+.latest-status-card-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15em;
+  padding: 0.4em 0.5em;
+  min-width: 0;
+}
+
+.latest-status-card-title {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.latest-status-card-desc {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  color: var(--text);
+}
+
+.latest-status-meta {
+  margin-block-start: 0.85em;
+}
+
+.latest-status-time {
+  font-family: var(--font-mono);
+  font-size: 0.82em;
+  color: var(--muted);
+}
+
+/* Lightbox */
+.latest-status-lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.latest-status-lightbox.open {
+  display: flex;
+}
+
+.latest-status-lb-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.latest-status-lb-img {
+  max-width: min(82vw, 1200px);
+  max-height: 82vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  display: block;
+  margin: 0;
+  cursor: zoom-in;
+}
+
+.latest-status-lb-caption {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.85em;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+.latest-status-lb-nav {
+  all: unset;
+  color: #fff;
+  font-size: 3rem;
+  line-height: 1;
+  padding-inline: 1rem;
+  cursor: pointer;
+  opacity: 0.7;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+footer .latest-status {
+  text-align: start;
+}
+
+@media (hover: hover) {
+  .latest-status-img-btn:hover img {
+    opacity: 0.88;
+  }
+
+  .latest-status-lb-nav:hover {
+    opacity: 1;
+  }
+
+  .latest-status-card:hover {
+    background: color-mix(in srgb, var(--border) 30%, transparent);
+    text-decoration: none;
+  }
+}
+
+.latest-status-quote {
+  display: block;
+  padding: 0.6em 0.8em;
+  text-decoration: none;
+}
+
+.latest-status-quote-author {
+  display: block;
+  font-size: calc(var(--font-small, 0.875rem) * 0.9);
+  font-weight: 600;
+  color: var(--muted);
+  margin-block-end: 0.3em;
+}
+
+.latest-status-quote-text {
+  font-size: var(--font-small, 0.875rem);
+  color: var(--text);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
