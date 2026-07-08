@@ -26,7 +26,7 @@ Ao longo da minha trajetória, construí uma carreira dedicada à Privacidade, P
 
 Com o tempo, percebi que a privacidade exige uma visão multidisciplinar e foi essa compreensão que me levou a ampliar minha formação. Além de advogado, sou  pós-graduado em Cibersegurança e Proteção Digital de Negócios, o que aprofunda minha capacidade de dialogar com times técnicos, avaliar controles, entender arquiteturas e apoiar decisões estratégicas com mais precisão.  
 
-Atuo há mais de cinco anos exclusivamente com privacidade, liderando projetos de adequação à LGPD, GDPR e outros padrões globais. Sou certificado por organizações de referência, como IAPP e EXIN, o que reforça meu compromisso com a excelência técnica.  
+Atuo há mais de cinco anos exclusivamente com privacidade, liderando projetos de adequação à LGPD, GDPR e outros padrões globais. Sou [certificado](/certificacoes/) por organizações de referência, como IAPP e EXIN, o que reforça meu compromisso com a excelência técnica.  
 
 Minha experiência inclui passagens por consultorias de grande porte, onde liderei a implementação de programas de governança de privacidade, conduzi avaliações de riscos, treinei equipes e apoiei áreas de negócio em tomadas de decisão envolvendo dados pessoais. Nesses ambientes dinâmicos, aprimorei minha capacidade de conduzir projetos complexos, sempre com foco em resultados, eficiência e segurança.  
 
