@@ -134,13 +134,21 @@ Para usar em uma página, post ou nota, cole o HTML abaixo direto no arquivo (me
 
 Troque o `href` pelo link real do webring e o texto do link pelo que fizer sentido (ex.: nome do webring, ou "Anterior"/"Próximo" separados em dois links dentro do mesmo `<div class="webring">`).
 
-O `<div class="webring">` também aceita vários links de uma vez — eles se organizam automaticamente em grade, quebrando linha conforme o espaço disponível (é assim que a seção "Explore por tema" da home é feita):
+## Chips de tema
+
+Grade de "pílulas" neutras para agrupar links de navegação (ex.: a seção "Explore por tema" da home) — ao contrário de um link comum, não muda de cor conforme o histórico de navegação (`:visited`), só destaca com a cor de link no hover.
+
+<div class="topic-grid">
+  <a class="topic-chip" href="/tags/privacidade/">Privacidade</a>
+  <a class="topic-chip" href="/tags/dicas/">Dicas</a>
+  <a class="topic-chip" href="/tags/guias/">Guias</a>
+</div>
 
 ```html
-<div class="webring">
-  <a class="webring-link webring-rounded" href="/tags/privacidade/">Privacidade</a>
-  <a class="webring-link webring-rounded" href="/tags/dicas/">Dicas</a>
-  <a class="webring-link webring-rounded" href="/tags/guias/">Guias</a>
+<div class="topic-grid">
+  <a class="topic-chip" href="/tags/privacidade/">Privacidade</a>
+  <a class="topic-chip" href="/tags/dicas/">Dicas</a>
+  <a class="topic-chip" href="/tags/guias/">Guias</a>
 </div>
 ```
 
