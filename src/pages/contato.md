@@ -5,7 +5,7 @@ date: 2025-12-06
 permalink: /contato/
 navigationConfig:
   key: Contato
-  order: 6
+  order: 4
 meta_description: "Tem alguma dúvida ou apenas quer entrar em contato? Envie-me um e-mail"
 meta_image: ""
 ---
