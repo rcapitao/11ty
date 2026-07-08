@@ -1021,6 +1021,46 @@ span.curve {
   background: var(--surface);
 }
 
+/* Topic chips (ex.: "Explore por tema" na home) */
+.topic-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-block-start: 1.5rem;
+}
+
+.topic-chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55em 1.1em;
+  font-size: var(--font-small);
+  font-weight: 500;
+  color: var(--text);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  text-decoration: none;
+  transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.topic-chip:visited {
+  color: var(--text);
+}
+
+@media (hover: hover) {
+  .topic-chip:hover {
+    color: var(--link);
+    border-color: var(--link);
+    background: color-mix(in srgb, var(--link) 8%, var(--surface));
+    text-decoration: none;
+  }
+}
+
+.topic-chip:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 @media (hover: hover) {
   .webring-pill:hover,
   .webring-rounded:hover,
@@ -1177,6 +1217,7 @@ span.curve {
   margin-inline: auto;
   margin-block: var(--space-block);
   padding: 1rem 1.1rem;
+  font-size: var(--font-small);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
