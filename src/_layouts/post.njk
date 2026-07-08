@@ -4,7 +4,7 @@ bodyClass: post
 ---
 <article>
   <h1>{{ title }}</h1>
-  <p><time datetime="{{ date | htmlDateString }}">{{ date | shortDate }}</time></p>
+  {% include "post-meta.njk" %}
   {{ content | safe }}
 </article>
 
