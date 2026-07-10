@@ -1157,6 +1157,7 @@ span.curve {
   height: 140px;
   margin-block-start: var(--space-block);
   padding-inline-start: 0;
+  overflow-x: auto;
 }
 
 .bar-chart-item {
@@ -1167,6 +1168,22 @@ span.curve {
   justify-content: flex-end;
   height: 100%;
   gap: 0.3rem;
+  min-width: 1.6rem;
+}
+
+@media (max-width: 480px) {
+  .bar-chart {
+    gap: 0.35rem;
+  }
+
+  .bar-chart-item {
+    min-width: 1.3rem;
+  }
+
+  .bar-chart-value,
+  .bar-chart-label {
+    font-size: calc(var(--font-small) * 0.85);
+  }
 }
 
 .bar-chart-value {
