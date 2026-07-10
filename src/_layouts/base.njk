@@ -85,6 +85,32 @@
   </script>
   <script>
     (function () {
+      function timeAgo(date) {
+        var diffMs = Date.now() - date.getTime();
+        var minutes = Math.floor(diffMs / 60000);
+        var hours = Math.floor(minutes / 60);
+        var days = Math.floor(hours / 24);
+        var months = Math.floor(days / 30);
+        var years = Math.floor(days / 365);
+
+        if (years >= 1) return (years === 1 ? "1 ano" : years + " anos") + " atrás";
+        if (months >= 1) return (months === 1 ? "1 mês" : months + " meses") + " atrás";
+        if (days >= 1) return (days === 1 ? "1 dia" : days + " dias") + " atrás";
+        if (hours >= 1) return (hours === 1 ? "1 hora" : hours + " horas") + " atrás";
+        if (minutes >= 1) return (minutes === 1 ? "1 minuto" : minutes + " minutos") + " atrás";
+        return "agora mesmo";
+      }
+
+      document.querySelectorAll(".js-time-ago[datetime]").forEach(function (el) {
+        var date = new Date(el.getAttribute("datetime"));
+        if (!isNaN(date.getTime())) {
+          el.textContent = timeAgo(date);
+        }
+      });
+    })();
+  </script>
+  <script>
+    (function () {
       var copyIcon = '<svg class="icon-copy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
       var checkIcon = '<svg class="icon-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg>';
 
