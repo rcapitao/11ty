@@ -14,25 +14,12 @@ function getGitLastModified(filePath) {
   }
 }
 
-function timeAgo(date) {
-  const diffMs = Date.now() - date.getTime();
-  const minutes = Math.floor(diffMs / 60000);
-  const hours = Math.floor(minutes / 60);
-  const days = Math.floor(hours / 24);
-  const months = Math.floor(days / 30);
-  const years = Math.floor(days / 365);
-
-  if (years >= 1) return years === 1 ? "1 ano" : `${years} anos`;
-  if (months >= 1) return months === 1 ? "1 mês" : `${months} meses`;
-  if (days >= 1) return days === 1 ? "1 dia" : `${days} dias`;
-  if (hours >= 1) return hours === 1 ? "1 hora" : `${hours} horas`;
-  if (minutes >= 1) return minutes === 1 ? "1 minuto" : `${minutes} minutos`;
-  return "poucos segundos";
-}
-
 module.exports = function (eleventyConfig) {
+  // Mostra a data absoluta (não "X atrás"): num site estático, um texto relativo
+  // calculado em build fica congelado no HTML e vai ficando errado conforme o
+  // tempo passa sem um novo deploy.
   eleventyConfig.addShortcode("lastModified", function () {
     const date = getGitLastModified(this.page.inputPath) || new Date(this.page.date);
-    return timeAgo(date);
+    return date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
   });
 };

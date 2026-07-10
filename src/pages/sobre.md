@@ -11,7 +11,7 @@ meta_image: ""
 ---
 # Sobre
 
-<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %} atrás.*  
+<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %}.*  
 
 ## Sobre mim    
 
