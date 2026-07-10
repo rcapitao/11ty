@@ -13,9 +13,8 @@ Sempre fui apaixonado por tecnologia e produtividade. Acompanho novidades, testo
 
 Até pouco tempo atrás, eu diria sem hesitar que automação e linguagem de programação eram coisas para outras pessoas, não para um advogado como eu. Resolvi testar isso usando o Claude e o resultado me surpreendeu, consegui criar dois scripts funcionais, sem nunca ter escrito uma linha de código antes.  
 
-1. [Bearblog Backup](tab:[https://github.com/rcapitao/bearblog-backup](https://github.com/rcapitao/bearblog-backup))  
-
-2. [Bearblog Crossposting](tab:[https://github.com/rcapitao/bearblog-crossposting](https://github.com/rcapitao/bearblog-crossposting))  
+1. [Bearblog Backup](tab:[https://github.com/rcapitao/bearblog-backup](https://github.com/rcapitao/bearblog-backup))
+2. [Bearblog Crossposting](tab:[https://github.com/rcapitao/bearblog-crossposting](https://github.com/rcapitao/bearblog-crossposting))
 
 O primeiro faz o backup diário dos posts do meu blog hospedado no [Bearblog](tab:[https://bearblog.dev](https://bearblog.dev)), lendo o feed Atom, salvando tudo em markdown e baixando as imagens automaticamente. O segundo cuida do crossposting, ou seja, sempre que publico algo novo, ele distribui o conteúdo para as minhas redes sociais [Mastodon](tab:[https://mastodon.social/@rcapitao](https://mastodon.social/@rcapitao)) e [Bluesky](tab:[https://bsky.app/profile/rcapitao.com](https://bsky.app/profile/rcapitao.com)), lendo o feed RSS do meu blog.  
 
