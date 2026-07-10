@@ -1,0 +1,106 @@
+media:
+  input: src/assets/img/uploads
+  output: /assets/img/uploads
+
+content:
+  - name: posts
+    label: Posts
+    type: collection
+    path: src/posts
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date, tags]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: post.njk
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+        required: true
+      - name: permalink
+        label: URL
+        type: string
+        required: true
+        description: 'Ex.: /posts/titulo-do-post/'
+      - name: tags
+        label: Tags
+        type: select
+        options:
+          multiple: true
+          creatable: true
+          values: [citacoes, dicas, filmes, guias, inteligencia-artificial, livros, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
+      - name: meta_description
+        label: 'Meta description (SEO)'
+        type: string
+        options:
+          maxlength: 180
+      - name: meta_image
+        label: 'Imagem de destaque (SEO)'
+        type: image
+        required: false
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  - name: notas
+    label: Notas
+    type: collection
+    path: src/notas
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      fields: [title, date]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: nota.njk
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+        required: true
+      - name: permalink
+        label: URL
+        type: string
+        required: true
+        description: 'Ex.: /notas/titulo-da-nota/'
+      - name: tags
+        label: Tags
+        type: select
+        options:
+          multiple: true
+          creatable: true
+          values: [citacoes, dicas, filmes, guias, inteligencia-artificial, livros, notas, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
+      - name: meta_description
+        label: 'Meta description (SEO)'
+        type: string
+        options:
+          maxlength: 180
+      - name: meta_image
+        label: 'Imagem de destaque (SEO)'
+        type: image
+        required: false
+      - name: body
+        label: Conteúdo
+        type: rich-text
