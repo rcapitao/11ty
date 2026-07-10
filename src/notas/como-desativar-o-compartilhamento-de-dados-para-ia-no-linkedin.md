@@ -11,4 +11,4 @@ meta_description: "O LinkedIn ativa por padrão o uso dos seus dados para treina
 meta_image: ""
 ---
 <p>Para usuários do #LinkedIn, acesse suas configurações, vá ao menu Privacidade de dados, selecione a opção “<strong>Dados para aprimoramento da IA generativa</strong>”. Desligue essa opção. É inacreditável que isso seja ativado por padrão sem nenhuma notificação ao usuário.</p>
-<p><img src="image-6.webp" alt="image" /></p>
+<p><img src="/assets/img/uploads/como-desativar-o-compartilhamento-de-dados-para-ia-no-linkedin.webp" alt="image" /></p>
