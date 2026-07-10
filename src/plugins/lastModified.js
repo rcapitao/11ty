@@ -15,11 +15,15 @@ function getGitLastModified(filePath) {
 }
 
 module.exports = function (eleventyConfig) {
-  // Mostra a data absoluta (não "X atrás"): num site estático, um texto relativo
-  // calculado em build fica congelado no HTML e vai ficando errado conforme o
-  // tempo passa sem um novo deploy.
+  // Emite a data real da última modificação (do git) num <time datetime="">,
+  // com a data absoluta como texto/fallback. O "X atrás" é calculado no
+  // navegador (script em base.njk) a partir desse datetime — assim o texto
+  // reflete o momento em que a página é vista, em vez de ficar congelado com
+  // o valor calculado no build (que ficaria cada vez mais errado sem deploys).
   eleventyConfig.addShortcode("lastModified", function () {
     const date = getGitLastModified(this.page.inputPath) || new Date(this.page.date);
-    return date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
+    const iso = date.toISOString();
+    const fallback = date.toLocaleDateString("pt-BR", { day: "2-digit", month: "2-digit", year: "numeric" });
+    return `<time class="js-time-ago" datetime="${iso}">${fallback}</time>`;
   });
 };
