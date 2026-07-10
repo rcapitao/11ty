@@ -1,0 +1,16 @@
+{%- set related = collections.content | relatedContent(page.url, tags, 5) %}
+{%- if related.length %}
+<span class="curve"></span>
+
+<div class="related-posts">
+  <h2>Posts relacionados</h2>
+  <ul class="blog-posts">
+    {%- for item in related %}
+    <li>
+      <span>{{ item.date | shortDate }}</span>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</div>
+{%- endif %}
