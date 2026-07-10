@@ -950,34 +950,37 @@ span.curve {
   color: var(--link);
 }
 
-/* Reply via email | robertbirming.com */
+/* Reply via email */
 .reply-email {
-  margin-block: var(--space-block);
+  margin: 0;
 }
 
 .reply-email a {
-  display: inline-block;
-  padding-block: 0.4em;
-  padding-inline: 1em;
-  font-size: var(--font-small);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-size: calc(var(--font-small) * 0.9);
   font-weight: 500;
   color: var(--link);
   text-decoration: none;
-  background: color-mix(in srgb, var(--link) 6%, var(--bg));
-  border: 1px solid color-mix(in srgb, var(--link) 18%, var(--bg));
-  border-radius: var(--radius);
+  border-bottom: 1px solid transparent;
+}
+
+.reply-email a svg {
+  width: 1.05em;
+  height: 1.05em;
+  flex-shrink: 0;
 }
 
 .reply-email a:focus-visible {
-  outline: none;
-  border-color: color-mix(in srgb, var(--link) 45%, var(--surface));
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--link) 18%, transparent);
+  outline: 2px solid var(--link);
+  outline-offset: 3px;
+  border-radius: 2px;
 }
 
 @media (hover: hover) {
   .reply-email a:hover {
-    background: color-mix(in srgb, var(--link) 10%, var(--bg));
-    border-color: color-mix(in srgb, var(--link) 28%, var(--bg));
+    border-bottom-color: color-mix(in srgb, var(--link) 55%, transparent);
   }
 }
 

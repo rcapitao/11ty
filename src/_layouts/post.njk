@@ -8,6 +8,10 @@ bodyClass: post
   {{ content | safe }}
 </article>
 
-<div class="reply-email">
-  <a href="https://letterbird.co/rcapitao?subject=Re:%20{{ title | urlencode }}" target="_blank" rel="noopener">Comente por e-mail</a>
-</div>
+<hr>
+<p class="reply-email">
+  <a href="https://letterbird.co/rcapitao?subject=Re:%20{{ title | urlencode }}" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"></rect><path d="m2 7 10 7L22 7"></path></svg>
+    Comente por e-mail
+  </a>
+</p>
