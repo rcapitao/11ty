@@ -1,13 +1,25 @@
 module.exports = {
-  // Pages CMS (and manual edits) can save a permalink without a trailing
-  // slash, which makes Eleventy fail the build (it can't tell the output
-  // is a directory instead of an extension-less file). Normalize it here
-  // instead of trusting every front matter permalink to be well-formed.
+  // Posts/notas normally set an explicit `permalink`, but it's optional in
+  // the Pages CMS form: if it's left blank, derive it from the file's own
+  // slug (same one used for its filename) instead of failing the build. If
+  // it is set, normalize a missing trailing slash rather than trusting
+  // every front matter permalink to be well-formed (Eleventy fails the
+  // build otherwise, unable to tell a directory from an extension-less file).
   permalink: (data) => {
     const inputPath = data.page && data.page.inputPath;
-    const isPostOrNota = typeof inputPath === "string" && (inputPath.includes("/src/posts/") || inputPath.includes("/src/notas/"));
-    if (!isPostOrNota || typeof data.permalink !== "string") return data.permalink;
-    return data.permalink.endsWith("/") ? data.permalink : `${data.permalink}/`;
+    const section = typeof inputPath === "string" && inputPath.includes("/src/notas/")
+      ? "notas"
+      : typeof inputPath === "string" && inputPath.includes("/src/posts/")
+      ? "posts"
+      : null;
+    if (!section) return data.permalink;
+
+    if (typeof data.permalink === "string" && data.permalink.length > 0) {
+      return data.permalink.endsWith("/") ? data.permalink : `${data.permalink}/`;
+    }
+
+    const slug = data.page.filePathStem.replace(/\/index$/, "").split("/").pop();
+    return `/${section}/${slug}/`;
   },
 
   eleventyNavigation: (data) => {
