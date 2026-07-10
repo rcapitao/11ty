@@ -8,7 +8,7 @@ meta_image: ""
 ---
 # Ferramentas e Apps que eu uso
 
-<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %} atrás.*
+<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %}.*
 
 A lista abaixo reúne os dispositivos, aplicativos e serviços que utilizo no dia a dia. Não é muita coisa, até porque meu uso de tecnologia é bastante seletivo, mas assim como me interesso pelo que outras pessoas usam, talvez alguém se interesse pelo que eu uso também.
 

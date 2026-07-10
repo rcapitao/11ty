@@ -8,7 +8,7 @@ meta_image: ""
 ---
 # O que estou fazendo agora?
 
-<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %} atrás.*
+<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %}.*
 
 <details>
 <summary>O que é isso?</summary>

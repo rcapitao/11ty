@@ -8,7 +8,7 @@ meta_image: ""
 ---
 # Social
 
-<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %} atrás.*
+<i class="fa-solid fa-arrows-rotate"></i> *Última atualização: {% lastModified %}.*
 
 Quer se conectar comigo? Veja onde estou presente.
 
