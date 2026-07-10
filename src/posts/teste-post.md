@@ -2,7 +2,7 @@
 layout: post.njk
 title: teste post
 date: 2026-07-10
-permalink: /posts/teste-post
+permalink: /posts/teste-post/
 tags:
   - guias
 meta_description: teste
