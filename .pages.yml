@@ -32,8 +32,8 @@ content:
       - name: permalink
         label: URL
         type: string
-        required: true
-        description: 'Ex.: /posts/titulo-do-post/'
+        required: false
+        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /posts/titulo-do-post/'
       - name: tags
         label: Tags
         type: select
@@ -83,8 +83,8 @@ content:
       - name: permalink
         label: URL
         type: string
-        required: true
-        description: 'Ex.: /notas/titulo-da-nota/'
+        required: false
+        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /notas/titulo-da-nota/'
       - name: tags
         label: Tags
         type: select
