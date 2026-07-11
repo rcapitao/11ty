@@ -2,7 +2,7 @@
 layout: nota.njk
 title: "Como desativar o compartilhamento de dados para IA no LinkedIn"
 date: 2026-04-14
-permalink: /notas/como-desativar-o-compartilhamento-de-dados-para-ia-no-linkedin/
+permalink: /blog/como-desativar-o-compartilhamento-de-dados-para-ia-no-linkedin/
 tags:
   - dicas
   - notas

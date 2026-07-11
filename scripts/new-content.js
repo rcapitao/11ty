@@ -6,13 +6,13 @@ const TYPES = {
   post: {
     layout: "post.njk",
     dir: "src/posts",
-    urlPrefix: "/posts/",
-    defaultTags: [],
+    urlPrefix: "/blog/",
+    defaultTags: ["posts"],
   },
   nota: {
     layout: "nota.njk",
     dir: "src/notas",
-    urlPrefix: "/notas/",
+    urlPrefix: "/blog/",
     defaultTags: ["notas"],
   },
 };

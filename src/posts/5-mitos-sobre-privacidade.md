@@ -2,8 +2,9 @@
 layout: post.njk
 title: "5 Mitos sobre Privacidade"
 date: 2024-09-11
-permalink: /posts/5-mitos-sobre-privacidade/
+permalink: /blog/5-mitos-sobre-privacidade/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Você realmente entende privacidade? Descubra 5 mitos comuns que fazem muitas pessoas negligenciarem a proteção dos seus dados pessoais."

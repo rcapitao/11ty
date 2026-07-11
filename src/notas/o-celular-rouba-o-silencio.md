@@ -2,7 +2,7 @@
 layout: nota.njk
 title: "O celular rouba o silêncio"
 date: 2025-12-23
-permalink: /notas/o-celular-rouba-o-silencio/
+permalink: /blog/o-celular-rouba-o-silencio/
 tags:
   - notas
 meta_description: "O celular virou padrão até no descanso da academia. Um convite à reflexão sobre atenção, silêncio, tempo de qualidade e escolhas conscientes."

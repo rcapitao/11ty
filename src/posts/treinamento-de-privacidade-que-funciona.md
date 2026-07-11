@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Treinamento de privacidade que funciona"
 date: 2026-03-27
-permalink: /posts/treinamento-de-privacidade-que-funciona/
+permalink: /blog/treinamento-de-privacidade-que-funciona/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Pílulas de privacidade, treinamentos modulares e Privacy Champions: conheça os elementos que tornam a conscientização efetiva nas empresas."
 meta_image: ""

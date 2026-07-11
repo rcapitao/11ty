@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Golpe silencioso de IA"
 date: 2025-11-09
-permalink: /posts/golpe-silencioso-de-ia/
+permalink: /blog/golpe-silencioso-de-ia/
 tags:
+  - posts
   - inteligencia-artificial
   - privacidade
   - privacy-rocks

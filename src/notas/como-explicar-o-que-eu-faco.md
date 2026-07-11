@@ -2,7 +2,7 @@
 layout: nota.njk
 title: "Como explicar o que eu faço?"
 date: 2024-12-09
-permalink: /notas/como-explicar-o-que-eu-faco/
+permalink: /blog/como-explicar-o-que-eu-faco/
 tags:
   - notas
 meta_description: "Explicar o que faço não é simples: conheça, de forma clara, o papel do profissional de privacidade e proteção de dados nas empresas."

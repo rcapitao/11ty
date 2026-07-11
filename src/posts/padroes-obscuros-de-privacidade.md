@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Padrões Obscuros de Privacidade"
 date: 2024-11-01
-permalink: /posts/padroes-obscuros-de-privacidade/
+permalink: /blog/padroes-obscuros-de-privacidade/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Entenda como dark patterns manipulam escolhas online, levando usuários a compras, assinaturas e compartilhamento de dados sem perceber."

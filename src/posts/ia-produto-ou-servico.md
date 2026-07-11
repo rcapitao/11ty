@@ -2,8 +2,9 @@
 layout: post.njk
 title: "IA: produto ou serviço?"
 date: 2025-11-25
-permalink: /posts/ia-produto-ou-servico/
+permalink: /blog/ia-produto-ou-servico/
 tags:
+  - posts
   - inteligencia-artificial
   - privacy-rocks
 meta_description: "Classificar IA como produto ou serviço muda obrigações, riscos e responsabilidade. Entenda efeitos práticos para negócios e LGPD."

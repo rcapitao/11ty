@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Identificar cookies nos sites"
 date: 2025-07-22
-permalink: /posts/identificar-cookies-nos-sites/
+permalink: /blog/identificar-cookies-nos-sites/
 tags:
+  - posts
   - dicas
   - privacidade
 meta_description: "Sites sem cookies existem? Descubra por que essa afirmação quase sempre está errada e como verificar cookies manualmente no navegador."

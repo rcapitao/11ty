@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Transferência internacional e TIA"
 date: 2025-03-28
-permalink: /posts/transferencia-internacional-e-tia/
+permalink: /blog/transferencia-internacional-e-tia/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Entenda como avaliar riscos em transferências internacionais de dados usando o TIA e por que essa prática fortalece a conformidade com a LGPD"
 meta_image: ""

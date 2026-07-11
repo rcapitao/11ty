@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Mitos sobre a LGPD no Brasil"
 date: 2026-03-12
-permalink: /posts/mitos-sobre-a-lgpd-no-brasil/
+permalink: /blog/mitos-sobre-a-lgpd-no-brasil/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Banners de cookies, medo da ANPD, publicidade personalizada: desmistificando os 5 equívocos mais comuns sobre a LGPD no Brasil"
 meta_image: ""

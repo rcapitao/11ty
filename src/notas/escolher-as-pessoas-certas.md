@@ -2,7 +2,7 @@
 layout: nota.njk
 title: "Escolher as pessoas certas"
 date: 2025-12-27
-permalink: /notas/escolher-as-pessoas-certas/
+permalink: /blog/escolher-as-pessoas-certas/
 tags:
   - citacoes
   - notas

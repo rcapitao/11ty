@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Barreiras à privacidade nas empresas"
 date: 2025-03-12
-permalink: /posts/barreiras-a-privacidade-nas-empresas/
+permalink: /blog/barreiras-a-privacidade-nas-empresas/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Por que a privacidade e a proteção de dados ainda enfrentam resistência nas empresas? Entenda as barreiras culturais, orçamentárias e como superá-las."
 meta_image: ""

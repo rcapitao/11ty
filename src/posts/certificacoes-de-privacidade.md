@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Certificações de Privacidade"
 date: 2025-01-22
-permalink: /posts/certificacoes-de-privacidade/
+permalink: /blog/certificacoes-de-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Começando na privacidade? Compare IAPP e EXIN, entenda a dificuldade e descubra qual certificação combina com seus objetivos."
 meta_image: ""

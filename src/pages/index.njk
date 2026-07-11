@@ -32,7 +32,7 @@ permalink: /
   <li>
     <span class="post-date">{{ post.date | shortDate }}</span>
     <a href="{{ post.url }}">{{ post.data.title }}</a>
-    <span class="content-type">{{ "Nota" if post.data.layout == "nota.njk" else "Post" }}</span>
+    <span class="content-type">{{ "Nota" if "notas" in post.data.tags else "Post" }}</span>
   </li>
   {%- endfor %}
 </ul>

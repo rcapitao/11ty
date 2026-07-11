@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Os riscos por trás do QR Code"
 date: 2025-09-15
-permalink: /posts/os-riscos-por-tras-do-qr-code/
+permalink: /blog/os-riscos-por-tras-do-qr-code/
 tags:
+  - posts
   - privacidade
   - seguranca-da-informacao
 meta_description: "Escanear um QR Code pode expor seus dados. Saiba como funcionam os riscos de rastreamento, links maliciosos e quais cuidados devemos adotar"

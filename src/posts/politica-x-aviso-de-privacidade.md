@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Política x Aviso de Privacidade"
 date: 2026-03-19
-permalink: /posts/politica-x-aviso-de-privacidade/
+permalink: /blog/politica-x-aviso-de-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Confunde política com aviso de privacidade? A diferença é fundamental. Um é interno, o outro é público — e os dois precisam refletir o que a empresa realmente faz."
 meta_image: ""

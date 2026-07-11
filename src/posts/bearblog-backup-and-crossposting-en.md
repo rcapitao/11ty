@@ -2,8 +2,9 @@
 layout: post.njk
 title: Bearblog Backup and Crossposting (EN)
 date: 2026-06-23
-permalink: /posts/bearblog-backup-and-crossposting-en/
+permalink: /blog/bearblog-backup-and-crossposting-en/
 tags:
+  - posts
   - inteligencia-artificial
   - produtividade
 meta_description: How I used Claude to create automations for backing up and

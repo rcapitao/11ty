@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Privacidade, Segurança e Anonimato"
 date: 2025-03-18
-permalink: /posts/privacidade-seguranca-e-anonimato/
+permalink: /blog/privacidade-seguranca-e-anonimato/
 tags:
+  - posts
   - privacidade
   - seguranca-da-informacao
 meta_description: "Entenda as diferenças entre privacidade, segurança e anonimato no mundo digital e saiba como esses conceitos se complementam na proteção dos seus dados."

@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Proteja documentos enviados"
 date: 2025-05-21
-permalink: /posts/proteja-documentos-enviados/
+permalink: /blog/proteja-documentos-enviados/
 tags:
+  - posts
   - dicas
   - privacidade
   - seguranca-da-informacao

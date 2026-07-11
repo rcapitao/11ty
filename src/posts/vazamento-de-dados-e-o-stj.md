@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Vazamento de dados e o STJ"
 date: 2025-03-08
-permalink: /posts/vazamento-de-dados-e-o-stj/
+permalink: /blog/vazamento-de-dados-e-o-stj/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "STJ decide que seguradora responde objetivamente por vazamento de dados sensíveis. Entenda os impactos da decisão para empresas e consumidores."
 meta_image: ""

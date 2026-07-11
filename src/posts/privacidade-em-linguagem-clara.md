@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Privacidade em linguagem clara"
 date: 2025-04-04
-permalink: /posts/privacidade-em-linguagem-clara/
+permalink: /blog/privacidade-em-linguagem-clara/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Privacidade não é só jurídico e técnica. Usar linguagem clara em políticas e treinamentos aumenta o engajamento e fortalece a cultura de proteção de dados."
 meta_image: ""

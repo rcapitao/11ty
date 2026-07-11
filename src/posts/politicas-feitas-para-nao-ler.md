@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Políticas feitas para não ler"
 date: 2025-10-21
-permalink: /posts/politicas-feitas-para-nao-ler/
+permalink: /blog/politicas-feitas-para-nao-ler/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Você já leu uma Política de Privacidade inteira? Entenda por que esses documentos afastam usuários e o que empresas podem fazer diferente."

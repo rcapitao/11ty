@@ -2,7 +2,7 @@
 layout: nota.njk
 title: "Ligações de golpe sem fim"
 date: 2025-12-04
-permalink: /notas/ligacoes-de-golpe-sem-fim/
+permalink: /blog/ligacoes-de-golpe-sem-fim/
 tags:
   - notas
 meta_description: "Chamadas mudas podem indicar golpes. Veja experiências reais e dicas para proteger seu número e reduzir tentativas de fraude"

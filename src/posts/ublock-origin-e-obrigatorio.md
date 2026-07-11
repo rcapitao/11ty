@@ -2,8 +2,9 @@
 layout: post.njk
 title: "uBlock Origin é obrigatório"
 date: 2026-04-28
-permalink: /posts/ublock-origin-e-obrigatorio/
+permalink: /blog/ublock-origin-e-obrigatorio/
 tags:
+  - posts
   - dicas
   - privacidade
 meta_description: ""
