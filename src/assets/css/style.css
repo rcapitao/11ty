@@ -355,7 +355,8 @@ main > :first-child {
   }
 }
 
-.post main > article > h1 {
+.post main > article > h1,
+.nota main > article > h1 {
   margin-block-end: 0;
 }
 
