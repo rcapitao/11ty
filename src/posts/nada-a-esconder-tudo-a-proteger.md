@@ -11,7 +11,7 @@ meta_description: "A privacidade física é importante e requer a destruição a
 meta_image: ""
 ---
 <p>Já arrancou a etiqueta da caixa da Amazon e jogou direto no lixo?</p>
-<p><img src="image-8.webp" alt="image" /></p>
+<p><img src="/assets/img/uploads/nada-a-esconder-tudo-a-proteger.webp" alt="image" /></p>
 <p>Quando falamos em privacidade, a conversa quase sempre corre para apps, senhas e ferramentas online. Mas a privacidade física é tão importante quanto... pensa naquela etiqueta de entrega da encomenda do Mercado Livre, Amazon ou Shopee que você arranca da caixa e joga fora inteira, ali está seu nome completo, endereço, telefone e às vezes até o que você comprou. Um prato cheio para quem souber procurar.</p>
 <p>Mesmo em 2026, ainda lidamos com uma quantidade surpreendente de papel, como recibos, faturas, documentos médicos, contratos, etiquetas de correspondências. Juntos, eles formam um retrato detalhado da sua vida, ou seja, um prato cheio para golpistas e para o roubo de identidade.</p>
 <p>A solução é simples e velha de guerra: <strong>uma boa trituradora</strong>, que transforma o documento em confete impossível de remontar. As de corte em tiras? Esquece. Quem tem tempo e paciência remonta com fita adesiva.</p>
