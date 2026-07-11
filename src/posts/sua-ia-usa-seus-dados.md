@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Sua IA usa seus dados"
 date: 2025-11-16
-permalink: /posts/sua-ia-usa-seus-dados/
+permalink: /blog/sua-ia-usa-seus-dados/
 tags:
+  - posts
   - inteligencia-artificial
   - privacidade
   - privacy-rocks

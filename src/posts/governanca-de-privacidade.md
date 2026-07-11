@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Governança de privacidade"
 date: 2026-03-10
-permalink: /posts/governanca-de-privacidade/
+permalink: /blog/governanca-de-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Governança de privacidade é o ponto de partida de qualquer programa sólido. Entenda papéis, DPO, KPIs e o que diz a LGPD sobre o tema."
 meta_image: ""

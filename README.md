@@ -23,15 +23,17 @@ npm run build # gera o site estático em _site/
 
 Para criar um novo post, adicione um arquivo `.md` em `src/posts/` seguindo o modelo dos posts existentes (front matter com `layout`, `title`, `date` e `permalink`).
 
+Posts e notas ficam em pastas separadas (`src/posts/` e `src/notas/`), mas publicam na mesma URL `/blog/<slug>/` — a distinção entre os dois é feita pelas tags `posts`/`notas` (cada arquivo já sai com a tag certa) e aparece como um selo "Post"/"Nota" ao lado do título nas listagens.
+
 ## Gestão do blog via Pages CMS
 
-O arquivo `.pages.yml` na raiz do repositório configura o [Pages CMS](https://pagescms.org/), uma interface web para criar e editar posts e notas direto no GitHub, sem precisar mexer em Markdown manualmente.
+O arquivo `.pages.yml` na raiz do repositório configura o [Pages CMS](https://pagescms.org/), uma interface web para criar e editar posts, notas e páginas direto no GitHub, sem precisar mexer em Markdown manualmente.
 
 Para usar:
 
 1. Instale o [GitHub App do Pages CMS](https://github.com/marketplace/pages-cms) na sua conta e autorize o acesso a este repositório.
 2. Acesse [app.pagescms.org](https://app.pagescms.org/) e faça login com o GitHub.
-3. Abra o projeto `rcapitao.com` — as coleções **Posts** e **Notas** aparecem prontas para edição, com os mesmos campos do front matter (`title`, `date`, `permalink`, `tags`, `meta_description`, `meta_image`) e um editor rich-text para o conteúdo.
+3. Abra o projeto `rcapitao.com` — as coleções **Posts**, **Notas** e **Páginas** aparecem prontas para edição, com os mesmos campos do front matter (`title`, `date`, `permalink`, `tags`, `meta_description`, `meta_image`) e um editor rich-text para o conteúdo. Posts e notas continuam com formulários separados (facilita publicar cada tipo), mesmo saindo na mesma URL `/blog/`.
 4. Imagens enviadas pelo editor são salvas em `src/assets/img/uploads/` e publicadas em `/assets/img/uploads/`.
 
 Cada alteração feita pelo Pages CMS vira um commit neste repositório, então o deploy (`.github/workflows/deploy.yml`) roda normalmente ao salvar.

@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Privacidade como negócio"
 date: 2026-03-04
-permalink: /posts/privacidade-como-negocio/
+permalink: /blog/privacidade-como-negocio/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Entenda como um programa de governança de privacidade protege sua reputação e vira diferencial competitivo."
 meta_image: ""

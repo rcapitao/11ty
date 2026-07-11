@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Como estruturar um Programa de Privacidade"
 date: 2025-02-17
-permalink: /posts/como-estruturar-um-programa-de-privacidade/
+permalink: /blog/como-estruturar-um-programa-de-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Conheça os 12 domínios essenciais para estruturar um programa de governança de privacidade robusto, que vai além da conformidade e gera valor ao negócio."
 meta_image: ""

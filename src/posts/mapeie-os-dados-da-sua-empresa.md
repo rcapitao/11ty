@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Mapeie os dados da sua empresa"
 date: 2026-03-11
-permalink: /posts/mapeie-os-dados-da-sua-empresa/
+permalink: /blog/mapeie-os-dados-da-sua-empresa/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Sua empresa sabe quais dados pessoais trata? O mapeamento de dados é o pilar do programa de privacidade e o primeiro passo para conformidade com a LGPD."
 meta_image: ""

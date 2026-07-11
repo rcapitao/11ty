@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Nada a esconder, tudo a proteger"
 date: 2026-06-01
-permalink: /posts/nada-a-esconder-tudo-a-proteger/
+permalink: /blog/nada-a-esconder-tudo-a-proteger/
 tags:
+  - posts
   - dicas
   - privacidade
   - privacy-rocks

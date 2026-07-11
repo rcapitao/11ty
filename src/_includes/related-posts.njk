@@ -9,7 +9,7 @@
     <li>
       <span class="post-date">{{ item.date | shortDate }}</span>
       <a href="{{ item.url }}">{{ item.data.title }}</a>
-      <span class="content-type">{{ "Nota" if item.data.layout == "nota.njk" else "Post" }}</span>
+      <span class="content-type">{{ "Nota" if "notas" in item.data.tags else "Post" }}</span>
     </li>
     {%- endfor %}
   </ul>

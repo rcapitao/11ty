@@ -2,8 +2,9 @@
 layout: post.njk
 title: "O que o Zero Day nos ensina"
 date: 2025-02-27
-permalink: /posts/o-que-o-zero-day-nos-ensina/
+permalink: /blog/o-que-o-zero-day-nos-ensina/
 tags:
+  - posts
   - filmes
   - privacidade
   - seguranca-da-informacao

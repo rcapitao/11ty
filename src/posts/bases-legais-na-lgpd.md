@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Bases legais na LGPD"
 date: 2026-03-17
-permalink: /posts/bases-legais-na-lgpd/
+permalink: /blog/bases-legais-na-lgpd/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Tratar dados sem base legal válida pode gerar sanções da ANPD. Veja como escolher e documentar corretamente a base legal no seu programa de privacidade."
 meta_image: ""

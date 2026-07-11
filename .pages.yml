@@ -33,14 +33,70 @@ content:
         label: URL
         type: string
         required: false
-        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /posts/titulo-do-post/'
+        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-do-post/'
       - name: tags
         label: Tags
         type: select
         options:
           multiple: true
           creatable: true
-          values: [citacoes, dicas, filmes, guias, inteligencia-artificial, livros, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
+          default: [posts]
+          values: [posts, citacoes, dicas, filmes, guias, inteligencia-artificial, livros, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
+      - name: meta_description
+        label: 'Meta description (SEO)'
+        type: string
+        options:
+          maxlength: 180
+      - name: meta_image
+        label: 'Imagem de destaque (SEO)'
+        type: image
+        required: false
+      - name: body
+        label: Conteúdo
+        type: rich-text
+
+  - name: paginas
+    label: Páginas
+    type: collection
+    path: src/pages
+    format: yaml-frontmatter
+    view:
+      fields: [title, permalink]
+      primary: title
+      sort: [title]
+    fields:
+      - name: layout
+        type: string
+        hidden: true
+        default: base.njk
+      - name: title
+        label: Título
+        type: string
+        required: true
+      - name: date
+        label: Data
+        type: date
+        required: true
+      - name: permalink
+        label: URL
+        type: string
+        required: true
+        description: 'Ex.: /sobre/'
+      - name: navigationConfig
+        label: 'Menu de navegação (opcional)'
+        type: object
+        required: false
+        description: 'Só preencha se essa página deve aparecer no menu do topo.'
+        fields:
+          - name: key
+            label: 'Texto no menu'
+            type: string
+          - name: order
+            label: Ordem
+            type: number
+          - name: icon
+            label: 'Ícone (Font Awesome, opcional — deixa só o ícone no menu em vez de texto)'
+            type: string
       - name: meta_description
         label: 'Meta description (SEO)'
         type: string
@@ -84,14 +140,15 @@ content:
         label: URL
         type: string
         required: false
-        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /notas/titulo-da-nota/'
+        description: 'Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-da-nota/'
       - name: tags
         label: Tags
         type: select
         options:
           multiple: true
           creatable: true
-          values: [citacoes, dicas, filmes, guias, inteligencia-artificial, livros, notas, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
+          default: [notas]
+          values: [notas, citacoes, dicas, filmes, guias, inteligencia-artificial, livros, privacidade, privacy-rocks, produtividade, seguranca-da-informacao]
       - name: meta_description
         label: 'Meta description (SEO)'
         type: string

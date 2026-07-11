@@ -2,8 +2,9 @@
 layout: post.njk
 title: "O truque do infravermelho para achar câmeras ocultas"
 date: 2026-04-12
-permalink: /posts/o-truque-do-infravermelho-para-achar-cameras-ocultas/
+permalink: /blog/o-truque-do-infravermelho-para-achar-cameras-ocultas/
 tags:
+  - posts
   - dicas
   - privacidade
   - privacy-rocks

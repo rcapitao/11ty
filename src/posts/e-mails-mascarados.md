@@ -2,8 +2,9 @@
 layout: post.njk
 title: "E-mails mascarados"
 date: 2025-09-30
-permalink: /posts/e-mails-mascarados/
+permalink: /blog/e-mails-mascarados/
 tags:
+  - posts
   - dicas
   - privacidade
 meta_description: "Quer mais controle sobre seus cadastros online? Saiba como e-mails mascarados ajudam a identificar vazamentos e reduzir spam"

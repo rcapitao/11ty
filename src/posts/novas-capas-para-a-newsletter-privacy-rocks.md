@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Novas capas para a newsletter Privacy Rocks"
 date: 2026-04-19
-permalink: /posts/novas-capas-para-a-newsletter-privacy-rocks/
+permalink: /blog/novas-capas-para-a-newsletter-privacy-rocks/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "A Privacy Rocks deixou de usar uma capa genérica e repetitiva. Veja como ficou a nova versão, criada especialmente para a próxima edição."
 meta_image: ""

@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Onde a privacidade deve ficar?"
 date: 2025-11-08
-permalink: /posts/onde-a-privacidade-deve-ficar/
+permalink: /blog/onde-a-privacidade-deve-ficar/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Onde alocar a área de privacidade? Entenda os riscos de decisões equivocadas e por que Jurídico ou Compliance são chave na governança do tema."
 meta_image: ""

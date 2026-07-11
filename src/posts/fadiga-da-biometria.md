@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Fadiga da biometria"
 date: 2024-09-03
-permalink: /posts/fadiga-da-biometria/
+permalink: /blog/fadiga-da-biometria/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
 meta_description: "A fadiga da biometria surge com o uso excessivo de dados biométricos no dia a dia. Entenda os riscos à privacidade e à tomada de decisão consciente."

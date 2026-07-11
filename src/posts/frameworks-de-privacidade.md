@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Frameworks de privacidade"
 date: 2026-03-09
-permalink: /posts/frameworks-de-privacidade/
+permalink: /blog/frameworks-de-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Não sabe por onde começar em privacidade? Conheça os frameworks mais usados no mercado e escolha o que melhor se adapta à sua realidade organizacional."
 meta_image: ""

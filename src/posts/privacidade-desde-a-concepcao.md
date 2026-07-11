@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Privacidade desde a concepção"
 date: 2026-03-23
-permalink: /posts/privacidade-desde-a-concepcao/
+permalink: /blog/privacidade-desde-a-concepcao/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Privacidade desde a concepção reduz riscos e custos. Entenda o que diz a LGPD, como a ISO 31700 orienta a implementação e por que toda empresa deve adotar."
 meta_image: ""

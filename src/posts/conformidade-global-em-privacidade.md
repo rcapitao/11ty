@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Conformidade global em privacidade"
 date: 2025-03-21
-permalink: /posts/conformidade-global-em-privacidade/
+permalink: /blog/conformidade-global-em-privacidade/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Entenda os principais passos para gerenciar a conformidade em privacidade de dados em diversos países, evitando silos e riscos regulatórios."
 meta_image: ""

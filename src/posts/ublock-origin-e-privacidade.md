@@ -2,8 +2,9 @@
 layout: post.njk
 title: "uBlock Origin e privacidade"
 date: 2025-09-19
-permalink: /posts/ublock-origin-e-privacidade/
+permalink: /blog/ublock-origin-e-privacidade/
 tags:
+  - posts
   - dicas
   - privacidade
 meta_description: "Extensões como o uBlock Origin ajudam a bloquear anúncios, rastreadores e scripts invisíveis, tornando a navegação mais segura e eficiente."

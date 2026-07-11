@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Pay or OK: escolha forçada"
 date: 2025-05-07
-permalink: /posts/pay-or-ok-escolha-forcada/
+permalink: /blog/pay-or-ok-escolha-forcada/
 tags:
+  - posts
   - privacy-rocks
 meta_description: "Você pagaria para manter sua privacidade? Entenda o modelo Pay or OK, seus riscos legais e por que ele desafia princípios da LGPD e do GDPR."
 meta_image: ""

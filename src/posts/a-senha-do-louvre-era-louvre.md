@@ -2,8 +2,9 @@
 layout: post.njk
 title: "A senha do Louvre era Louvre"
 date: 2025-11-11
-permalink: /posts/a-senha-do-louvre-era-louvre/
+permalink: /blog/a-senha-do-louvre-era-louvre/
 tags:
+  - posts
   - seguranca-da-informacao
 meta_description: "A senha do Louvre era “Louvre”. Um exemplo real de como senhas fracas ainda são um risco crítico, mesmo em ambientes com alta segurança."
 meta_image: ""

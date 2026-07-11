@@ -7,19 +7,15 @@ module.exports = {
   // build otherwise, unable to tell a directory from an extension-less file).
   permalink: (data) => {
     const inputPath = data.page && data.page.inputPath;
-    const section = typeof inputPath === "string" && inputPath.includes("/src/notas/")
-      ? "notas"
-      : typeof inputPath === "string" && inputPath.includes("/src/posts/")
-      ? "posts"
-      : null;
-    if (!section) return data.permalink;
+    const isPostOrNota = typeof inputPath === "string" && (inputPath.includes("/src/notas/") || inputPath.includes("/src/posts/"));
+    if (!isPostOrNota) return data.permalink;
 
     if (typeof data.permalink === "string" && data.permalink.length > 0) {
       return data.permalink.endsWith("/") ? data.permalink : `${data.permalink}/`;
     }
 
     const slug = data.page.filePathStem.replace(/\/index$/, "").split("/").pop();
-    return `/${section}/${slug}/`;
+    return `/blog/${slug}/`;
   },
 
   eleventyNavigation: (data) => {

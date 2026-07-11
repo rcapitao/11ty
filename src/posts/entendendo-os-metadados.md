@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Entendendo os metadados"
 date: 2025-03-28
-permalink: /posts/entendendo-os-metadados/
+permalink: /blog/entendendo-os-metadados/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Entenda o que são metadados, como eles revelam hábitos, localização e padrões de comportamento, e por que representam riscos reais à privacidade."

@@ -2,8 +2,9 @@
 layout: post.njk
 title: "Segurança e Privacidade se complementam mas não se confundem"
 date: 2026-04-09
-permalink: /posts/seguranca-e-privacidade-se-complementam-mas-nao-se-confundem/
+permalink: /blog/seguranca-e-privacidade-se-complementam-mas-nao-se-confundem/
 tags:
+  - posts
   - privacidade
   - privacy-rocks
   - seguranca-da-informacao
