@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Onde a privacidade deve ficar?"
-date: 2025-11-08
+date: 2025-11-08T23:46:00.000Z
 permalink: /blog/onde-a-privacidade-deve-ficar/
 tags:
   - posts

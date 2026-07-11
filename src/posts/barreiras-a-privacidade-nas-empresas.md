@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Barreiras à privacidade nas empresas"
-date: 2025-03-12
+date: 2025-03-12T02:38:00.000Z
 permalink: /blog/barreiras-a-privacidade-nas-empresas/
 tags:
   - posts

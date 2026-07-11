@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacidade e gestão de fornecedores"
-date: 2026-03-24
+date: 2026-03-24T19:19:00.000Z
 permalink: /blog/privacidade-e-gestao-de-fornecedores/
 tags:
   - posts

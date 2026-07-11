@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "E-mails mascarados"
-date: 2025-09-30
+date: 2025-09-30T23:59:00.000Z
 permalink: /blog/e-mails-mascarados/
 tags:
   - posts

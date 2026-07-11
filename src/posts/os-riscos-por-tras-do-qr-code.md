@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Os riscos por trás do QR Code"
-date: 2025-09-15
+date: 2025-09-15T17:04:00.000Z
 permalink: /blog/os-riscos-por-tras-do-qr-code/
 tags:
   - posts

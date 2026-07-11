@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Alertas de privacidade no iPhone"
-date: 2026-04-09
+date: 2026-04-09T21:30:00.000Z
 permalink: /blog/alertas-de-privacidade-no-iphone/
 tags:
   - posts

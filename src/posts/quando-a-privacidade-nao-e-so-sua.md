@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Quando a privacidade não é só sua"
-date: 2026-02-03
+date: 2026-02-03T15:45:00.000Z
 permalink: /blog/quando-a-privacidade-nao-e-so-sua/
 tags:
   - posts

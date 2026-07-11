@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Resistência cultural é o maior desafio da privacidade"
-date: 2026-04-24
+date: 2026-04-24T01:26:00.000Z
 permalink: /blog/resistencia-cultural-e-o-maior-desafio-da-privacidade/
 tags:
   - posts

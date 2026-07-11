@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Políticas feitas para não ler"
-date: 2025-10-21
+date: 2025-10-21T23:53:00.000Z
 permalink: /blog/politicas-feitas-para-nao-ler/
 tags:
   - posts

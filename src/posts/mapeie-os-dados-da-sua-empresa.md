@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Mapeie os dados da sua empresa"
-date: 2026-03-11
+date: 2026-03-11T21:36:00.000Z
 permalink: /blog/mapeie-os-dados-da-sua-empresa/
 tags:
   - posts

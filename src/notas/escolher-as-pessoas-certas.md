@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Escolher as pessoas certas"
-date: 2025-12-27
+date: 2025-12-27T21:54:00.000Z
 permalink: /blog/escolher-as-pessoas-certas/
 tags:
   - citacoes

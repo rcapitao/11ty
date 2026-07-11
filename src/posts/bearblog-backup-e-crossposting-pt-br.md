@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Bearblog Backup e Crossposting (pt-BR)
-date: 2026-06-23
+date: 2026-06-23T21:58:00.000Z
 permalink: /blog/bearblog-backup-crossposting-ptbr/
 tags:
   - posts

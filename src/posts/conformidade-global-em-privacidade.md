@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Conformidade global em privacidade"
-date: 2025-03-21
+date: 2025-03-21T02:30:00.000Z
 permalink: /blog/conformidade-global-em-privacidade/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Fadiga da biometria"
-date: 2024-09-03
+date: 2024-09-03T03:17:00.000Z
 permalink: /blog/fadiga-da-biometria/
 tags:
   - posts

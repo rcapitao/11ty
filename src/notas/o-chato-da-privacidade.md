@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "O \"chato\" da privacidade"
-date: 2026-04-07
+date: 2026-04-07T16:45:00.000Z
 permalink: /blog/o-chato-da-privacidade/
 tags:
   - notas

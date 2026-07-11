@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Impossible is Nothing"
-date: 2026-04-11
+date: 2026-04-11T15:26:00.000Z
 permalink: /blog/impossible-is-nothing/
 tags:
   - citacoes

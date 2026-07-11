@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Produtividade com GTD - Um método que transforma minha rotina"
-date: 2026-04-12
+date: 2026-04-12T01:15:00.000Z
 permalink: /blog/produtividade-com-gtd-um-metodo-que-transforma-minha-rotina/
 tags:
   - posts

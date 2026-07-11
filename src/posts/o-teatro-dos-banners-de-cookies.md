@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "O teatro dos banners de cookies"
-date: 2025-10-23
+date: 2025-10-23T23:51:00.000Z
 permalink: /blog/o-teatro-dos-banners-de-cookies/
 tags:
   - posts

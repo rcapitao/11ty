@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "A senha do Louvre era Louvre"
-date: 2025-11-11
+date: 2025-11-11T02:36:00.000Z
 permalink: /blog/a-senha-do-louvre-era-louvre/
 tags:
   - posts

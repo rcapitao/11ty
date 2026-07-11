@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacidade sem travar projetos"
-date: 2026-03-10
+date: 2026-03-10T16:06:00.000Z
 permalink: /blog/privacidade-sem-travar-projetos/
 tags:
   - posts

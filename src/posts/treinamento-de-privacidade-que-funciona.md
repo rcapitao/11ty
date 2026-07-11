@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Treinamento de privacidade que funciona"
-date: 2026-03-27
+date: 2026-03-27T03:05:00.000Z
 permalink: /blog/treinamento-de-privacidade-que-funciona/
 tags:
   - posts

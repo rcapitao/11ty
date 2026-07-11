@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Gerenciadores de senhas"
-date: 2025-09-26
+date: 2025-09-26T02:40:00.000Z
 permalink: /blog/gerenciadores-de-senhas/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacidade abstrata"
-date: 2026-04-08
+date: 2026-04-08T13:00:00.000Z
 permalink: /blog/privacidade-abstrata/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Rastreamento além dos cookies"
-date: 2025-05-13
+date: 2025-05-13T01:54:00.000Z
 permalink: /blog/rastreamento-alem-dos-cookies/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Novas capas para a newsletter Privacy Rocks"
-date: 2026-04-19
+date: 2026-04-19T13:20:00.000Z
 permalink: /blog/novas-capas-para-a-newsletter-privacy-rocks/
 tags:
   - posts

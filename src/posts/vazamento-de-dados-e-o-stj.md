@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Vazamento de dados e o STJ"
-date: 2025-03-08
+date: 2025-03-08T02:43:00.000Z
 permalink: /blog/vazamento-de-dados-e-o-stj/
 tags:
   - posts

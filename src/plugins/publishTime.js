@@ -1,4 +1,6 @@
 const { execSync } = require("child_process");
+const fs = require("fs");
+const path = require("path");
 
 function getGitFirstCommitTime(filePath) {
   try {
@@ -11,20 +13,6 @@ function getGitFirstCommitTime(filePath) {
     if (!output) return null;
     const lines = output.split("\n");
     return new Date(lines[lines.length - 1]);
-  } catch (error) {
-    return null;
-  }
-}
-
-function getGitLastCommitTime(filePath) {
-  try {
-    const output = execSync(`git log --follow -1 --format=%aI -- "${filePath}"`, {
-      cwd: process.cwd(),
-      stdio: ["ignore", "pipe", "ignore"],
-    })
-      .toString()
-      .trim();
-    return output ? new Date(output) : null;
   } catch (error) {
     return null;
   }
@@ -50,23 +38,83 @@ function getPublishDateTime(data) {
   return publishedAt;
 }
 
-// "Atualizado em" only tracks commits from this feature's launch onward.
-// Every post/nota that existed before it got touched by bulk maintenance
-// (URL migration, adding the `posts` tag, moving images, etc.) — comparing
-// against each file's own first commit would make practically all of them
-// read as "updated today", which isn't a real content revision. Comparing
-// against a fixed cutover instead means only genuine edits made after this
-// shipped (through Pages CMS or otherwise) count.
-const UPDATED_TRACKING_STARTS_AT = new Date("2026-07-11T04:00:00.000Z");
+function stripFrontMatter(content) {
+  const match = content.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n?([\s\S]*)$/);
+  return match ? match[1].trim() : content.trim();
+}
 
+function getCommitHashesNewestFirst(filePath) {
+  try {
+    const output = execSync(`git log --follow --format=%H -- "${filePath}"`, {
+      cwd: process.cwd(),
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+    return output ? output.split("\n") : [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function getFileAtCommit(commitHash, filePath) {
+  try {
+    return execSync(`git show ${commitHash}:"${filePath}"`, {
+      cwd: process.cwd(),
+      stdio: ["ignore", "pipe", "ignore"],
+    }).toString();
+  } catch (error) {
+    return null;
+  }
+}
+
+function getCommitTime(commitHash) {
+  try {
+    const output = execSync(`git show -s --format=%aI ${commitHash}`, {
+      cwd: process.cwd(),
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+    return output ? new Date(output) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+// "Atualizado em" only fires when the post/nota's body — the text after
+// front matter — actually changed, not whenever any commit touches the
+// file. Otherwise routine maintenance (retagging everything, migrating
+// URLs, fixing a broken image path, correcting the publish date) would
+// make practically every post claim to have been "updated today", which
+// isn't a real content revision from the reader's point of view. Walks
+// commits newest-to-oldest and returns the time of the most recent one
+// where the body actually differs from the version right before it.
 function getUpdatedDateTime(data) {
   const inputPath = data.page && data.page.inputPath;
   if (!inputPath) return null;
 
-  const lastCommit = getGitLastCommitTime(inputPath);
-  if (!lastCommit || lastCommit <= UPDATED_TRACKING_STARTS_AT) return null;
+  const hashes = getCommitHashesNewestFirst(inputPath);
+  if (hashes.length < 2) return null;
 
-  return lastCommit;
+  let currentBody;
+  try {
+    currentBody = stripFrontMatter(fs.readFileSync(path.join(process.cwd(), inputPath), "utf8"));
+  } catch (error) {
+    return null;
+  }
+
+  for (let i = 0; i < hashes.length - 1; i++) {
+    const olderContent = getFileAtCommit(hashes[i + 1], inputPath);
+    if (olderContent === null) continue;
+
+    const olderBody = stripFrontMatter(olderContent);
+    if (olderBody !== currentBody) {
+      return getCommitTime(hashes[i]);
+    }
+  }
+
+  return null;
 }
 
 module.exports = { getPublishDateTime, getUpdatedDateTime };

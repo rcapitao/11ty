@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "uBlock Origin e privacidade"
-date: 2025-09-19
+date: 2025-09-19T02:49:00.000Z
 permalink: /blog/ublock-origin-e-privacidade/
 tags:
   - posts

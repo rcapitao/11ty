@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Livros notáveis sobre privacidade proteção de dados de 2025"
-date: 2026-04-10
+date: 2026-04-10T10:47:00.000Z
 permalink: /blog/livros-notaveis-sobre-privacidade-protecao-de-dados-de-2025/
 tags:
   - posts

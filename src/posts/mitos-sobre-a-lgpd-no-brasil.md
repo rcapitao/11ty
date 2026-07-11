@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Mitos sobre a LGPD no Brasil"
-date: 2026-03-12
+date: 2026-03-12T22:04:00.000Z
 permalink: /blog/mitos-sobre-a-lgpd-no-brasil/
 tags:
   - posts

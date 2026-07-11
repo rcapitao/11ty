@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Bases legais na LGPD"
-date: 2026-03-17
+date: 2026-03-17T22:15:00.000Z
 permalink: /blog/bases-legais-na-lgpd/
 tags:
   - posts

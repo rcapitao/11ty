@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "5 hábitos para mais privacidade"
-date: 2025-10-09
+date: 2025-10-09T00:01:00.000Z
 permalink: /blog/5-habitos-para-mais-privacidade/
 tags:
   - posts

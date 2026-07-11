@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Escolher as nossas pessoas"
-date: 2026-04-10
+date: 2026-04-10T21:30:00.000Z
 permalink: /blog/escolher-as-nossas-pessoas/
 tags:
   - citacoes

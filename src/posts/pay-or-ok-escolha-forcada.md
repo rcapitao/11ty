@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Pay or OK: escolha forçada"
-date: 2025-05-07
+date: 2025-05-07T01:59:00.000Z
 permalink: /blog/pay-or-ok-escolha-forcada/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Como estruturar um Programa de Privacidade"
-date: 2025-02-17
+date: 2025-02-17T23:08:00.000Z
 permalink: /blog/como-estruturar-um-programa-de-privacidade/
 tags:
   - posts

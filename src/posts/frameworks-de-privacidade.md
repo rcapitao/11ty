@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Frameworks de privacidade"
-date: 2026-03-09
+date: 2026-03-09T16:02:00.000Z
 permalink: /blog/frameworks-de-privacidade/
 tags:
   - posts

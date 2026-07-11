@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "IA: produto ou serviço?"
-date: 2025-11-25
+date: 2025-11-25T03:00:00.000Z
 permalink: /blog/ia-produto-ou-servico/
 tags:
   - posts
