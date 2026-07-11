@@ -16,27 +16,24 @@ function getGitFirstCommitTime(filePath) {
   }
 }
 
-// Combines the front matter `date` (day) with an explicit `time` ("HH:MM"),
-// or — if no time was set — the time of day the file was first committed,
-// so "hora da publicação" defaults to when the post actually went out
-// instead of silently landing on midnight.
+// The Pages CMS "date" field has a time picker built in (options.time:
+// true), so `date` alone can already carry a real publish time. But it
+// defaults new entries to midnight rather than the current time, and
+// every post/nota written before this feature existed is date-only (also
+// midnight once parsed) — so midnight UTC is treated as "no time set" and
+// filled in with the hour the file was first committed, instead of
+// silently publishing everything at 00:00.
 function getPublishDateTime(data) {
-  const day = new Date(data.date);
-
-  if (typeof data.time === "string" && /^([01]\d|2[0-3]):[0-5]\d$/.test(data.time.trim())) {
-    const [hours, minutes] = data.time.trim().split(":").map(Number);
-    const combined = new Date(day);
-    combined.setUTCHours(hours, minutes, 0, 0);
-    return combined;
-  }
+  const publishedAt = new Date(data.date);
+  const hasExplicitTime = publishedAt.getUTCHours() !== 0 || publishedAt.getUTCMinutes() !== 0;
+  if (hasExplicitTime) return publishedAt;
 
   const inputPath = data.page && data.page.inputPath;
   const gitTime = inputPath ? getGitFirstCommitTime(inputPath) : null;
-  const combined = new Date(day);
   if (gitTime) {
-    combined.setUTCHours(gitTime.getUTCHours(), gitTime.getUTCMinutes(), 0, 0);
+    publishedAt.setUTCHours(gitTime.getUTCHours(), gitTime.getUTCMinutes(), 0, 0);
   }
-  return combined;
+  return publishedAt;
 }
 
 module.exports = { getPublishDateTime };
