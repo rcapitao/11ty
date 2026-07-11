@@ -1,5 +1,5 @@
 const { state: buildMode } = require("../plugins/buildMode.js");
-const { getPublishDateTime } = require("../plugins/publishTime.js");
+const { getPublishDateTime, getUpdatedDateTime } = require("../plugins/publishTime.js");
 
 function isPostOrNota(data) {
   const inputPath = data.page && data.page.inputPath;
@@ -38,6 +38,15 @@ module.exports = {
   publishDateTime: (data) => {
     if (!isPostOrNota(data)) return undefined;
     return getPublishDateTime(data);
+  },
+
+  // "Atualizado em" is entirely automatic — derived from git, not a field
+  // you fill in — so editing a post can never overwrite its publish date.
+  // `date` always stays the original publish moment; this only shows up
+  // once the file has been committed again since then (see publishTime.js).
+  updated: (data) => {
+    if (!isPostOrNota(data)) return data.updated;
+    return getUpdatedDateTime(data) || undefined;
   },
 
   // A post/nota with a publish date/time in the future still gets built at

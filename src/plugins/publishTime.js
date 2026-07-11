@@ -16,6 +16,20 @@ function getGitFirstCommitTime(filePath) {
   }
 }
 
+function getGitLastCommitTime(filePath) {
+  try {
+    const output = execSync(`git log --follow -1 --format=%aI -- "${filePath}"`, {
+      cwd: process.cwd(),
+      stdio: ["ignore", "pipe", "ignore"],
+    })
+      .toString()
+      .trim();
+    return output ? new Date(output) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
 // The Pages CMS "date" field has a time picker built in (options.time:
 // true), so `date` alone can already carry a real publish time. But it
 // defaults new entries to midnight rather than the current time, and
@@ -36,4 +50,23 @@ function getPublishDateTime(data) {
   return publishedAt;
 }
 
-module.exports = { getPublishDateTime };
+// "Atualizado em" only tracks commits from this feature's launch onward.
+// Every post/nota that existed before it got touched by bulk maintenance
+// (URL migration, adding the `posts` tag, moving images, etc.) — comparing
+// against each file's own first commit would make practically all of them
+// read as "updated today", which isn't a real content revision. Comparing
+// against a fixed cutover instead means only genuine edits made after this
+// shipped (through Pages CMS or otherwise) count.
+const UPDATED_TRACKING_STARTS_AT = new Date("2026-07-11T04:00:00.000Z");
+
+function getUpdatedDateTime(data) {
+  const inputPath = data.page && data.page.inputPath;
+  if (!inputPath) return null;
+
+  const lastCommit = getGitLastCommitTime(inputPath);
+  if (!lastCommit || lastCommit <= UPDATED_TRACKING_STARTS_AT) return null;
+
+  return lastCommit;
+}
+
+module.exports = { getPublishDateTime, getUpdatedDateTime };

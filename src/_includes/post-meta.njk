@@ -11,7 +11,7 @@
   {%- if updated %}
   <span class="post-meta-sep">·</span>
   <span class="post-meta-item">
-    <span>Atualizado em <time datetime="{{ updated | htmlDateString }}">{{ updated | shortDate }}</time></span>
+    <span>Atualizado em <time datetime="{{ updated | isoDateTime }}">{{ updated | shortDate }} às {{ updated | shortTime }}</time></span>
   </span>
   {%- endif %}
   {%- if tags and tags.length %}
