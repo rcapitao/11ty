@@ -6,4 +6,4 @@ tags:
   - posts
 meta_description: "teste"
 ---
-Conteúdo original.
+Conteúdo editado depois da publicação.
