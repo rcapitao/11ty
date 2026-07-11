@@ -521,7 +521,7 @@ header nav a {
   flex: 0 0 auto;
   margin-inline-start: auto;
   font-family: var(--font-mono);
-  font-size: calc(var(--font-small) * 0.85);
+  font-size: calc(var(--font-small) * 0.7);
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--muted);
