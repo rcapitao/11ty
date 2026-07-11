@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Ligações de golpe sem fim"
-date: 2025-12-04
+date: 2025-12-04T13:22:00.000Z
 permalink: /blog/ligacoes-de-golpe-sem-fim/
 tags:
   - notas

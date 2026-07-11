@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Anonimizar não resolve tudo"
-date: 2025-09-11
+date: 2025-09-11T17:06:00.000Z
 permalink: /blog/anonimizar-nao-resolve-tudo/
 tags:
   - posts

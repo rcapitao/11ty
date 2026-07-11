@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Governança de privacidade"
-date: 2026-03-10
+date: 2026-03-10T21:08:00.000Z
 permalink: /blog/governanca-de-privacidade/
 tags:
   - posts

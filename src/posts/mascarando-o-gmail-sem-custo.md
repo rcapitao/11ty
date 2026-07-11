@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Mascarando o Gmail sem custo"
-date: 2025-10-20
+date: 2025-10-20T23:56:00.000Z
 permalink: /blog/mascarando-o-gmail-sem-custo/
 tags:
   - posts

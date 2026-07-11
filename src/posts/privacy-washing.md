@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacy Washing"
-date: 2025-03-15
+date: 2025-03-15T02:50:00.000Z
 permalink: /blog/privacy-washing/
 tags:
   - posts

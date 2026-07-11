@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: Bearblog Backup and Crossposting (EN)
-date: 2026-06-23
+date: 2026-06-23T22:06:00.000Z
 permalink: /blog/bearblog-backup-and-crossposting-en/
 tags:
   - posts

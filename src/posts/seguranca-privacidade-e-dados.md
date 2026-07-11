@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Segurança, Privacidade e Dados"
-date: 2025-04-25
+date: 2025-04-25T02:03:00.000Z
 permalink: /blog/seguranca-privacidade-e-dados/
 tags:
   - posts

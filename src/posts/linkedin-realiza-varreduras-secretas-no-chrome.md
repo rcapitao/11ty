@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "LinkedIn realiza varreduras secretas no Chrome"
-date: 2026-05-07
+date: 2026-05-07T16:55:00.000Z
 permalink: /blog/linkedin-realiza-varreduras-secretas-no-chrome/
 tags:
   - posts

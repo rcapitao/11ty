@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Auditoria de privacidade não é ameaça"
-date: 2026-04-16
+date: 2026-04-16T13:43:00.000Z
 permalink: /blog/auditoria-de-privacidade-nao-e-ameaca/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Segurança e Privacidade se complementam mas não se confundem"
-date: 2026-04-09
+date: 2026-04-09T11:15:00.000Z
 permalink: /blog/seguranca-e-privacidade-se-complementam-mas-nao-se-confundem/
 tags:
   - posts

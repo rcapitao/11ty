@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Privacy Guides"
-date: 2026-04-06
+date: 2026-04-06T14:53:00.000Z
 permalink: /blog/privacy-guides/
 tags:
   - dicas

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Política x Aviso de Privacidade"
-date: 2026-03-19
+date: 2026-03-19T21:46:00.000Z
 permalink: /blog/politica-x-aviso-de-privacidade/
 tags:
   - posts

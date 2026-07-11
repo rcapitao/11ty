@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Parei de usar o X"
-date: 2026-05-02
+date: 2026-05-02T18:33:00.000Z
 permalink: /blog/parei-de-usar-o-x/
 tags:
   - notas

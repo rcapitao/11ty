@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "Acessibilidade em dashboards"
-date: 2026-01-03
+date: 2026-01-03T14:43:00.000Z
 permalink: /blog/acessibilidade-em-dashboards/
 tags:
   - notas

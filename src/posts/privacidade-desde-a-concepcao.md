@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacidade desde a concepção"
-date: 2026-03-23
+date: 2026-03-23T22:59:00.000Z
 permalink: /blog/privacidade-desde-a-concepcao/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Golpe silencioso de IA"
-date: 2025-11-09
+date: 2025-11-09T10:44:00.000Z
 permalink: /blog/golpe-silencioso-de-ia/
 tags:
   - posts

@@ -1,7 +1,7 @@
 ---
 layout: nota.njk
 title: "O celular rouba o silêncio"
-date: 2025-12-23
+date: 2025-12-23T02:51:00.000Z
 permalink: /blog/o-celular-rouba-o-silencio/
 tags:
   - notas

@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Certificações de Privacidade"
-date: 2025-01-22
+date: 2025-01-22T03:00:00.000Z
 permalink: /blog/certificacoes-de-privacidade/
 tags:
   - posts

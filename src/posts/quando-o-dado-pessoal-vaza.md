@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Quando o dado pessoal vaza"
-date: 2026-03-30
+date: 2026-03-30T12:02:00.000Z
 permalink: /blog/quando-o-dado-pessoal-vaza/
 tags:
   - posts

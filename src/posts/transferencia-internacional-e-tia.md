@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Transferência internacional e TIA"
-date: 2025-03-28
+date: 2025-03-28T02:22:00.000Z
 permalink: /blog/transferencia-internacional-e-tia/
 tags:
   - posts

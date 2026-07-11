@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Pequenas e médias empresas também precisam se adequar à LGPD"
-date: 2026-04-07
+date: 2026-04-07T11:30:00.000Z
 permalink: /blog/pequenas-e-medias-empresas-tambem-precisam-se-adequar-a-lgpd/
 tags:
   - posts

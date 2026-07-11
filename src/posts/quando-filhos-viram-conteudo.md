@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Quando filhos viram conteúdo"
-date: 2025-11-27
+date: 2025-11-27T03:00:00.000Z
 permalink: /blog/quando-filhos-viram-conteudo/
 tags:
   - posts

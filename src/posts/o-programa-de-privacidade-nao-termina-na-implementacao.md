@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "O programa de privacidade não termina na implementação"
-date: 2026-04-01
+date: 2026-04-01T11:46:00.000Z
 permalink: /blog/o-programa-de-privacidade-nao-termina-na-implementacao/
 tags:
   - posts

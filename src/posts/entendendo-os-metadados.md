@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Entendendo os metadados"
-date: 2025-03-28
+date: 2025-03-28T02:25:00.000Z
 permalink: /blog/entendendo-os-metadados/
 tags:
   - posts

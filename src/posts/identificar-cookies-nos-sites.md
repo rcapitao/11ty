@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Identificar cookies nos sites"
-date: 2025-07-22
+date: 2025-07-22T10:49:00.000Z
 permalink: /blog/identificar-cookies-nos-sites/
 tags:
   - posts

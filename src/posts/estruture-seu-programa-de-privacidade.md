@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Estruture seu programa de privacidade"
-date: 2025-02-14
+date: 2025-02-14T23:11:00.000Z
 permalink: /blog/estruture-seu-programa-de-privacidade/
 tags:
   - posts

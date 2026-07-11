@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Privacidade como negócio"
-date: 2026-03-04
+date: 2026-03-04T22:58:00.000Z
 permalink: /blog/privacidade-como-negocio/
 tags:
   - posts

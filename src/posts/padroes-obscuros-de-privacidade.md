@@ -1,7 +1,7 @@
 ---
 layout: post.njk
 title: "Padrões Obscuros de Privacidade"
-date: 2024-11-01
+date: 2024-11-01T03:06:00.000Z
 permalink: /blog/padroes-obscuros-de-privacidade/
 tags:
   - posts
