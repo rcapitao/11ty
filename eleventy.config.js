@@ -1,3 +1,4 @@
+const { InputPathToUrlTransformPlugin } = require("@11ty/eleventy");
 const pluginRss = require("@11ty/eleventy-plugin-rss").default;
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const utilsPlugin = require("./src/plugins/utils.js");
@@ -18,6 +19,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(lastModifiedPlugin);
   eleventyConfig.addPlugin(statsPlugin);
   eleventyConfig.addPlugin(pluginNavigation);
+  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
 
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
