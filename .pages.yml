@@ -30,6 +30,11 @@ content:
         type: date
         required: true
         description: 'Data futura = publica no ar mas fica fora do blog, da home, das tags e do feed até essa data chegar (bom para agendar).'
+      - name: time
+        label: 'Horário (opcional)'
+        type: string
+        required: false
+        description: 'Formato 24h, ex.: 23:15. Deixe em branco para usar automaticamente o horário em que a publicação foi salva.'
       - name: draft
         label: Rascunho
         type: boolean
@@ -146,6 +151,11 @@ content:
         type: date
         required: true
         description: 'Data futura = publica no ar mas fica fora do blog, da home, das tags e do feed até essa data chegar (bom para agendar).'
+      - name: time
+        label: 'Horário (opcional)'
+        type: string
+        required: false
+        description: 'Formato 24h, ex.: 23:15. Deixe em branco para usar automaticamente o horário em que a publicação foi salva.'
       - name: draft
         label: Rascunho
         type: boolean
