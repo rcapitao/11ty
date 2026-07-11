@@ -108,7 +108,10 @@ content:
         required: false
       - name: body
         label: Conteúdo
-        type: rich-text
+        type: code
+        options:
+          format: markdown
+        description: 'Editor de texto puro (Markdown/HTML), não rich-text: várias páginas têm HTML customizado (ex.: os cards do Diretório) que um editor visual reformata e estraga ao salvar.'
 
   - name: notas
     label: Notas
