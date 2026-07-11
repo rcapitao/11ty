@@ -6,7 +6,6 @@ permalink: /diretorio/
 navigationConfig:
   key: Diretório
   order: 5
-  icon: folder-tree
 meta_description: Procura algo específico? O Diretório reúne todos os conteúdos
   do meu blog em um só lugar, facilitando sua navegação.
 ---
