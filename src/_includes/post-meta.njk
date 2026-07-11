@@ -8,12 +8,6 @@
     <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
     <span>{{ publishDateTime | shortTime }}</span>
   </span>
-  {%- if updated %}
-  <span class="post-meta-sep">·</span>
-  <span class="post-meta-item">
-    <span>Atualizado em <time datetime="{{ updated | isoDateTime }}">{{ updated | shortDate }} às {{ updated | shortTime }}</time></span>
-  </span>
-  {%- endif %}
   {%- if tags and tags.length %}
   <span class="post-meta-sep">·</span>
   <span class="post-meta-item post-meta-tags">
