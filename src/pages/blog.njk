@@ -6,7 +6,7 @@ navigationConfig:
   key: Blog
   order: 2
 pagination:
-  data: collections.posts
+  data: collections.content
   size: 25
   alias: pagePosts
 ---
@@ -16,12 +16,13 @@ pagination:
 {%- for group in groups %}
 {%- for month in group.months %}
 <div class="archive-month-group">
-  <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} post{{ "s" if month.count != 1 }})</span></h3>
+  <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} publicaç{{ "ão" if month.count == 1 else "ões" }})</span></h3>
   <ul class="blog-posts">
     {%- for post in month.posts %}
     <li>
-      <span>{{ post.date | shortDate }}</span>
+      <span class="post-date">{{ post.date | shortDate }}</span>
       <a href="{{ post.url }}">{{ post.data.title }}</a>
+      <span class="content-type">{{ "Nota" if post.data.layout == "nota.njk" else "Post" }}</span>
     </li>
     {%- endfor %}
   </ul>
