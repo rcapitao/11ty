@@ -31,9 +31,10 @@ module.exports = {
   },
 
   // The full publish moment (date + time), used to display "às HH:MM" on
-  // the post/nota and to decide when a scheduled one goes live. `time`
-  // ("HH:MM") is an optional Pages CMS field; when it's not set, the time
-  // of day defaults to the file's first git commit instead of midnight.
+  // the post/nota and to decide when a scheduled one goes live. The Pages
+  // CMS "date" field has a time picker built in; when it's left at
+  // midnight, the time of day defaults to the file's first git commit
+  // instead (see publishTime.js).
   publishDateTime: (data) => {
     if (!isPostOrNota(data)) return undefined;
     return getPublishDateTime(data);
