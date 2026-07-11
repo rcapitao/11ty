@@ -10,7 +10,7 @@ content:
     format: yaml-frontmatter
     filename: "{primary}.md"
     view:
-      fields: [title, date, tags]
+      fields: [title, date, draft, tags]
       primary: title
       sort: [date, title]
       default:
@@ -29,6 +29,12 @@ content:
         label: Data
         type: date
         required: true
+        description: 'Data futura = publica no ar mas fica fora do blog, da home, das tags e do feed até essa data chegar (bom para agendar).'
+      - name: draft
+        label: Rascunho
+        type: boolean
+        default: false
+        description: 'Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto.'
       - name: permalink
         label: URL
         type: string
@@ -120,7 +126,7 @@ content:
     format: yaml-frontmatter
     filename: "{primary}.md"
     view:
-      fields: [title, date]
+      fields: [title, date, draft]
       primary: title
       sort: [date, title]
       default:
@@ -139,6 +145,12 @@ content:
         label: Data
         type: date
         required: true
+        description: 'Data futura = publica no ar mas fica fora do blog, da home, das tags e do feed até essa data chegar (bom para agendar).'
+      - name: draft
+        label: Rascunho
+        type: boolean
+        default: false
+        description: 'Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto.'
       - name: permalink
         label: URL
         type: string

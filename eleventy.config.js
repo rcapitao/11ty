@@ -7,6 +7,7 @@ const archivePlugin = require("./src/plugins/archive.js");
 const collectionsPlugin = require("./src/plugins/collections.js");
 const lastModifiedPlugin = require("./src/plugins/lastModified.js");
 const statsPlugin = require("./src/plugins/stats.js");
+const buildModePlugin = require("./src/plugins/buildMode.js");
 
 const PATH_PREFIX = "/rcapitao.com/";
 
@@ -20,6 +21,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(statsPlugin);
   eleventyConfig.addPlugin(pluginNavigation);
   eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+  eleventyConfig.addPlugin(buildModePlugin);
 
   eleventyConfig.addGlobalData("pathPrefix", PATH_PREFIX);
 
