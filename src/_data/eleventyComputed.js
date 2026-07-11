@@ -1,4 +1,5 @@
 const { state: buildMode } = require("../plugins/buildMode.js");
+const { getPublishDateTime } = require("../plugins/publishTime.js");
 
 function isPostOrNota(data) {
   const inputPath = data.page && data.page.inputPath;
@@ -29,21 +30,28 @@ module.exports = {
     return `/blog/${slug}/`;
   },
 
-  // A post/nota with a date in the future still gets built at its URL (so
-  // you can share/preview the link ahead of time), but stays out of
-  // collections — blog listing, home, tags, feeds, "posts relacionados" —
-  // until that date arrives. Drafts are excluded the same way, as a
-  // safety net in case one ever ends up referenced somewhere despite not
-  // being written to disk. Doesn't apply while previewing locally.
+  // The full publish moment (date + time), used to display "às HH:MM" on
+  // the post/nota and to decide when a scheduled one goes live. `time`
+  // ("HH:MM") is an optional Pages CMS field; when it's not set, the time
+  // of day defaults to the file's first git commit instead of midnight.
+  publishDateTime: (data) => {
+    if (!isPostOrNota(data)) return undefined;
+    return getPublishDateTime(data);
+  },
+
+  // A post/nota with a publish date/time in the future still gets built at
+  // its URL (so you can share/preview the link ahead of time), but stays
+  // out of collections — blog listing, home, tags, feeds, "posts
+  // relacionados" — until that moment arrives. Drafts are excluded the
+  // same way, as a safety net in case one ever ends up referenced
+  // somewhere despite not being written to disk. Doesn't apply while
+  // previewing locally.
   eleventyExcludeFromCollections: (data) => {
     if (!isPostOrNota(data) || buildMode.isServing) return data.eleventyExcludeFromCollections;
 
     if (data.draft) return true;
 
-    const pageDate = new Date(data.page.date);
-    const timezoneOffsetMs = new Date().getTimezoneOffset() * 60000;
-    pageDate.setTime(pageDate.getTime() + timezoneOffsetMs);
-    return pageDate > new Date() ? true : data.eleventyExcludeFromCollections;
+    return getPublishDateTime(data) > new Date() ? true : data.eleventyExcludeFromCollections;
   },
 
   eleventyNavigation: (data) => {

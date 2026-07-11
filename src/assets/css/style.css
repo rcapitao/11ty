@@ -305,15 +305,21 @@ main > :first-child {
   margin-block-start: 0.3em;
 }
 
-/* Post/nota meta line (date, tags) */
+/* Post/nota meta lines (date/time on one row, tags on the row below) */
 .post-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-family: var(--font-mono);
+  font-size: var(--font-small);
+  color: var(--muted);
+}
+
+.post-meta-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
-  font-family: var(--font-mono);
-  font-size: var(--font-small);
-  color: var(--muted);
 }
 
 .post-meta-item {

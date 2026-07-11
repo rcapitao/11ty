@@ -1,19 +1,27 @@
-<p class="post-meta">
-  <span class="post-meta-item">
-    <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-    <span>Publicado em <time datetime="{{ date | htmlDateString }}">{{ date | shortDate }}</time></span>
-  </span>
-  {%- if updated %}
-  <span class="post-meta-sep">·</span>
-  <span class="post-meta-item">
-    <span>Atualizado em <time datetime="{{ updated | htmlDateString }}">{{ updated | shortDate }}</time></span>
-  </span>
-  {%- endif %}
+<div class="post-meta">
+  <p class="post-meta-row">
+    <span class="post-meta-item">
+      <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+      <span>Publicado em <time datetime="{{ publishDateTime | isoDateTime }}">{{ date | shortDate }}</time></span>
+    </span>
+    <span class="post-meta-sep">·</span>
+    <span class="post-meta-item">
+      <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+      <span>{{ publishDateTime | shortTime }}</span>
+    </span>
+    {%- if updated %}
+    <span class="post-meta-sep">·</span>
+    <span class="post-meta-item">
+      <span>Atualizado em <time datetime="{{ updated | htmlDateString }}">{{ updated | shortDate }}</time></span>
+    </span>
+    {%- endif %}
+  </p>
   {%- if tags and tags.length %}
-  <span class="post-meta-sep">·</span>
-  <span class="post-meta-item post-meta-tags">
-    <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41L13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
-    <span>{%- for tag in tags %}<a href="/tags/{{ tag }}/">#{{ tag }}</a>{{ " " if not loop.last }}{%- endfor %}</span>
-  </span>
+  <p class="post-meta-row">
+    <span class="post-meta-item post-meta-tags">
+      <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.59 13.41L13.42 20.58a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7.01" y2="7"></line></svg>
+      <span>{%- for tag in tags %}<a href="/tags/{{ tag }}/">#{{ tag }}</a>{{ " " if not loop.last }}{%- endfor %}</span>
+    </span>
+  </p>
   {%- endif %}
-</p>
+</div>
