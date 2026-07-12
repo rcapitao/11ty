@@ -31,10 +31,9 @@ module.exports = {
   },
 
   // The full publish moment (date + time), used to display "às HH:MM" on
-  // the post/nota and to decide when a scheduled one goes live. The Pages
-  // CMS "date" field has a time picker built in; when it's left at
-  // midnight, the time of day defaults to the file's first git commit
-  // instead (see publishTime.js).
+  // the post/nota. The Pages CMS "date" field has a time picker built in;
+  // when it's left at midnight, the time of day defaults to the file's
+  // first git commit instead (see publishTime.js).
   publishDateTime: (data) => {
     if (!isPostOrNota(data)) return undefined;
     return getPublishDateTime(data);
@@ -49,19 +48,14 @@ module.exports = {
     return getUpdatedDateTime(data) || undefined;
   },
 
-  // A post/nota with a publish date/time in the future still gets built at
-  // its URL (so you can share/preview the link ahead of time), but stays
-  // out of collections — blog listing, home, tags, feeds, "posts
-  // relacionados" — until that moment arrives. Drafts are excluded the
-  // same way, as a safety net in case one ever ends up referenced
-  // somewhere despite not being written to disk. Doesn't apply while
-  // previewing locally.
+  // Drafts are excluded from collections — blog listing, home, tags, feeds,
+  // "posts relacionados" — as a safety net in case one ever ends up
+  // referenced somewhere despite not being written to disk. Doesn't apply
+  // while previewing locally.
   eleventyExcludeFromCollections: (data) => {
     if (!isPostOrNota(data) || buildMode.isServing) return data.eleventyExcludeFromCollections;
 
-    if (data.draft) return true;
-
-    return getPublishDateTime(data) > new Date() ? true : data.eleventyExcludeFromCollections;
+    return data.draft ? true : data.eleventyExcludeFromCollections;
   },
 
   eleventyNavigation: (data) => {
