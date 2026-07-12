@@ -18,6 +18,24 @@ function getGitFirstCommitTime(filePath) {
   }
 }
 
+// The Pages CMS date+time picker writes values with no timezone marker at
+// all (e.g. "2026-07-12T17:00"), which is the author's wall-clock time in
+// Brazil, not UTC. `new Date()` treats a timezone-less date-time string as
+// local to whatever machine parses it — the build server (GitHub Actions),
+// not the author's — so without this, a post scheduled for 17:00 goes live
+// at 17:00 UTC (14:00 in Brazil), hours before intended. Brazil dropped DST
+// nationally in 2019, so -03:00 is a safe fixed offset, not a real timezone
+// lookup. Strings that already carry a timezone (our historical imports,
+// which used real UTC instants) are left untouched.
+const BRAZIL_UTC_OFFSET = "-03:00";
+
+function withAuthorTimezone(dateInput) {
+  if (typeof dateInput !== "string") return dateInput;
+  const hasTimezone = /(Z|[+-]\d{2}:?\d{2})$/.test(dateInput);
+  const hasTime = /T\d{2}:\d{2}/.test(dateInput);
+  return hasTime && !hasTimezone ? `${dateInput}${BRAZIL_UTC_OFFSET}` : dateInput;
+}
+
 // The Pages CMS "date" field has a time picker built in (options.time:
 // true), so `date` alone can already carry a real publish time. But it
 // defaults new entries to midnight rather than the current time, and
@@ -26,7 +44,7 @@ function getGitFirstCommitTime(filePath) {
 // filled in with the hour the file was first committed, instead of
 // silently publishing everything at 00:00.
 function getPublishDateTime(data) {
-  const publishedAt = new Date(data.date);
+  const publishedAt = new Date(withAuthorTimezone(data.date));
   const hasExplicitTime = publishedAt.getUTCHours() !== 0 || publishedAt.getUTCMinutes() !== 0;
   if (hasExplicitTime) return publishedAt;
 
