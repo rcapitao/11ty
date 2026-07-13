@@ -8,7 +8,7 @@ meta_image: ""
 ---
 # Changelog
 
-Um registro das mudanças feitas neste blog — novidades, ajustes de design, correções de bugs. Atualizado conforme o site evolui.
+Um registro das mudanças feitas neste blog — novidades, ajustes de design, correções de bugs — desde que saí do [Bearblog](https://bearblog.dev) e passei a manter minha própria versão. Atualizado conforme o site evolui.
 
 ### 12 de julho de 2026
 
@@ -56,3 +56,7 @@ Um registro das mudanças feitas neste blog — novidades, ajustes de design, co
 
 - Paginação de 25 itens por página no Blog e nas Notas.
 - Ajustes de rodapé de paginação, cabeçalhos de arquivo e filtros de busca por ano e tag.
+
+### Antes de julho de 2026
+
+- Até então eu publicava no [Bearblog](https://bearblog.dev). Saí de lá para construir este blog do zero, com [Eleventy](https://www.11ty.dev/), trazendo todo o conteúdo publicado anteriormente — incluindo as datas reais de cada post e nota.
