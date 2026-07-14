@@ -4,6 +4,10 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+    <!-- Caminho absoluto: este site é publicado sob /rcapitao.com/ (GitHub
+         Pages de projeto), então a resolução relativa do config.yml falha
+         se a URL for acessada sem a barra final (/admin em vez de /admin/). -->
+    <link href="/rcapitao.com/admin/config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
     <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.mjs"></script>
