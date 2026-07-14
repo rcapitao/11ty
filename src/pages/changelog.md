@@ -12,7 +12,7 @@ Um registro das mudanças feitas neste blog — novidades, ajustes de design, co
 
 ### 14 de julho de 2026
 
-- Removido o [Pages CMS](https://pagescms.org/) como interface de edição do blog — voltei a editar os posts, notas e páginas direto nos arquivos Markdown do repositório.
+- Trocado o [Pages CMS](https://pagescms.org/) pelo [Sveltia CMS](https://sveltiacms.app/en/) como interface de edição do blog, direto pelo navegador (`/admin/`).
 
 ### 12 de julho de 2026
 
