@@ -12,7 +12,7 @@ Um registro das mudanças feitas neste blog — novidades, ajustes de design, co
 
 ### 14 de julho de 2026
 
-- Trocado o [Pages CMS](https://pagescms.org/) pelo [Decap CMS](https://decapcms.org/) como interface de edição do blog, direto pelo navegador (`/admin/`).
+- Removido o [Pages CMS](https://pagescms.org/) como interface de edição do blog — voltei a editar os posts, notas e páginas direto nos arquivos Markdown do repositório.
 
 ### 12 de julho de 2026
 
