@@ -11,6 +11,10 @@
     <link href="https://rcapitao.github.io/rcapitao.com/admin/config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
-    <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.mjs"></script>
+    <!-- Script clássico (não "type=module"): o auto-init do Sveltia CMS
+         depende de document.currentScript, que o navegador sempre retorna
+         null para scripts de módulo — com type="module" o CMS.init() nunca
+         é chamado automaticamente e a página fica em branco, sem erro. -->
+    <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   </body>
 </html>
