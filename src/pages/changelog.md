@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Changelog
-date: 2026-07-13
+date: 2026-07-14
 permalink: /changelog/
 meta_description: "Registro das mudanças feitas neste blog: novidades, ajustes de design e correções, em ordem cronológica."
 meta_image: ""
@@ -9,6 +9,10 @@ meta_image: ""
 # Changelog
 
 Um registro das mudanças feitas neste blog — novidades, ajustes de design, correções de bugs — desde que saí do [Bearblog](https://bearblog.dev) e passei a manter minha própria versão. Atualizado conforme o site evolui.
+
+### 14 de julho de 2026
+
+- Trocado o [Pages CMS](https://pagescms.org/) pelo [Decap CMS](https://decapcms.org/) como interface de edição do blog, direto pelo navegador (`/admin/`).
 
 ### 12 de julho de 2026
 

@@ -1,0 +1,200 @@
+backend:
+  name: github
+  repo: rcapitao/rcapitao.com
+  branch: main
+  # Este site é hospedado no GitHub Pages, não na Netlify, então o backend
+  # "github" precisa de um provedor OAuth próprio para autenticar no admin.
+  # Veja instruções de configuração no README ("Gestão do blog via Decap CMS").
+  base_url: https://SUBSTITUA-PELO-SEU-PROVEDOR-OAUTH
+  auth_endpoint: auth
+
+locale: "pt"
+
+media_folder: src/assets/img/uploads
+public_folder: /assets/img/uploads
+
+collections:
+  - name: posts
+    label: Posts
+    label_singular: Post
+    folder: src/posts
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: post.njk }
+      - { label: Título, name: title, widget: string, required: true }
+      - label: Data da publicação
+        name: date
+        widget: datetime
+        required: true
+        picker_utc: false
+        hint: >-
+          Quando foi publicado pela primeira vez — não mexa aqui depois, ao
+          editar o post. Deixe o horário em 00:00 (sem mexer) para usar
+          automaticamente o horário em que a publicação foi salva. A data de
+          "atualizado em" aparece sozinha, calculada automaticamente quando
+          você edita o post depois — não é um campo daqui.
+      - label: Rascunho
+        name: draft
+        widget: boolean
+        default: false
+        hint: "Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto."
+      - label: URL
+        name: permalink
+        widget: string
+        required: false
+        hint: "Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-do-post/"
+      - label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        default: [posts]
+        options:
+          [
+            posts,
+            citacoes,
+            dicas,
+            filmes,
+            guias,
+            inteligencia-artificial,
+            livros,
+            privacidade,
+            privacy-rocks,
+            produtividade,
+            seguranca-da-informacao,
+          ]
+        hint: "Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."
+      - label: "Meta description (SEO)"
+        name: meta_description
+        widget: string
+        required: false
+        pattern: ['^.{0,180}$', "Máximo de 180 caracteres"]
+      - label: "Imagem de destaque (SEO)"
+        name: meta_image
+        widget: image
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
+
+  - name: paginas
+    label: Páginas
+    label_singular: Página
+    folder: src/pages
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{permalink}}"
+    sortable_fields: [title]
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: base.njk }
+      - { label: Título, name: title, widget: string, required: true }
+      - { label: Data, name: date, widget: date, required: true }
+      - label: URL
+        name: permalink
+        widget: string
+        required: true
+        hint: "Ex.: /sobre/"
+      - label: "Menu de navegação (opcional)"
+        name: navigationConfig
+        widget: object
+        required: false
+        hint: "Só preencha se essa página deve aparecer no menu do topo."
+        fields:
+          - { label: "Texto no menu", name: key, widget: string, required: false }
+          - { label: Ordem, name: order, widget: number, required: false }
+          - label: "Ícone (Font Awesome, opcional — deixa só o ícone no menu em vez de texto)"
+            name: icon
+            widget: string
+            required: false
+      - label: "Meta description (SEO)"
+        name: meta_description
+        widget: string
+        required: false
+        pattern: ['^.{0,180}$', "Máximo de 180 caracteres"]
+      - label: "Imagem de destaque (SEO)"
+        name: meta_image
+        widget: image
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: code
+        default_language: markdown
+        allow_language_selection: false
+        output_code_only: true
+        hint: "Editor de texto puro (Markdown/HTML), não rich-text: várias páginas têm HTML customizado (ex.: os cards do Diretório) que um editor visual reformata e estraga ao salvar."
+
+  - name: notas
+    label: Notas
+    label_singular: Nota
+    folder: src/notas
+    extension: md
+    format: frontmatter
+    create: true
+    slug: "{{slug}}"
+    identifier_field: title
+    summary: "{{title}} — {{date}}"
+    sortable_fields: [date, title]
+    fields:
+      - { label: Layout, name: layout, widget: hidden, default: nota.njk }
+      - { label: Título, name: title, widget: string, required: true }
+      - label: Data da publicação
+        name: date
+        widget: datetime
+        required: true
+        picker_utc: false
+        hint: >-
+          Quando foi publicado pela primeira vez — não mexa aqui depois, ao
+          editar o post. Deixe o horário em 00:00 (sem mexer) para usar
+          automaticamente o horário em que a publicação foi salva. A data de
+          "atualizado em" aparece sozinha, calculada automaticamente quando
+          você edita o post depois — não é um campo daqui.
+      - label: Rascunho
+        name: draft
+        widget: boolean
+        default: false
+        hint: "Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto."
+      - label: URL
+        name: permalink
+        widget: string
+        required: false
+        hint: "Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-da-nota/"
+      - label: Tags
+        name: tags
+        widget: select
+        multiple: true
+        default: [notas]
+        options:
+          [
+            notas,
+            citacoes,
+            dicas,
+            filmes,
+            guias,
+            inteligencia-artificial,
+            livros,
+            privacidade,
+            privacy-rocks,
+            produtividade,
+            seguranca-da-informacao,
+          ]
+        hint: "Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."
+      - label: "Meta description (SEO)"
+        name: meta_description
+        widget: string
+        required: false
+        pattern: ['^.{0,180}$', "Máximo de 180 caracteres"]
+      - label: "Imagem de destaque (SEO)"
+        name: meta_image
+        widget: image
+        required: false
+      - label: Conteúdo
+        name: body
+        widget: markdown
