@@ -4,10 +4,11 @@
     <meta charset="utf-8" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
-    <!-- Caminho absoluto: este site é publicado sob /rcapitao.com/ (GitHub
-         Pages de projeto), então a resolução relativa do config.yml falha
-         se a URL for acessada sem a barra final (/admin em vez de /admin/). -->
-    <link href="/rcapitao.com/admin/config.yml" type="text/yaml" rel="cms-config-url" />
+    <!-- URL totalmente qualificada (com domínio): um caminho absoluto como
+         "/rcapitao.com/admin/config.yml" fica sujeito à própria heurística
+         de detecção de base path do Sveltia CMS (que duplica o prefixo do
+         GitHub Pages de projeto). Só a URL completa evita ambiguidade. -->
+    <link href="https://rcapitao.github.io/rcapitao.com/admin/config.yml" type="text/yaml" rel="cms-config-url" />
   </head>
   <body>
     <script type="module" src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.mjs"></script>
