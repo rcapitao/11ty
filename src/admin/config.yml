@@ -3,11 +3,10 @@ backend:
   repo: rcapitao/rcapitao.com
   branch: main
   # Este site é hospedado no GitHub Pages, não na Netlify, então o backend
-  # "github" precisa de um provedor OAuth próprio para autenticar no admin.
-  # Recomendado: o Cloudflare Worker sveltia-cms-auth (feito pelo mesmo autor
-  # do Sveltia CMS): https://github.com/sveltia/sveltia-cms-auth
-  # Veja instruções de configuração no README ("Gestão do blog via Sveltia CMS").
-  base_url: https://SUBSTITUA-PELO-SEU-WORKER-CLOUDFLARE
+  # "github" usa o Cloudflare Worker sveltia-cms-auth como provedor OAuth
+  # (https://github.com/sveltia/sveltia-cms-auth). Veja instruções de
+  # configuração no README ("Gestão do blog via Sveltia CMS").
+  base_url: https://sveltia-cms-auth.past-cat7897.workers.dev
 
 locale: "pt"
 

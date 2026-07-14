@@ -41,14 +41,14 @@ Cada alteração feita pelo Sveltia CMS vira um commit neste repositório, entã
 
 ### Autenticação (importante: este site roda no GitHub Pages, não na Netlify)
 
-O backend `github` do Sveltia CMS exige um provedor OAuth para autenticar o login com GitHub. Como este projeto é publicado pelo GitHub Actions/GitHub Pages (não Netlify), é preciso apontar `base_url` (`src/admin/config.yml`) para um provedor OAuth externo antes do admin funcionar — o valor de exemplo (`https://SUBSTITUA-PELO-SEU-WORKER-CLOUDFLARE`) precisa ser trocado.
+O backend `github` do Sveltia CMS exige um provedor OAuth para autenticar o login com GitHub. Como este projeto é publicado pelo GitHub Actions/GitHub Pages (não Netlify), `base_url` (`src/admin/config.yml`) aponta para um [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth) já implantado: `https://sveltia-cms-auth.past-cat7897.workers.dev` (Cloudflare Worker feito pelo mesmo autor do Sveltia CMS, especificamente para esse fim).
 
-A opção recomendada é o [sveltia-cms-auth](https://github.com/sveltia/sveltia-cms-auth), um Cloudflare Worker feito pelo mesmo autor do Sveltia CMS especificamente para esse fim:
+Para deixar esse worker funcional:
 
-1. Crie um [GitHub OAuth App](https://github.com/settings/applications/new) com **Authorization callback URL** = `<URL do worker>/callback` (pode ajustar depois de fazer o deploy).
-2. Faça o deploy do worker (botão "Deploy to Cloudflare Workers" no README do repositório, ou `wrangler deploy`).
-3. No Cloudflare, configure as variáveis do worker: `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (secret) e `ALLOWED_DOMAINS` (ex.: `rcapitao.github.io,localhost:8080`).
-4. Atualize o **Authorization callback URL** do OAuth App com a URL real do worker.
+1. Crie um [GitHub OAuth App](https://github.com/settings/applications/new) com **Authorization callback URL** = `https://sveltia-cms-auth.past-cat7897.workers.dev/callback`.
+2. No Cloudflare, configure as variáveis do worker (**Workers & Pages → sveltia-cms-auth → Settings → Variables**): `GITHUB_CLIENT_ID`, `GITHUB_CLIENT_SECRET` (secret) e `ALLOWED_DOMAINS` (ex.: `rcapitao.github.io,localhost:8080`), usando o Client ID/Secret do OAuth App criado no passo 1.
+
+Se o worker (ou o repositório dele) for recriado no futuro, atualize a URL em `base_url` de acordo.
 5. Troque `base_url` em `src/admin/config.yml` pela URL do worker.
 
 ### Data de publicação e "atualizado em"
