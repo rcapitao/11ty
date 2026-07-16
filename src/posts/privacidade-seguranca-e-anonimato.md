@@ -4,7 +4,6 @@ title: "Privacidade, Segurança e Anonimato"
 date: 2025-03-18T02:34:00.000Z
 permalink: /blog/privacidade-seguranca-e-anonimato/
 tags:
-  - posts
   - privacidade
   - seguranca-da-informacao
 meta_description: "Entenda as diferenças entre privacidade, segurança e anonimato no mundo digital e saiba como esses conceitos se complementam na proteção dos seus dados."

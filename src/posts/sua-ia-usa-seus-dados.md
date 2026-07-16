@@ -4,7 +4,6 @@ title: "Sua IA usa seus dados"
 date: 2025-11-16T02:20:00.000Z
 permalink: /blog/sua-ia-usa-seus-dados/
 tags:
-  - posts
   - inteligencia-artificial
   - privacidade
   - privacy-rocks

@@ -14,7 +14,7 @@ module.exports = class {
   }
 
   render({ collections }) {
-    const items = collections.content
+    const items = collections.posts
       .filter((item) => item.data.title && item.url)
       .map((item) => ({
         title: item.data.title,

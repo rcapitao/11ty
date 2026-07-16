@@ -4,7 +4,6 @@ title: "Mascarando o Gmail sem custo"
 date: 2025-10-20T23:56:00.000Z
 permalink: /blog/mascarando-o-gmail-sem-custo/
 tags:
-  - posts
   - dicas
   - privacidade
 meta_description: "Mascarar e-mails no Gmail é possível e gratuito. Veja como usar o sinal “+” para controlar cadastros, rastreamento e comunicações."

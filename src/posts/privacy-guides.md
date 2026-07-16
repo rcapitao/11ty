@@ -1,11 +1,10 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Privacy Guides"
 date: 2026-04-06T14:53:00.000Z
 permalink: /blog/privacy-guides/
 tags:
   - dicas
-  - notas
   - privacidade
 meta_description: ""
 meta_image: ""

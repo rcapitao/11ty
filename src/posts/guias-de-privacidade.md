@@ -4,7 +4,6 @@ title: "Guias de Privacidade"
 date: 2024-07-30T03:00:00.000Z
 permalink: /blog/guias-de-privacidade/
 tags:
-  - posts
   - guias
   - privacidade
 meta_description: "Guia essencial para proteger sua privacidade: apps seguros, configurações recomendadas e boas práticas para manter seus dados protegidos."

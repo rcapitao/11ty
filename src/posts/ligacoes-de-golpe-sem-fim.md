@@ -1,10 +1,10 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Ligações de golpe sem fim"
 date: 2025-12-04T13:22:00.000Z
 permalink: /blog/ligacoes-de-golpe-sem-fim/
 tags:
-  - notas
+  - inteligencia-artificial
 meta_description: "Chamadas mudas podem indicar golpes. Veja experiências reais e dicas para proteger seu número e reduzir tentativas de fraude"
 meta_image: ""
 ---

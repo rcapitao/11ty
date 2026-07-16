@@ -4,7 +4,6 @@ title: "Resistência cultural é o maior desafio da privacidade"
 date: 2026-04-24T01:26:00.000Z
 permalink: /blog/resistencia-cultural-e-o-maior-desafio-da-privacidade/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Frases como \"sempre foi assim\" mostram como a resistência cultural ameaça programas de privacidade mais que qualquer lacuna técnica ou jurídica."
 meta_image: ""

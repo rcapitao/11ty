@@ -3,12 +3,12 @@ layout: base.njk
 title: Guia de estilo
 date: 2026-07-05
 permalink: /style-guide/
-meta_description: "Guia de estilo com os elementos de conteúdo do blog e como usá-los em posts, notas e páginas."
+meta_description: "Guia de estilo com os elementos de conteúdo do blog e como usá-los em posts e páginas."
 meta_image: ""
 ---
 # Guia de estilo
 
-Esta página reúne os principais elementos de conteúdo para conferir como cada um fica com o tema atual, e explica como usar cada um deles em uma página, post ou nota. Ela não aparece no Blog nem em nenhum menu — acesse direto por `/style-guide/`.
+Esta página reúne os principais elementos de conteúdo para conferir como cada um fica com o tema atual, e explica como usar cada um deles em uma página ou post. Ela não aparece no Blog nem em nenhum menu — acesse direto por `/style-guide/`.
 
 ## Título nível 2
 
@@ -16,7 +16,7 @@ Esta página reúne os principais elementos de conteúdo para conferir como cada
 
 #### Título nível 4
 
-Títulos são criados com `#` no início da linha: um `#` para nível 1 (reservado ao título da página), `##` para nível 2, `###` para nível 3 e `####` para nível 4. Cole isso em qualquer post, nota ou página:
+Títulos são criados com `#` no início da linha: um `#` para nível 1 (reservado ao título da página), `##` para nível 2, `###` para nível 3 e `####` para nível 4. Cole isso em qualquer post ou página:
 
 ```md
 ## Título nível 2
@@ -124,7 +124,7 @@ Existem quatro variantes de estilo para o botão de webring. Todas usam a classe
   <a class="webring-link webring-ghost" href="#">← Webring → (ghost)</a>
 </div>
 
-Para usar em uma página, post ou nota, cole o HTML abaixo direto no arquivo (mesma lógica do divisor curvo): funciona em qualquer arquivo `.md` da pasta `src/posts/` ou em páginas soltas como esta. Escolha **uma** das quatro classes de borda — não é preciso repetir o bloco quatro vezes como acima, isso foi só para comparar os estilos.
+Para usar em uma página ou post, cole o HTML abaixo direto no arquivo (mesma lógica do divisor curvo): funciona em qualquer arquivo `.md` da pasta `src/posts/` ou em páginas soltas como esta. Escolha **uma** das quatro classes de borda — não é preciso repetir o bloco quatro vezes como acima, isso foi só para comparar os estilos.
 
 ```html
 <div class="webring">
@@ -156,7 +156,7 @@ Grade de "pílulas" neutras para agrupar links de navegação (ex.: a seção "E
 
 <p>{ status mastodon rcapitao@mastodon.social }</p>
 
-Mostra automaticamente a publicação mais recente do Mastodon, com texto, imagem (ou pré-visualização de link) e "há quanto tempo" foi publicada. Cole o marcador abaixo em qualquer página, post ou nota, trocando o `usuario@instancia` pela conta desejada:
+Mostra automaticamente a publicação mais recente do Mastodon, com texto, imagem (ou pré-visualização de link) e "há quanto tempo" foi publicada. Cole o marcador abaixo em qualquer página ou post, trocando o `usuario@instancia` pela conta desejada:
 
 ```html
 { status mastodon usuario@instancia }
@@ -173,7 +173,7 @@ Cartão simples com título (com ícone opcional) e um parágrafo de descrição
   <p>Um parágrafo curto descrevendo do que se trata este link ou seção.</p>
 </div>
 
-Cole o HTML abaixo em qualquer página, post ou nota, trocando o link, o ícone e o texto:
+Cole o HTML abaixo em qualquer página ou post, trocando o link, o ícone e o texto:
 
 ```html
 <div class="card">

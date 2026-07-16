@@ -302,12 +302,11 @@ main > :first-child {
   margin-block-start: 0;
 }
 
-.post main > article > h1 + p,
-.nota main > article > h1 + p {
+.post main > article > h1 + p {
   margin-block-start: 0.3em;
 }
 
-/* Post/nota meta line (date, time, tags) */
+/* Post meta line (date, time, tags) */
 .post-meta {
   display: flex;
   flex-wrap: wrap;
@@ -356,8 +355,7 @@ main > :first-child {
   }
 }
 
-.post main > article > h1,
-.nota main > article > h1 {
+.post main > article > h1 {
   margin-block-end: 0;
 }
 
@@ -517,21 +515,6 @@ header nav a {
   font-family: var(--font-mono);
   font-size: var(--font-small);
   color: var(--muted);
-  white-space: nowrap;
-}
-
-.content-type {
-  flex: 0 0 auto;
-  margin-inline-start: auto;
-  font-family: var(--font-mono);
-  font-size: calc(var(--font-small) * 0.7);
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-  color: var(--muted);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 0.1em 0.5em;
   white-space: nowrap;
 }
 

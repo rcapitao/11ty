@@ -4,7 +4,6 @@ title: "Monitoramento e Auditoria"
 date: 2025-03-11T02:48:00.000Z
 permalink: /blog/monitoramento-e-auditoria/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Monitoramento e auditoria são essenciais para manter programas de privacidade eficazes, identificar falhas e garantir conformidade contínua nas empresas."
 meta_image: ""

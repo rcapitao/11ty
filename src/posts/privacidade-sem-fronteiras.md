@@ -4,7 +4,6 @@ title: "Privacidade sem fronteiras"
 date: 2026-03-05T21:27:00.000Z
 permalink: /blog/privacidade-sem-fronteiras/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "O mapa da privacidade mudou e o Brasil está nele. Descubra o que o cenário internacional de proteção de dados exige das empresas agora."
 meta_image: ""

@@ -4,7 +4,6 @@ title: "Proteja documentos enviados"
 date: 2025-05-21T21:55:00.000Z
 permalink: /blog/proteja-documentos-enviados/
 tags:
-  - posts
   - dicas
   - privacidade
   - seguranca-da-informacao

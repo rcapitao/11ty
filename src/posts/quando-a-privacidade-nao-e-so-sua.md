@@ -4,7 +4,6 @@ title: "Quando a privacidade não é só sua"
 date: 2026-02-03T15:45:00.000Z
 permalink: /blog/quando-a-privacidade-nao-e-so-sua/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Cuidar dos próprios dados é importante, mas não suficiente. Entenda por que a privacidade vai além das escolhas individuais e exige consciência coletiva."

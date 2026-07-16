@@ -1,10 +1,9 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Sharenting: o risco de expor seus filhos online"
 date: 2026-04-10T00:12:00.000Z
 permalink: /blog/sharenting-o-risco-de-expor-seus-filhos-online/
 tags:
-  - notas
   - privacidade
   - privacy-rocks
 meta_description: "Compartilhar fotos dos filhos parece inofensivo, mas o sharenting pode comprometer privacidade, autoestima e segurança da criança no futuro. Reflita antes de postar."

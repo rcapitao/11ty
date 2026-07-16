@@ -4,7 +4,6 @@ title: "O truque do infravermelho para achar câmeras ocultas"
 date: 2026-04-12T20:53:00.000Z
 permalink: /blog/o-truque-do-infravermelho-para-achar-cameras-ocultas/
 tags:
-  - posts
   - dicas
   - privacidade
   - privacy-rocks

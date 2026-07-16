@@ -4,7 +4,6 @@ title: "E-mails mascarados"
 date: 2025-09-30T23:59:00.000Z
 permalink: /blog/e-mails-mascarados/
 tags:
-  - posts
   - dicas
   - privacidade
 meta_description: "Quer mais controle sobre seus cadastros online? Saiba como e-mails mascarados ajudam a identificar vazamentos e reduzir spam"

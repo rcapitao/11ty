@@ -83,8 +83,8 @@ function currentConsecutiveRun(sortedUniqueIndexes, todayIndex) {
 }
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.addFilter("blogStats", function (posts, notas) {
-    const all = [...posts, ...notas];
+  eleventyConfig.addFilter("blogStats", function (posts) {
+    const all = posts;
 
     const entries = all.map((item) => {
       const body = readBody(item.inputPath);
@@ -159,14 +159,9 @@ module.exports = function (eleventyConfig) {
       longest: longestConsecutiveRun(weekIndexes),
     };
 
-    // "posts"/"notas" mark content type, not topic — they'd dwarf every
-    // other tag here (one is on ~80% of all content), so they're excluded
-    // from this topic-focused ranking.
-    const STRUCTURAL_TAGS = new Set(["posts", "notas"]);
     const tagCounts = new Map();
     for (const item of all) {
       for (const tag of item.data.tags || []) {
-        if (STRUCTURAL_TAGS.has(tag)) continue;
         tagCounts.set(tag, (tagCounts.get(tag) || 0) + 1);
       }
     }
@@ -187,8 +182,6 @@ module.exports = function (eleventyConfig) {
     });
 
     return {
-      totalPosts: posts.length,
-      totalNotas: notas.length,
       totalItems,
       totalWords,
       avgWords,

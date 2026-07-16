@@ -3,9 +3,9 @@ layout: base.njk
 title: Estatísticas
 date: 2026-07-08
 permalink: /estatisticas/
-meta_description: "Estatísticas do blog: total de posts e notas, palavras escritas, tempo de leitura, quando costumo publicar e as tags mais usadas."
+meta_description: "Estatísticas do blog: total de posts, palavras escritas, tempo de leitura, quando costumo publicar e as tags mais usadas."
 ---
-{%- set stats = collections.posts | blogStats(collections.notas) %}
+{%- set stats = collections.posts | blogStats %}
 <h1>Estatísticas</h1>
 
 <p>Um raio-x do blog: quanto já escrevi, quanto tempo leva para ler tudo, quando costumo publicar e quais assuntos mais aparecem. Atualizado automaticamente a cada publicação.</p>
@@ -16,14 +16,6 @@ meta_description: "Estatísticas do blog: total de posts e notas, palavras escri
   <div class="stat-tile">
     <span class="stat-value">{{ stats.totalItems }}</span>
     <span class="stat-label">Publicações</span>
-  </div>
-  <div class="stat-tile">
-    <span class="stat-value">{{ stats.totalPosts }}</span>
-    <span class="stat-label">Posts</span>
-  </div>
-  <div class="stat-tile">
-    <span class="stat-value">{{ stats.totalNotas }}</span>
-    <span class="stat-label">Notas</span>
   </div>
   <div class="stat-tile">
     <span class="stat-value">{{ stats.totalWords | numberFormat }}</span>

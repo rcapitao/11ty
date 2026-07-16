@@ -4,7 +4,6 @@ title: "Onde a privacidade deve ficar?"
 date: 2025-11-08T23:46:00.000Z
 permalink: /blog/onde-a-privacidade-deve-ficar/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Onde alocar a área de privacidade? Entenda os riscos de decisões equivocadas e por que Jurídico ou Compliance são chave na governança do tema."
 meta_image: ""

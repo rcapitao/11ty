@@ -1,10 +1,10 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Acessibilidade em dashboards"
 date: 2026-01-03T14:43:00.000Z
 permalink: /blog/acessibilidade-em-dashboards/
 tags:
-  - notas
+  - produtividade
 meta_description: "Relatórios e dashboards acessíveis geram melhores decisões. Descubra como pequenas adaptações em visualização de dados promovem inclusão real."
 meta_image: ""
 ---

@@ -4,7 +4,6 @@ title: "Criptomoedas sem privacidade"
 date: 2025-05-13T22:11:00.000Z
 permalink: /blog/criptomoedas-sem-privacidade/
 tags:
-  - posts
   - privacidade
 meta_description: "A União Europeia quer banir privacy coins até 2027. O combate a crimes justifica o fim do anonimato financeiro em criptoativos?"
 meta_image: ""

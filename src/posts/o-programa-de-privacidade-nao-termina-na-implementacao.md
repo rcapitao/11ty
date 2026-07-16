@@ -4,7 +4,6 @@ title: "O programa de privacidade não termina na implementação"
 date: 2026-04-01T11:46:00.000Z
 permalink: /blog/o-programa-de-privacidade-nao-termina-na-implementacao/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Privacidade não termina na implementação. O monitoramento contínuo é o mecanismo que mantém o programa calibrado e o DPO preparado."
 meta_image: ""

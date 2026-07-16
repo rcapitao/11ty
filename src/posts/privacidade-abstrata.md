@@ -4,7 +4,6 @@ title: "Privacidade abstrata"
 date: 2026-04-08T13:00:00.000Z
 permalink: /blog/privacidade-abstrata/
 tags:
-  - posts
   - privacidade
 meta_description: "A privacidade se tornou abstrata na vida digital, com usuários aceitando termos, compartilhando dados indiscriminadamente e se surpreendendo com anúncios personalizados."
 meta_image: ""

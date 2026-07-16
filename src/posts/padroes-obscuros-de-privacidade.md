@@ -4,7 +4,6 @@ title: "Padrões Obscuros de Privacidade"
 date: 2024-11-01T03:06:00.000Z
 permalink: /blog/padroes-obscuros-de-privacidade/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Entenda como dark patterns manipulam escolhas online, levando usuários a compras, assinaturas e compartilhamento de dados sem perceber."

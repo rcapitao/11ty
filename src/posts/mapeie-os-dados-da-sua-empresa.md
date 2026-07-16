@@ -4,7 +4,6 @@ title: "Mapeie os dados da sua empresa"
 date: 2026-03-11T21:36:00.000Z
 permalink: /blog/mapeie-os-dados-da-sua-empresa/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Sua empresa sabe quais dados pessoais trata? O mapeamento de dados é o pilar do programa de privacidade e o primeiro passo para conformidade com a LGPD."
 meta_image: ""

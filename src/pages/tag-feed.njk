@@ -12,13 +12,13 @@ eleventyExcludeFromCollections: true
 	<subtitle>{{ metadata.description }}</subtitle>
 	<link href="{{ ('/tags/' + tag + '/feed.xml') | url | absoluteUrl(metadata.url) }}" rel="self"/>
 	<link href="{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}"/>
-	<updated>{{ collections.content | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
+	<updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
 	<id>{{ ('/tags/' + tag + '/') | url | absoluteUrl(metadata.url) }}</id>
 	<author>
 		<name>{{ metadata.author }}</name>
 	</author>
 
-	{%- for post in collections.content %}
+	{%- for post in collections.posts %}
 	{%- if post.data.tags and tag in post.data.tags %}
 	<entry>
 		<title>{{ post.data.title }}</title>

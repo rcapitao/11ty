@@ -4,7 +4,6 @@ title: "Privacy Washing"
 date: 2025-03-15T02:50:00.000Z
 permalink: /blog/privacy-washing/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Empresas falam em privacidade, mas agem diferente? Conheça o Privacy Washing, seus riscos e exemplos reais envolvendo grandes empresas de tecnologia."

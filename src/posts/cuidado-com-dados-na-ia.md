@@ -4,7 +4,6 @@ title: "Cuidado com dados na IA"
 date: 2025-10-02T03:00:00.000Z
 permalink: /blog/cuidado-com-dados-na-ia/
 tags:
-  - posts
   - inteligencia-artificial
   - privacidade
 meta_description: "Evite expor dados sensíveis em IA. Saiba como proteger informações, configurar privacidade e reduzir riscos."

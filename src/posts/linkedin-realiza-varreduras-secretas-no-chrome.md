@@ -4,7 +4,6 @@ title: "LinkedIn realiza varreduras secretas no Chrome"
 date: 2026-05-07T16:55:00.000Z
 permalink: /blog/linkedin-realiza-varreduras-secretas-no-chrome/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "O LinkedIn foi acusado de escanear silenciosamente extensões do Google Chrome, revelando preocupações sobre privacidade que podem ser evitadas ao usar navegadores alternativos."

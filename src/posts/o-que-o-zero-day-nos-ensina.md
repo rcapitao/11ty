@@ -4,7 +4,6 @@ title: "O que o Zero Day nos ensina"
 date: 2025-02-27T22:56:00.000Z
 permalink: /blog/o-que-o-zero-day-nos-ensina/
 tags:
-  - posts
   - filmes
   - privacidade
   - seguranca-da-informacao

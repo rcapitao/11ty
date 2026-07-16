@@ -1,11 +1,10 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Impossible is Nothing"
 date: 2026-04-11T15:26:00.000Z
 permalink: /blog/impossible-is-nothing/
 tags:
   - citacoes
-  - notas
 meta_description: "Impossible is Nothing marcou gerações com um conceito simples e poderoso o limite que você enfrenta pode estar só na sua cabeça."
 meta_image: ""
 ---
