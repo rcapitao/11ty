@@ -64,6 +64,7 @@ collections:
             privacidade,
             privacy-rocks,
             produtividade,
+            reflexao,
             seguranca-da-informacao,
           ]
         hint: "Classifique só por assunto. Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."

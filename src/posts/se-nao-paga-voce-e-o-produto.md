@@ -4,6 +4,7 @@ title: "Se não paga você é o produto"
 date: 2026-04-10T22:00:00.000Z
 permalink: /blog/se-nao-paga-voce-e-o-produto/
 tags:
+  - privacidade
 meta_description: ""
 meta_image: ""
 ---

@@ -4,6 +4,7 @@ title: "Como explicar o que eu faço?"
 date: 2024-12-09T03:01:00.000Z
 permalink: /blog/como-explicar-o-que-eu-faco/
 tags:
+  - privacidade
 meta_description: "Explicar o que faço não é simples: conheça, de forma clara, o papel do profissional de privacidade e proteção de dados nas empresas."
 meta_image: ""
 ---
