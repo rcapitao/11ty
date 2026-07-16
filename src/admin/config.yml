@@ -23,7 +23,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: title
-    summary: "{{title}} — {{date}}"
+    summary: "{{title}} — {{fields.tags}} — {{date}}"
     sortable_fields: [date, title]
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post.njk }
@@ -95,7 +95,6 @@ collections:
     fields:
       - { label: Layout, name: layout, widget: hidden, default: base.njk }
       - { label: Título, name: title, widget: string, required: true }
-      - { label: Data, name: date, widget: datetime, type: date, format: "YYYY-MM-DD", required: true }
       - label: URL
         name: permalink
         widget: string
@@ -122,6 +121,7 @@ collections:
         name: meta_image
         widget: image
         required: false
+      - { label: Data, name: date, widget: datetime, type: date, format: "YYYY-MM-DD", required: true }
       - label: Conteúdo
         name: body
         widget: code
