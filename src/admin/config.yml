@@ -23,7 +23,7 @@ collections:
     create: true
     slug: "{{slug}}"
     identifier_field: title
-    summary: "{{title}} — {{date}}"
+    summary: "{{title}} — {{fields.tags}} — {{date}}"
     sortable_fields: [date, title]
     fields:
       - { label: Layout, name: layout, widget: hidden, default: post.njk }
