@@ -4,7 +4,6 @@ title: "Conformidade global em privacidade"
 date: 2025-03-21T02:30:00.000Z
 permalink: /blog/conformidade-global-em-privacidade/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Entenda os principais passos para gerenciar a conformidade em privacidade de dados em diversos países, evitando silos e riscos regulatórios."
 meta_image: ""

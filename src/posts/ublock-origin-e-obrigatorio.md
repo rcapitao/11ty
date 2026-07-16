@@ -4,7 +4,6 @@ title: "uBlock Origin é obrigatório"
 date: 2026-04-28T02:30:00.000Z
 permalink: /blog/ublock-origin-e-obrigatorio/
 tags:
-  - posts
   - dicas
   - privacidade
 meta_description: ""

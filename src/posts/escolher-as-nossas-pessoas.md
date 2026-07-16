@@ -1,11 +1,10 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Escolher as nossas pessoas"
 date: 2026-04-10T21:30:00.000Z
 permalink: /blog/escolher-as-nossas-pessoas/
 tags:
   - citacoes
-  - notas
 meta_description: "Uma reflexão sobre o que de fato podemos controlar na vida, inspirada em uma frase marcante da série This is Us."
 meta_image: ""
 ---

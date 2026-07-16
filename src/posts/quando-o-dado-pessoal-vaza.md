@@ -4,7 +4,6 @@ title: "Quando o dado pessoal vaza"
 date: 2026-03-30T12:02:00.000Z
 permalink: /blog/quando-o-dado-pessoal-vaza/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Incidente de privacidade exige processo, não improviso. Veja como estruturar uma resposta eficaz antes que o pior aconteça — e reduzir danos quando ele ocorrer."
 meta_image: ""

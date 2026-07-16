@@ -7,20 +7,20 @@ navigationConfig:
   order: 6
   icon: magnifying-glass
 ---
-{%- set yearGroups = collections.content | groupPostsByYearMonth %}
-{%- set tagCounts = collections.content | tagsWithCounts %}
+{%- set yearGroups = collections.posts | groupPostsByYearMonth %}
+{%- set tagCounts = collections.posts | tagsWithCounts %}
 <h1>Busca</h1>
 
 <div class="search-panel">
   <div class="search-box">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-    <input type="search" id="search-input" placeholder="Buscar posts e notas..." aria-label="Buscar posts e notas">
+    <input type="search" id="search-input" placeholder="Buscar posts..." aria-label="Buscar posts">
   </div>
 
   <div class="search-filter-group">
     <p class="search-filter-label">Ano</p>
     <div class="search-filter-pills" role="group" aria-label="Filtrar por ano">
-      <button type="button" class="search-pill search-year-pill" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.content.length }})</button>
+      <button type="button" class="search-pill search-year-pill" data-year="all" onclick="setSearchYear('all', this)">Todos ({{ collections.posts.length }})</button>
       {%- for group in yearGroups %}
       <button type="button" class="search-pill search-year-pill" data-year="{{ group.year }}" onclick="setSearchYear('{{ group.year }}', this)">{{ group.year }} ({{ group.count }})</button>
       {%- endfor %}

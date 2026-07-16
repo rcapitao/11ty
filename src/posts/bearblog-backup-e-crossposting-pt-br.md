@@ -4,7 +4,6 @@ title: Bearblog Backup e Crossposting (pt-BR)
 date: 2026-06-23T21:58:00.000Z
 permalink: /blog/bearblog-backup-crossposting-ptbr/
 tags:
-  - posts
   - inteligencia-artificial
   - produtividade
 meta_description: Como usei o Claude para criar automações de backup e

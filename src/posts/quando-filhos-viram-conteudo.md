@@ -4,7 +4,6 @@ title: "Quando filhos viram conteúdo"
 date: 2025-11-27T03:00:00.000Z
 permalink: /blog/quando-filhos-viram-conteudo/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Exposição digital infantil vai além de fotos fofas. Veja riscos, impactos na privacidade e decisões judiciais sobre sharenting."

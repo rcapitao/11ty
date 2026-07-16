@@ -4,7 +4,6 @@ title: "5 hábitos para mais privacidade"
 date: 2025-10-09T00:01:00.000Z
 permalink: /blog/5-habitos-para-mais-privacidade/
 tags:
-  - posts
   - dicas
   - privacidade
 meta_description: "Pequenas decisões fazem grande diferença na privacidade digital. Veja 5 práticas que ajudam a retomar controle sobre seus dados"

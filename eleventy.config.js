@@ -30,7 +30,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/admin");
   eleventyConfig.addPassthroughCopy("src/posts/**/*.{png,jpg,jpeg,gif,webp,svg}");
-  eleventyConfig.addPassthroughCopy("src/notas/**/*.{png,jpg,jpeg,gif,webp,svg}");
 
   return {
     pathPrefix: PATH_PREFIX,

@@ -4,7 +4,6 @@ title: "Anonimizar não resolve tudo"
 date: 2025-09-11T17:06:00.000Z
 permalink: /blog/anonimizar-nao-resolve-tudo/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Antes da anonimização, os dados ainda são pessoais e exigem base legal. Entenda por que a LGPD se aplica a todo o processo inicial."
 meta_image: ""

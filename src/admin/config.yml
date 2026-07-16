@@ -53,10 +53,8 @@ collections:
         name: tags
         widget: select
         multiple: true
-        default: [posts]
         options:
           [
-            posts,
             citacoes,
             dicas,
             filmes,
@@ -68,7 +66,7 @@ collections:
             produtividade,
             seguranca-da-informacao,
           ]
-        hint: "Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."
+        hint: "Classifique só por assunto. Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."
       - label: "Meta description (SEO)"
         name: meta_description
         widget: string
@@ -130,71 +128,3 @@ collections:
         allow_language_selection: false
         output_code_only: true
         hint: "Editor de texto puro (Markdown/HTML), não rich-text: várias páginas têm HTML customizado (ex.: os cards do Diretório) que um editor visual reformata e estraga ao salvar."
-
-  - name: notas
-    label: Notas
-    label_singular: Nota
-    folder: src/notas
-    extension: md
-    format: frontmatter
-    create: true
-    slug: "{{slug}}"
-    identifier_field: title
-    summary: "{{title}} — {{date}}"
-    sortable_fields: [date, title]
-    fields:
-      - { label: Layout, name: layout, widget: hidden, default: nota.njk }
-      - { label: Título, name: title, widget: string, required: true }
-      - label: Data da publicação
-        name: date
-        widget: datetime
-        required: true
-        picker_utc: false
-        hint: >-
-          Quando foi publicado pela primeira vez — não mexa aqui depois, ao
-          editar o post. Deixe o horário em 00:00 (sem mexer) para usar
-          automaticamente o horário em que a publicação foi salva. A data de
-          "atualizado em" aparece sozinha, calculada automaticamente quando
-          você edita o post depois — não é um campo daqui.
-      - label: Rascunho
-        name: draft
-        widget: boolean
-        default: false
-        hint: "Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto."
-      - label: URL
-        name: permalink
-        widget: string
-        required: false
-        hint: "Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-da-nota/"
-      - label: Tags
-        name: tags
-        widget: select
-        multiple: true
-        default: [notas]
-        options:
-          [
-            notas,
-            citacoes,
-            dicas,
-            filmes,
-            guias,
-            inteligencia-artificial,
-            livros,
-            privacidade,
-            privacy-rocks,
-            produtividade,
-            seguranca-da-informacao,
-          ]
-        hint: "Para adicionar uma tag nova, primeiro inclua ela na lista de opções deste campo em src/admin/config.yml."
-      - label: "Meta description (SEO)"
-        name: meta_description
-        widget: string
-        required: false
-        pattern: ['^.{0,180}$', "Máximo de 180 caracteres"]
-      - label: "Imagem de destaque (SEO)"
-        name: meta_image
-        widget: image
-        required: false
-      - label: Conteúdo
-        name: body
-        widget: markdown

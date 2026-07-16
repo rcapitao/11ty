@@ -16,7 +16,7 @@ module.exports = class {
       feed_url: `${siteUrl}/feed.json`,
       description: metadata.description,
       author: { name: metadata.author },
-      items: collections.content.map((post) => ({
+      items: collections.posts.map((post) => ({
         id: siteUrl + post.url,
         url: siteUrl + post.url,
         title: post.data.title,

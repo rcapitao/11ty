@@ -4,7 +4,6 @@ title: "Privacidade e gestão de fornecedores"
 date: 2026-03-24T19:19:00.000Z
 permalink: /blog/privacidade-e-gestao-de-fornecedores/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Contratar um fornecedor com acesso a dados pessoais exige due diligence, cláusulas contratuais e inventário. Terceirizar serviço não é terceirizar risco."
 meta_image: ""

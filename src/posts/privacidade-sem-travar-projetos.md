@@ -4,7 +4,6 @@ title: "Privacidade sem travar projetos"
 date: 2026-03-10T16:06:00.000Z
 permalink: /blog/privacidade-sem-travar-projetos/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Quando a área de negócio desvia do DPO, o problema pode ser seu. Entenda como mudar a conversa sobre privacidade sem travar projetos nem perder credibilidade."
 meta_image: ""

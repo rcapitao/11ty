@@ -3,23 +3,9 @@ module.exports = function (eleventyConfig) {
     return collectionApi.getFilteredByGlob("src/posts/**/*.md").sort((a, b) => b.date - a.date);
   });
 
-  eleventyConfig.addCollection("notas", (collectionApi) => {
-    return collectionApi.getFilteredByGlob("src/notas/**/*.md").sort((a, b) => b.date - a.date);
-  });
-
-  eleventyConfig.addCollection("content", (collectionApi) => {
-    return [
-      ...collectionApi.getFilteredByGlob("src/posts/**/*.md"),
-      ...collectionApi.getFilteredByGlob("src/notas/**/*.md"),
-    ].sort((a, b) => b.date - a.date);
-  });
-
   eleventyConfig.addCollection("tagList", (collectionApi) => {
     const tags = new Set();
-    const items = [
-      ...collectionApi.getFilteredByGlob("src/posts/**/*.md"),
-      ...collectionApi.getFilteredByGlob("src/notas/**/*.md"),
-    ];
+    const items = collectionApi.getFilteredByGlob("src/posts/**/*.md");
     items.forEach((post) => {
       for (const tag of post.data.tags || []) {
         tags.add(tag);

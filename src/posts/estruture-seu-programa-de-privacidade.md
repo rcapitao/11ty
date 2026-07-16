@@ -4,7 +4,6 @@ title: "Estruture seu programa de privacidade"
 date: 2025-02-14T23:11:00.000Z
 permalink: /blog/estruture-seu-programa-de-privacidade/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Conheça os principais frameworks de privacidade e veja como estruturar a gestão de riscos, atender à LGPD e ao GDPR e fortalecer a governança de dados."
 meta_image: ""

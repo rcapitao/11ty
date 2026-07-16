@@ -4,7 +4,6 @@ title: "Gerenciadores de senhas"
 date: 2025-09-26T02:40:00.000Z
 permalink: /blog/gerenciadores-de-senhas/
 tags:
-  - posts
   - dicas
   - seguranca-da-informacao
 meta_description: "Usar a mesma senha em vários serviços é um erro comum. Descubra como gerenciadores de senhas garantem mais segurança e tranquilidade."

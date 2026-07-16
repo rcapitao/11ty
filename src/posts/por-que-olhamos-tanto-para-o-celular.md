@@ -1,10 +1,9 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Por que olhamos tanto para o celular"
 date: 2026-04-08T21:24:00.000Z
 permalink: /blog/por-que-olhamos-tanto-para-o-celular/
 tags:
-  - notas
 meta_description: "Contei 25 pessoas no celular durante um intervalo na academia. Uma reflexão sobre como esse hábito se tornou invisível em nossas vidas."
 meta_image: ""
 ---

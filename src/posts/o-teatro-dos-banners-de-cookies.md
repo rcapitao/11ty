@@ -4,7 +4,6 @@ title: "O teatro dos banners de cookies"
 date: 2025-10-23T23:51:00.000Z
 permalink: /blog/o-teatro-dos-banners-de-cookies/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Você realmente lê políticas de cookies? Entenda por que os banners viraram teatro de consentimento e por que quase todo mundo clica em “aceitar tudo”."

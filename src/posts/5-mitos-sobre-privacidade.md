@@ -4,7 +4,6 @@ title: "5 Mitos sobre Privacidade"
 date: 2024-09-11T03:20:00.000Z
 permalink: /blog/5-mitos-sobre-privacidade/
 tags:
-  - posts
   - privacidade
   - privacy-rocks
 meta_description: "Você realmente entende privacidade? Descubra 5 mitos comuns que fazem muitas pessoas negligenciarem a proteção dos seus dados pessoais."

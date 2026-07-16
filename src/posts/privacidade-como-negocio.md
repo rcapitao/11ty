@@ -4,7 +4,6 @@ title: "Privacidade como negócio"
 date: 2026-03-04T22:58:00.000Z
 permalink: /blog/privacidade-como-negocio/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Entenda como um programa de governança de privacidade protege sua reputação e vira diferencial competitivo."
 meta_image: ""

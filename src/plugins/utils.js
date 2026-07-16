@@ -3,8 +3,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("numberFormat", (n) => Number(n).toLocaleString("pt-BR"));
 
-  // Posts/notas that share at least one tag with the current item, ranked by
-  // how many tags they share (then by most recent) — used for "posts relacionados".
+  // Posts that share at least one tag with the current item, ranked by how
+  // many tags they share (then by most recent) — used for "posts relacionados".
   eleventyConfig.addFilter("relatedContent", (items, currentUrl, currentTags, limit = 5) => {
     const currentTagSet = new Set(currentTags || []);
     if (!currentTagSet.size) return [];

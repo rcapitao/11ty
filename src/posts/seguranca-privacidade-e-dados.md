@@ -4,7 +4,6 @@ title: "Segurança, Privacidade e Dados"
 date: 2025-04-25T02:03:00.000Z
 permalink: /blog/seguranca-privacidade-e-dados/
 tags:
-  - posts
   - privacidade
   - seguranca-da-informacao
 meta_description: "Entenda as diferenças entre segurança de dados, privacidade de dados e proteção de dados, e por que esses conceitos não são sinônimos na prática."

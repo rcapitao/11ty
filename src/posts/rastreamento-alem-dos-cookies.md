@@ -4,7 +4,6 @@ title: "Rastreamento além dos cookies"
 date: 2025-05-13T01:54:00.000Z
 permalink: /blog/rastreamento-alem-dos-cookies/
 tags:
-  - posts
   - privacidade
 meta_description: "Mesmo sem cookies ou login, seu navegador pode te identificar. Entenda o que é browser fingerprinting, seus riscos à privacidade e como reduzir o rastreamento."
 meta_image: ""

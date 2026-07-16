@@ -4,7 +4,6 @@ title: "Alertas de privacidade no iPhone"
 date: 2026-04-09T21:30:00.000Z
 permalink: /blog/alertas-de-privacidade-no-iphone/
 tags:
-  - posts
   - dicas
   - privacidade
 meta_description: "Os pontos coloridos no iPhone alertam os usuários sobre o uso em tempo real de câmera, microfone e localização, permitindo que revisem quais apps têm essas permissões."

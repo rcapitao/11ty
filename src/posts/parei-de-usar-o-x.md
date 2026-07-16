@@ -1,10 +1,9 @@
 ---
-layout: nota.njk
+layout: post.njk
 title: "Parei de usar o X"
 date: 2026-05-02T18:33:00.000Z
 permalink: /blog/parei-de-usar-o-x/
 tags:
-  - notas
 meta_description: "Decidi sair do X após anos de falta de transparência sobre dados. Veja os motivos e onde continuar me acompanhando a partir de agora."
 meta_image: ""
 ---

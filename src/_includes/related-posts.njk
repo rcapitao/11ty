@@ -1,4 +1,4 @@
-{%- set related = collections.content | relatedContent(page.url, tags, 5) %}
+{%- set related = collections.posts | relatedContent(page.url, tags, 5) %}
 {%- if related.length %}
 <span class="curve"></span>
 
@@ -9,7 +9,6 @@
     <li>
       <span class="post-date">{{ item.date | shortDate }}</span>
       <a href="{{ item.url }}">{{ item.data.title }}</a>
-      <span class="content-type">{{ "Nota" if "notas" in item.data.tags else "Post" }}</span>
     </li>
     {%- endfor %}
   </ul>

@@ -7,13 +7,6 @@ const TYPES = {
     layout: "post.njk",
     dir: "src/posts",
     urlPrefix: "/blog/",
-    defaultTags: ["posts"],
-  },
-  nota: {
-    layout: "nota.njk",
-    dir: "src/notas",
-    urlPrefix: "/blog/",
-    defaultTags: ["notas"],
   },
 };
 
@@ -45,7 +38,7 @@ function main() {
   const title = titleParts.join(" ").trim();
 
   if (!config || !title) {
-    console.error("Uso: npm run new-post -- \"Título do post\"  (ou npm run new-nota -- \"Título da nota\")");
+    console.error('Uso: npm run new-post -- "Título do post"');
     process.exit(1);
   }
 
@@ -61,17 +54,13 @@ function main() {
     process.exit(1);
   }
 
-  const tagsBlock = config.defaultTags.length
-    ? config.defaultTags.map((tag) => `  - ${tag}`).join("\n")
-    : "  - ";
-
   const frontMatter = `---
 layout: ${config.layout}
 title: "${title}"
 date: ${todayIso()}
 permalink: ${config.urlPrefix}${slug}/
 tags:
-${tagsBlock}
+  -
 meta_description: ""
 meta_image: ""
 ---

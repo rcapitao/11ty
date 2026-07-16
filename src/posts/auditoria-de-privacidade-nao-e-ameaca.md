@@ -4,7 +4,6 @@ title: "Auditoria de privacidade não é ameaça"
 date: 2026-04-16T13:43:00.000Z
 permalink: /blog/auditoria-de-privacidade-nao-e-ameaca/
 tags:
-  - posts
   - privacy-rocks
 meta_description: "Um programa de privacidade eficaz requer auditorias regulares para garantir que os controles documentados sejam aplicados na prática e que as conformidades sejam verdadeiramente evidenciadas."
 meta_image: ""
