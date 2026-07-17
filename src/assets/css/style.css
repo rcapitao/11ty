@@ -548,11 +548,15 @@ header nav a {
   margin-block-end: var(--space-block);
 }
 
-.archive-year-pill,
-.archive-year-pill:visited {
+.archive-year-pill {
+  padding: 0;
+  font: inherit;
+  letter-spacing: inherit;
   font-weight: 600;
   color: var(--text);
-  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 .archive-year-pill.is-current {
@@ -570,6 +574,11 @@ header nav a {
   }
 }
 
+.archive-year-pill:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
 .archive-year-count {
   font-weight: 400;
   color: var(--muted);
@@ -582,7 +591,7 @@ header nav a {
 }
 
 .archive-month-group {
-  margin-block-start: 1.8rem;
+  margin-block-start: 3.2rem;
   padding-inline-start: 1rem;
   border-inline-start: 2px solid var(--border);
 }
@@ -621,43 +630,6 @@ header nav a {
   .archive-entry-title:hover {
     color: var(--link);
   }
-}
-
-.archive-entry-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-block: 0.3em 0;
-  font-family: var(--font-mono);
-  font-size: var(--font-small);
-  color: var(--muted);
-}
-
-.archive-entry-tag {
-  display: inline-block;
-  padding-block: 0.1em;
-  padding-inline: 0.6em;
-  color: var(--bg);
-  background: var(--link);
-  border: 1px solid var(--link);
-  border-radius: 99px;
-  text-decoration: none;
-}
-
-@media (hover: hover) {
-  .archive-entry-tag:hover {
-    opacity: 0.85;
-  }
-}
-
-.archive-entry-date {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.85em;
-  opacity: 0.85;
-  white-space: nowrap;
 }
 
 /* Tag cloud */
