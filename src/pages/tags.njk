@@ -8,14 +8,13 @@ permalink: "/tags/{{ tag }}/"
 eleventyComputed:
   title: "Tag: {{ tag }}"
 ---
-<h1>#{{ tag }}</h1>
+<h1>#{{ tag }} <a href="/tags/{{ tag }}/feed.xml" class="archive-feed-icon" aria-label="Feed RSS desta tag"><i class="fa-solid fa-rss"></i></a></h1>
 
 {%- if tagDescriptions[tag] %}
 <p class="tag-description">{{ tagDescriptions[tag] }}</p>
 {%- endif %}
 
 <p>
-  <a href="/tags/{{ tag }}/feed.xml">Feed RSS desta tag</a> ·
   <a href="/tags/{{ tag }}/feed.json">Feed JSON desta tag</a>
 </p>
 

@@ -82,6 +82,11 @@ collections:
         widget: boolean
         default: false
         hint: "Marque para não publicar de jeito nenhum ainda (nem a URL fica acessível). Desmarque quando estiver pronto."
+      - label: Breadcrumb
+        name: breadcrumb
+        widget: boolean
+        default: false
+        hint: "Marque para exibir a trilha 'Home / ...' no topo deste post. Desmarcado por padrão."
       - label: Conteúdo
         name: body
         widget: markdown
@@ -132,6 +137,11 @@ collections:
         widget: image
         required: false
       - { label: Data, name: date, widget: datetime, type: date, format: "YYYY-MM-DD", required: true }
+      - label: Breadcrumb
+        name: breadcrumb
+        widget: boolean
+        default: false
+        hint: "Marque para exibir a trilha 'Home / ...' no topo desta página. Desmarcado por padrão."
       - label: Conteúdo
         name: body
         widget: code

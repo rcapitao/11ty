@@ -46,7 +46,7 @@
       </p>
     </nav>
   </header>
-  {%- if title and title != metadata.title and page.url != "/" %}
+  {%- if breadcrumb and title and title != metadata.title and page.url != "/" %}
   <nav class="breadcrumb" aria-label="Breadcrumb">
     <a href="/">Home</a>
     {%- if eleventyNavigation and eleventyNavigation.parent %}
