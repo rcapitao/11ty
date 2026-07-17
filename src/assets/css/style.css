@@ -623,43 +623,6 @@ header nav a {
   }
 }
 
-.archive-entry-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.5rem;
-  margin-block: 0.3em 0;
-  font-family: var(--font-mono);
-  font-size: var(--font-small);
-  color: var(--muted);
-}
-
-.archive-entry-tag {
-  display: inline-block;
-  padding-block: 0.1em;
-  padding-inline: 0.6em;
-  color: var(--bg);
-  background: var(--link);
-  border: 1px solid var(--link);
-  border-radius: 99px;
-  text-decoration: none;
-}
-
-@media (hover: hover) {
-  .archive-entry-tag:hover {
-    opacity: 0.85;
-  }
-}
-
-.archive-entry-date {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  font-size: 0.85em;
-  opacity: 0.85;
-  white-space: nowrap;
-}
-
 /* Tag cloud */
 .tag-cloud {
   margin-block: 0.4rem var(--space-block);

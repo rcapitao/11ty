@@ -27,15 +27,10 @@ navigationConfig:
     {%- for post in month.posts %}
     <li>
       <a href="{{ post.url }}" class="archive-entry-title">{{ post.data.title }}</a>
-      <p class="archive-entry-meta">
-        {%- for tag in post.data.tags %}
-        <a href="/tags/{{ tag }}/" class="archive-entry-tag">{{ tag }}</a>
-        {%- endfor %}
-        <span class="archive-entry-date">
-          <svg class="post-meta-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-          {{ post.date | shortDate }}
-        </span>
-      </p>
+      {%- set date = post.date %}
+      {%- set publishDateTime = post.data.publishDateTime %}
+      {%- set tags = post.data.tags %}
+      {% include "post-meta.njk" %}
     </li>
     {%- endfor %}
   </ul>
