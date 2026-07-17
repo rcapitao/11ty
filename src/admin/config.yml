@@ -33,6 +33,11 @@ collections:
         widget: string
         required: false
         hint: "Deixe em branco para gerar automaticamente a partir do título. Se preencher, use o formato /blog/titulo-do-post/"
+      - label: Alias
+        name: alias
+        widget: list
+        required: false
+        hint: "Caminhos antigos que devem redirecionar para este post (ex.: /titulo-antigo/, com barra no início e no fim). Deixe vazio se não precisar."
       - label: Tags
         name: tags
         widget: select
@@ -100,6 +105,11 @@ collections:
         widget: string
         required: true
         hint: "Ex.: /sobre/"
+      - label: Alias
+        name: alias
+        widget: list
+        required: false
+        hint: "Caminhos antigos que devem redirecionar para esta página (ex.: /titulo-antigo/, com barra no início e no fim). Deixe vazio se não precisar."
       - label: "Menu de navegação (opcional)"
         name: navigationConfig
         widget: object

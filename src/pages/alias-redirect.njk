@@ -1,0 +1,20 @@
+---
+pagination:
+  data: collections.aliases
+  size: 1
+  alias: redirectEntry
+permalink: "{{ redirectEntry.from }}"
+eleventyExcludeFromCollections: true
+---
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="refresh" content="0; url={{ redirectEntry.to }}">
+  <link rel="canonical" href="{{ redirectEntry.to }}">
+  <title>Redirecionando…</title>
+</head>
+<body>
+  <p>Redirecionando para <a href="{{ redirectEntry.to }}">{{ redirectEntry.to }}</a>…</p>
+</body>
+</html>
