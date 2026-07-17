@@ -7,22 +7,22 @@ navigationConfig:
   order: 2
 ---
 {%- set groups = collections.posts | groupPostsByYearMonth %}
-<h1>Blog</h1>
+<h1>Blog <a href="/feed.xml" class="archive-feed-icon" aria-label="Feed RSS"><i class="fa-solid fa-rss"></i></a></h1>
 
-<p class="archive-intro">{{ collections.posts.length }} publicaç{{ "ão" if collections.posts.length == 1 else "ões" }}, organizadas por mês. <a href="/feed.xml">Feed RSS</a> · <a href="/feed.json">Feed JSON</a></p>
+<p class="archive-intro">{{ collections.posts.length }} publicaç{{ "ão" if collections.posts.length == 1 else "ões" }} desde {{ groups[groups.length - 1].year }}, organizadas por mês. Também em <a href="/feed.json">JSON</a>.</p>
 
 <p class="archive-browse-label">Navegar por ano</p>
-<div class="archive-year-pills">
+<p class="archive-year-pills">
   {%- for group in groups %}
   <a href="#ano-{{ group.year }}" class="archive-year-pill{{ ' is-current' if group.year == currentYear }}">{{ group.year }} <span class="archive-year-count">({{ group.count }})</span></a>
   {%- endfor %}
-</div>
+</p>
 
 {%- for group in groups %}
 <h2 id="ano-{{ group.year }}" class="archive-year-heading">{{ group.year }}</h2>
 {%- for month in group.months %}
 <div class="archive-month-group">
-  <h3 class="bearming-archive-month">{{ month.name }} <span class="bearming-archive-count">({{ month.count }} publicaç{{ "ão" if month.count == 1 else "ões" }})</span></h3>
+  <h3 class="archive-month-label">{{ month.name | upper }} {{ group.year }} <span class="archive-month-count">({{ month.count }})</span></h3>
   <ul class="archive-list">
     {%- for post in month.posts %}
     <li>

@@ -518,7 +518,88 @@ header nav a {
   white-space: nowrap;
 }
 
-/* Blog list: Archive (title on its own line, tags + date below) */
+/* Blog archive (/blog/): deepakness.com/archive/-style layout */
+.archive-feed-icon {
+  display: inline-block;
+  margin-inline-start: 0.3em;
+  font-size: 0.7em;
+  color: var(--accent);
+  vertical-align: middle;
+}
+
+.archive-intro {
+  margin-block-end: 1.2rem;
+}
+
+.archive-browse-label {
+  margin-block: var(--space-block) 0.55rem;
+  font-size: var(--font-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.archive-year-pills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.9rem;
+  margin-block-end: var(--space-block);
+}
+
+.archive-year-pill,
+.archive-year-pill:visited {
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.archive-year-pill.is-current {
+  padding-block: 0.15em;
+  padding-inline: 0.6em;
+  color: var(--link);
+  background: color-mix(in srgb, var(--link) 12%, var(--bg));
+  border: 1px solid var(--link);
+  border-radius: var(--radius);
+}
+
+@media (hover: hover) {
+  .archive-year-pill:not(.is-current):hover {
+    text-decoration: underline;
+  }
+}
+
+.archive-year-count {
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.archive-year-heading {
+  margin-block: 2.6rem 0;
+  padding-block-end: 0.3rem;
+  border-block-end: 1px solid var(--border);
+}
+
+.archive-month-group {
+  margin-block-start: 1.8rem;
+  padding-inline-start: 1rem;
+  border-inline-start: 2px solid var(--border);
+}
+
+.archive-month-label {
+  margin-block-end: 0.9rem;
+  font-size: var(--font-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.archive-month-count {
+  font-weight: 400;
+}
+
 .archive-list {
   margin-block-end: var(--space-block);
   padding: 0;
@@ -531,7 +612,15 @@ header nav a {
 
 .archive-entry-title {
   display: inline-block;
+  color: var(--text);
+  font-size: 1.05em;
   font-weight: 600;
+}
+
+@media (hover: hover) {
+  .archive-entry-title:hover {
+    color: var(--link);
+  }
 }
 
 .archive-entry-meta {
@@ -569,62 +658,6 @@ header nav a {
   font-size: 0.85em;
   opacity: 0.85;
   white-space: nowrap;
-}
-
-/* Blog archive: browse-by-year pills */
-.archive-intro {
-  color: var(--muted);
-}
-
-.archive-browse-label {
-  margin-block: var(--space-block) 0.55rem;
-  font-size: var(--font-small);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
-  color: var(--muted);
-}
-
-.archive-year-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.archive-year-pill,
-.archive-year-pill:visited {
-  display: inline-block;
-  padding-block: 0.3em;
-  padding-inline: 0.75em;
-  font-size: calc(var(--font-size) * 0.8);
-  font-weight: 500;
-  color: var(--accent);
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 99px;
-  text-decoration: none;
-}
-
-.archive-year-pill.is-current {
-  color: var(--bg);
-  background: var(--link);
-  border-color: var(--link);
-}
-
-@media (hover: hover) {
-  .archive-year-pill:not(.is-current):hover {
-    border-color: var(--link);
-  }
-}
-
-.archive-year-count {
-  opacity: 0.8;
-}
-
-.archive-year-heading {
-  margin-block: 2.6rem 0;
-  padding-block-end: 0.3rem;
-  border-block-end: 1px solid var(--border);
 }
 
 /* Tag cloud */
