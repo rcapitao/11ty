@@ -90,6 +90,8 @@ collections:
       - label: Conteúdo
         name: body
         widget: markdown
+        modes: [raw]
+        hint: "Editor em modo Markdown puro (sem modo visual/rich text), para o conteúdo salvo no arquivo ser sempre Markdown de verdade."
 
   - name: paginas
     label: Páginas
