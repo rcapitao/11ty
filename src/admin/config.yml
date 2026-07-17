@@ -142,6 +142,12 @@ collections:
         widget: boolean
         default: false
         hint: "Marque para exibir a trilha 'Home / ...' no topo desta página. Desmarcado por padrão."
+      - label: "Seção pai (breadcrumb)"
+        name: breadcrumbParent
+        widget: select
+        required: false
+        options: [Blog, Busca, Sobre, Contato, Diretório]
+        hint: "Opcional. Escolha sob qual seção do menu esta página se encaixa, para a trilha ficar 'Home / <seção> / <esta página>' em vez de só 'Home / <esta página>'. Só tem efeito se o Breadcrumb acima estiver marcado."
       - label: Conteúdo
         name: body
         widget: code

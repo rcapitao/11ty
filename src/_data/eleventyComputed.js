@@ -73,6 +73,13 @@ module.exports = {
       return { key: data.title, parent: "Blog" };
     }
 
+    // Regular pages can opt into a breadcrumb parent (CMS field
+    // `breadcrumbParent`), nesting them under one of the top-level nav
+    // sections above instead of showing only "Home / <título>".
+    if (data.breadcrumbParent) {
+      return { key: data.title, parent: data.breadcrumbParent };
+    }
+
     return undefined;
   },
 };
