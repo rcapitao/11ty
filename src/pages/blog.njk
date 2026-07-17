@@ -9,31 +9,46 @@ navigationConfig:
 {%- set groups = collections.posts | groupPostsByYearMonth %}
 <h1>Blog <a href="/feed.xml" class="archive-feed-icon" aria-label="Feed RSS"><i class="fa-solid fa-rss"></i></a></h1>
 
-<p class="archive-intro">{{ collections.posts.length }} publicaç{{ "ão" if collections.posts.length == 1 else "ões" }} desde {{ groups[groups.length - 1].year }}, organizadas por mês. Também em <a href="/feed.json">JSON</a>.</p>
+<p class="archive-intro">{{ collections.posts.length }} publicaç{{ "ão" if collections.posts.length == 1 else "ões" }} desde {{ groups[groups.length - 1].year }}, organizadas por mês.</p>
 
 <p class="archive-browse-label">Navegar por ano</p>
 <p class="archive-year-pills">
   {%- for group in groups %}
-  <a href="#ano-{{ group.year }}" class="archive-year-pill{{ ' is-current' if group.year == currentYear }}">{{ group.year }} <span class="archive-year-count">({{ group.count }})</span></a>
+  <button type="button" class="archive-year-pill{{ ' is-current' if group.year == currentYear }}" data-year="{{ group.year }}" onclick="setArchiveYear({{ group.year }}, this)">{{ group.year }} <span class="archive-year-count">({{ group.count }})</span></button>
   {%- endfor %}
 </p>
 
 {%- for group in groups %}
-<h2 id="ano-{{ group.year }}" class="archive-year-heading">{{ group.year }}</h2>
-{%- for month in group.months %}
-<div class="archive-month-group">
-  <h3 class="archive-month-label">{{ month.name | upper }} {{ group.year }} <span class="archive-month-count">({{ month.count }})</span></h3>
-  <ul class="archive-list">
-    {%- for post in month.posts %}
-    <li>
-      <a href="{{ post.url }}" class="archive-entry-title">{{ post.data.title }}</a>
-      {%- set date = post.date %}
-      {%- set publishDateTime = post.data.publishDateTime %}
-      {%- set tags = post.data.tags %}
-      {% include "post-meta.njk" %}
-    </li>
-    {%- endfor %}
-  </ul>
+<div class="archive-year-section" data-year="{{ group.year }}"{{ " hidden" if group.year != currentYear }}>
+  <h2 class="archive-year-heading">{{ group.year }}</h2>
+  {%- for month in group.months %}
+  <div class="archive-month-group">
+    <h3 class="archive-month-label">{{ month.name | upper }} {{ group.year }} <span class="archive-month-count">({{ month.count }})</span></h3>
+    <ul class="archive-list">
+      {%- for post in month.posts %}
+      <li>
+        <a href="{{ post.url }}" class="archive-entry-title">{{ post.data.title }}</a>
+        {%- set date = post.date %}
+        {%- set publishDateTime = post.data.publishDateTime %}
+        {%- set tags = post.data.tags %}
+        {% include "post-meta.njk" %}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endfor %}
 </div>
 {%- endfor %}
-{%- endfor %}
+
+<script>
+  (function () {
+    window.setArchiveYear = function (year, button) {
+      document.querySelectorAll(".archive-year-pill").forEach(function (el) {
+        el.classList.toggle("is-current", el === button);
+      });
+      document.querySelectorAll(".archive-year-section").forEach(function (section) {
+        section.hidden = Number(section.dataset.year) !== year;
+      });
+    };
+  })();
+</script>
