@@ -1,22 +1,28 @@
 ---
 layout: base.njk
 title: Blog
-permalink: "/blog/{% if pagination.pageNumber > 0 %}{{ pagination.pageNumber + 1 }}/{% endif %}"
+permalink: /blog/
 navigationConfig:
   key: Blog
   order: 2
-pagination:
-  data: collections.posts
-  size: 25
-  alias: pagePosts
 ---
-{%- set groups = pagePosts | groupPostsByYearMonth %}
+{%- set groups = collections.posts | groupPostsByYearMonth %}
 <h1>Blog</h1>
 
+<p class="archive-intro">{{ collections.posts.length }} publicaç{{ "ão" if collections.posts.length == 1 else "ões" }}, organizadas por mês. <a href="/feed.xml">Feed RSS</a> · <a href="/feed.json">Feed JSON</a></p>
+
+<p class="archive-browse-label">Navegar por ano</p>
+<div class="archive-year-pills">
+  {%- for group in groups %}
+  <a href="#ano-{{ group.year }}" class="archive-year-pill{{ ' is-current' if group.year == currentYear }}">{{ group.year }} <span class="archive-year-count">({{ group.count }})</span></a>
+  {%- endfor %}
+</div>
+
 {%- for group in groups %}
+<h2 id="ano-{{ group.year }}" class="archive-year-heading">{{ group.year }}</h2>
 {%- for month in group.months %}
 <div class="archive-month-group">
-  <h3 class="bearming-archive-month">{{ month.name }} de {{ group.year }} <span class="bearming-archive-count">({{ month.count }} publicaç{{ "ão" if month.count == 1 else "ões" }})</span></h3>
+  <h3 class="bearming-archive-month">{{ month.name }} <span class="bearming-archive-count">({{ month.count }} publicaç{{ "ão" if month.count == 1 else "ões" }})</span></h3>
   <ul class="archive-list">
     {%- for post in month.posts %}
     <li>
@@ -36,5 +42,3 @@ pagination:
 </div>
 {%- endfor %}
 {%- endfor %}
-
-{% include "pagination-nav.njk" %}

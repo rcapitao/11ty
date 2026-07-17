@@ -548,17 +548,17 @@ header nav a {
 .archive-entry-tag {
   display: inline-block;
   padding-block: 0.1em;
-  padding-inline: 0.55em;
-  color: var(--accent);
-  background: var(--surface);
-  border: 1px solid var(--border);
+  padding-inline: 0.6em;
+  color: var(--bg);
+  background: var(--link);
+  border: 1px solid var(--link);
   border-radius: 99px;
   text-decoration: none;
 }
 
 @media (hover: hover) {
   .archive-entry-tag:hover {
-    text-decoration: underline;
+    opacity: 0.85;
   }
 }
 
@@ -566,7 +566,65 @@ header nav a {
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
+  font-size: 0.85em;
+  opacity: 0.85;
   white-space: nowrap;
+}
+
+/* Blog archive: browse-by-year pills */
+.archive-intro {
+  color: var(--muted);
+}
+
+.archive-browse-label {
+  margin-block: var(--space-block) 0.55rem;
+  font-size: var(--font-small);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--muted);
+}
+
+.archive-year-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.archive-year-pill,
+.archive-year-pill:visited {
+  display: inline-block;
+  padding-block: 0.3em;
+  padding-inline: 0.75em;
+  font-size: calc(var(--font-size) * 0.8);
+  font-weight: 500;
+  color: var(--accent);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  text-decoration: none;
+}
+
+.archive-year-pill.is-current {
+  color: var(--bg);
+  background: var(--link);
+  border-color: var(--link);
+}
+
+@media (hover: hover) {
+  .archive-year-pill:not(.is-current):hover {
+    border-color: var(--link);
+  }
+}
+
+.archive-year-count {
+  opacity: 0.8;
+}
+
+.archive-year-heading {
+  margin-block: 2.6rem 0;
+  padding-block-end: 0.3rem;
+  border-block-end: 1px solid var(--border);
 }
 
 /* Tag cloud */
