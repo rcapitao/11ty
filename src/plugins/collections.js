@@ -13,4 +13,24 @@ module.exports = function (eleventyConfig) {
     });
     return [...tags].sort((a, b) => a.localeCompare(b, "pt-BR"));
   });
+
+  // Redirect pages: posts/páginas can set an `alias` field (one or more old
+  // paths) in the CMS, and a page gets generated at each of those paths that
+  // redirects to the item's current permalink — see alias-redirect.njk.
+  eleventyConfig.addCollection("aliases", (collectionApi) => {
+    const items = [
+      ...collectionApi.getFilteredByGlob("src/posts/**/*.md"),
+      ...collectionApi.getFilteredByGlob("src/pages/**/*.md"),
+    ];
+    const redirects = [];
+    items.forEach((item) => {
+      const aliases = item.data.alias;
+      if (!aliases) return;
+      const list = Array.isArray(aliases) ? aliases : [aliases];
+      list.forEach((from) => {
+        if (from) redirects.push({ from, to: item.url });
+      });
+    });
+    return redirects;
+  });
 };

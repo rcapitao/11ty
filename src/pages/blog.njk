@@ -30,7 +30,6 @@ navigationConfig:
         <a href="{{ post.url }}" class="archive-entry-title">{{ post.data.title }}</a>
         {%- set date = post.date %}
         {%- set publishDateTime = post.data.publishDateTime %}
-        {%- set tags = post.data.tags %}
         {% include "post-meta.njk" %}
       </li>
       {%- endfor %}
